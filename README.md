@@ -1,37 +1,30 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=8312460&assignment_repo_type=AssignmentRepo)
----
-title: 'Fundamentos de Ingenieria de Software'
----
+# Repositorio plantilla para proyectos FIS
 
-FixtureApp FIS OBL
-===
+| Identificación del proyecto
+|-----------
+| Fundamentos de Ingeniería de Software
+M3A (Matturro - Yang)
+M4A (Adorjan- Falco)
+M3B/M4B (Adorjan - Kidd)
+N3A / N4A (Ferreiro-Falco-Kidd)
+Estudiantes: 
 
-## Integrantes
-Natalia Vazquez (???)
-María Noel Fernandez (???)
-Santiago Salinas (266628)
+Lectura: 21-mar-2022
+Entrega 1: 2-may-2022
 
-## Tabla de Contenidos
+Code freeze: 20-jun-2022
 
-[TOC]
+Entrega 2: 27-jun-2022
 
-## Analisis de Requerimientos
-NO LOGIN
+[Letra del proyecto](letra.md)
 
-A quien vamos a entrevistar, como los vamos a entrevistar. 
+[Instalación](install.md)
 
-Realizar un modelo conceptual UML de clses de lo que vayamos a hacer.
+[Procedimiento de entrega](proc_entrega.md)
 
-## Que es un fixture para Nosotros?
-
-Definir y descubrir. Capaz para uno un fixture es una app de apuestas. Para otro es un juego al solitario que ganas figuritas. Etc.
-
-## Definir Requerimientos no funcionales
-
-Como lo puede ser definir un tipo de letra estable como lo es Roboto.
-
-## Ingenieria Inversa
-
-Analisar a los competidores.
+Los informes académicos para cada entrega se realizan en los archivos README.md que están en las carpetas docs (entrega 1) y src (entrega 2).
+* [Informe entrega 1](docs/README.md)
+* [Informe entrega 2](src/README.md)
 
 
