@@ -2,6 +2,7 @@ FixtureApp FIS OBL
 ===
 
 ## Inicio rama Develop
+git push --set-upstream origin develop
 
 ## Integrantes
 Natalia Vazquez (???)
