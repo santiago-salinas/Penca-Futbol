@@ -1,32 +1,108 @@
 # Informe académico entrega 1
 Fecha de entrega: 18-oct-2021
 
-## Repositorio Git
+# Repositorio Git
 
-Creación y uso de repositorios locales y remotos
+Como parte del proceso de **Ingeniería de Software**, por el lado de procesos de apoyo, utilizaremos una herramienta de ***Software Control Management*** (Gestión de control de software) llamada **Git**.
 
-Comandos Git ejecutados desde terminal y desde el IDE
+Está nos permitirá **mantener control** sobre los cambios que ocurran en nuestro proyecto. Aquí se alojaran nuestros elementos de configuración como lo es esta misma documentación.
 
-Utilizamos git clone URL para obtener el repositorio y empezar a trabajar
-Probamos hacer un cambio inicial usando
-git add .
-git commit -m "Primer commit"
-git push -u
+Git nos permitirá crear repositorios tanto locales como hacer uso de repositorios remotos. Nosotros tendremos nuestro repositorio subido en la pagina web Github, donde cada integrante podrá acceder de forma online a la ultima versión subida de forma remota. Como también subir sus commits locales al repositorio remoto para que otros tengan acceso.
 
-Para poder trabajar de forma más comoda iniciamos una rama develop
-git checkout -b "develop"
-git add .
-git commit - m "Crar rama"
-git push --set-upstream origin develop
+## Comandos Git ejecutados desde terminal y desde el IDE
+
+Para poder hacer uso de esta herramienta hay que tener instalado [Git](https://git-scm.com/) en nuestra computadora.
+
+Nuestro repositorio fue originalmente creador desde Github, por lo que no tendremos que inicializarlo nosotros de forma manual. Pero para poder trabajar en el de forma local debemos obtener una imagen del mismo haciendo uso del siguiente comando desde la terminal
+
+`$ git clone <url>`
+
+Donde \<url\> será el link proporcionado por Github
+
+`$ git clone https://github.com/ORTFIS2022/obligatorio-vazquez-fernandez-salinas.git`
+***
+Una vez descargado, podemos empezar a realizar cambios en los documentos. En la siguiente sección veremos el porque, pero los cambios en producción serán hechos en otra **rama** llamada develop.
+
+Para saber en que rama estamos trabajando utilizaremos
+
+`$ git branch`
+
+Para acceder a ella utilizaremos el comando:
+
+`$ git checkout develop`
+
+Si esta no existe, la consola nos avisará y podremos crearla con:
+
+`$ git checkout -b develop`
+
+### Nota: git es case-sensitive (sensible a capitalización), por lo que debemos cuidar que ejecutamos.
+
+Por ejemplo:
+
+`$ git checkout -B develop`
+
+Si la rama ya existía, la reinicia.
+***
+
+Ya parados sobre la rama develop, podemos hacer cambios en nuestros documentos. Cuando estemos listos para crear una instancia/*snapshot*, de nuestro trabajo debemos realizar un **commit**
+
+En Git tenemos tres areas
+1. Working Directory
+2. Staging Area (Added)
+3. Repositorio (Committed)
+
+Para ver que archivos se modificaron:
+
+`$ git status`
+
+Nuestros archivos modificados se encuentran en el area Working. Por lo que debemos pasarlas al Staging Area usando:
+
+`$ git add .`
+
+Y si estamos seguros realizamos el commit:
+
+`$ git commit -m "Primer commit" `
+
+El *tag* -m seguido de un comentario entre comillas... agrega el comentario.
+
+Finalmente, para que nuestros cambios se vean reflejados en la web de Github. Finalmente haremos:
+
+`$ git push`
+
+Si nos encontramos con algun tipo de error, que nos indique que la rama no existe de forma remota, repetimos el comando anterior de la siguiente forma:
+
+`$ git push --set-upstream origin develop`
 
 Este ultimo push se nos exige para generar una rama visible en el github
+***
 
-Con git branch podemos ver en que branch estamos trabajando actualmente
+## Conventional commits
 
-Uso de conventional commits, para "taggear" los commits con prefijos
-Por ejemplo, para cambios de documnetación
-git commit -m "docs: Conventional commits"
-## Versionado
+A la larga la cantidad de commits realizados crece de forma exponencial, por lo que introduciremos los conventional commits para ordenar un poco nuestro caos.
+
+Esto no es una herramienta especial de Git, ni Github, sino que es algo completamente sintáctico a la hora de generar nuestro comentario.
+
+Previo a la descripción de nuestro commit, haremos uso de distintos *tags*, presentados a continuación:
+
+### docs
+`git commit -m "docs: Conventional commits"`
+Este hará referencia a cambios en la documentación.
+
+### feat
+Introduce una *feature* (funcionalidad) al programa
+### fix
+Arregla errores
+### style
+Se realizaron cambios en el estilo, cambios que no afecten la funcionalidad final
+
+https://www.conventionalcommits.org/en/v1.0.0/#specification
+https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
+
+Estos son **algunos** de los que estaremos usando en nuestro proyecto, que se pueden encontrar normalmente en proyectos.
+
+Siendo que esto es simplemente texto, si nuestra organización así lo necesite, puede inventar su propia convención.
+
+# Versionado
 
 Buenas prácticas de versionado
 
@@ -36,7 +112,7 @@ Resumen de commits y evolución del proyecto
 
 
 
-## Elicitación
+# Elicitación
 
 Evidencia de actividades de investigación
 
@@ -46,7 +122,7 @@ Caracterización de usuarios: User Personas
 
 Modelo conceptual del problema
 
-## Especificación
+# Especificación
 
 Definición de requerimientos funcionales y no funcionales
 
@@ -54,13 +130,13 @@ User Stories / Use Cases detallados
 
 Bocetos de IU
 
-## Validación y verificación
+# Validación y verificación
 
 Verificar la especificación
 
 Validar la solución con personas no involucradas en el proyecto
 
-## Reflexión
+# Reflexión
 
 Detalle del trabajo individual
 
