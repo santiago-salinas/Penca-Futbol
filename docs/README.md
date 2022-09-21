@@ -114,6 +114,44 @@ Resumen de commits y evolución del proyecto
 
 # Elicitación
 
+---
+## Posibles preguntas para el cuestionario (4-8 Minutos)
+
+1. ¿Estás interesado en el futbol?
+
+    - [ ] Si
+    - [ ] No
+
+2. ¿Cómo calificarias tu interés?  <!-- Esto filtra la importancia del requerimiento -->
+
+    - [ ] 1 (Alto)
+    - [ ] 2
+    - [ ] 3
+    - [ ] 4
+    - [ ] 5 (Bajo)
+
+3. ¿Qué conoces como Fixture / Penca?
+
+| Inserte texto | 
+| ------------- | 
+
+4. ¿Qué te gusta de las apps de Fixture / Penca actuales?
+
+| Inserte texto | 
+| ------------- | 
+
+5. ¿Qué NO te gusta de las apps actuales?
+
+| Inserte texto | 
+| ------------- | 
+
+6. ¿Qué consideras es un buen incentivo o recompensa para su uso?
+
+| Inserte texto | 
+| ------------- | 
+
+---
+
 Evidencia de actividades de investigación
 
 Referencias a fuentes de información
@@ -141,6 +179,3 @@ Validar la solución con personas no involucradas en el proyecto
 Detalle del trabajo individual
 
 Técnicas aplicadas y aprendizajes
-
-
-
