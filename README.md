@@ -8,7 +8,7 @@
 | Estudiantes
 |-----------
 | Santiago Salinas 266628
-| Natalia Vázquez ######
+| Natalia Vázquez 266986
 | María Noel Fernandez ######
 
 ## Informes
