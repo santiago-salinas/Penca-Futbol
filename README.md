@@ -9,7 +9,7 @@
 |-----------
 | Santiago Salinas 266628
 | Natalia Vázquez 266986
-| María Noel Fernandez ######
+| María Noel Fernández 270854
 
 ## Informes
 Los informes académicos para cada entrega se realizan en los archivos README.md que están en las carpetas docs (entrega 1) y src (entrega 2).
