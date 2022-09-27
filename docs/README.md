@@ -114,10 +114,24 @@ Resumen de commits y evolución del proyecto
 
 # Elicitación
 
+Técnicas de elicitación utilizadas:  
+1. Entrevista
+2. Cuestionario
+3. Ingeniería Reversa
+
+### Entrevista:  
+Que es
+
+### Cuestionario:
+Que es
+
+### Ingeniería Reversa:
+Se basa en el análisis actual del mercado, se observa como otros han implementado ideas similares; y en base a esto se destacan características esenciales.
+***
 ## Etapas y posibles preguntas guía para la entrevista (10 minutos)
-***
+
 ### Etapa 1: Introducción casual
-***
+
 ¿Es el fútbol uno de tus intereses? / ¿Te interesa el fútbol?  
 En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?  
 ¿Cómo lo disfrutas?  
@@ -127,7 +141,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 ¿Alguna vez utilizaste alguno? ¿Solo, con amigos, o familiares?
 ***
 ### Etapa 2: Introducción a la aplicación
-***
+
 ¿Conoces la existencia de las aplicaciones de fixture?  
 ¿Has usado alguna vez una?  
 ¿Qué cosas crees que es esencial que las mismas contengan?  
@@ -138,7 +152,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 ¿Hay algo que no te agrade de estas aplicaciones  
 
 ## Se ha realizado la entrevista:
-* [Transcripcion](investigacion/README.md)
+* [Transcripción](investigacion/README.md)
 
 ***
 ## Preguntas del Cuestionario (4-8 Minutos)
@@ -147,7 +161,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
     - [ ] Si
     - [ ] No
 
-2. ¿Cómo calificarias tu interés?  <!-- Esto filtra la importancia del requerimiento -->
+2. ¿Cómo calificarías tu interés?  <!-- Esto filtra la importancia del requerimiento -->
     - [ ] 1 (Alto)
     - [ ] 2
     - [ ] 3
@@ -176,8 +190,49 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 
 ---
 
-* [Transcripcion](investigacion/README.md)
+* [Transcripción](investigacion/README.md)
 
+***
+## Ingeniería Reversa
+
+Hemos analizado dos aplicativos populares en el mercado iOS:
+(Las imágenes pueden variar según el dispositivo, el análisis fue hecho sobre un iPhone 8)
+
+[World Cup App](https://apps.apple.com/uy/app/world-cup-app-2022/id793118251)  
+[Penca Ovación Movistar](https://apps.apple.com/uy/app/penca-ovaci%C3%B3n-movistar/id1357606778) 
+
+![](investigacion/reversaPOM.jpg)
+![](investigacion/reversaWCA.jpg) 
+
+Pantalla de Inicio:  
+World Cup App
+* Se visualizan los partidos actuales o más próximos a las fechas.
+* Permite ir rápidamente a ver el resto de partidos, ya sean previos o futuros.
+* Permite también, ver los siguientes partidos clasificados por los grupos de países.
+
+Penca Ovación Movistar
+* Lista ordenada de los próximos partidos, con información sobre la fecha de juego y grupo al que pertenece el partido. 
+
+
+Vista detallada de un partido:  
+World Cup App
+* Score actual ubicado en la parte superior, siendo lo primero a ver por el usuario.
+* Información adicional se provee tal como lesiones, goles y demás.
+
+Penca Ovación Movistar
+* Visualización clara de los contrincantes
+* Permite hacer ingreso de una predicción
+* Estadísticas sobre los pronósticos de otras personas
+
+Ingreso de Predicción:  
+World Cup App
+* No tiene
+
+Penca Ovación Movistar
+* Aspecto sencillo, como el resto de la app.
+* Tipografías grandes, agregan facilidad al usuario al interactuar con la app.
+
+***
 
 Evidencia de actividades de investigación
 
