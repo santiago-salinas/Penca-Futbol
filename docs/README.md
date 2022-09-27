@@ -114,37 +114,40 @@ Resumen de commits y evolución del proyecto
 
 # Elicitación
 
----
 ## Etapas y posibles preguntas guía para la entrevista (10 minutos)
-Etapa 1: Introducción casual
-¿Es el fútbol uno de tus intereses? / ¿Te interesa el fútbol?
-En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo? 
-¿Cómo lo disfrutas?
-¿Estás al tanto del comienzo del mundial?
-¿Qué tipo de comportamientos, o prácticas tienen los fanáticos en este tipo de eventos?
-¿Estás familiarizado con el concepto de fixture? De ser así, explicando con tus palabras… ¿Qué es el mismo?
+***
+### Etapa 1: Introducción casual
+***
+¿Es el fútbol uno de tus intereses? / ¿Te interesa el fútbol?  
+En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?  
+¿Cómo lo disfrutas?  
+¿Estás al tanto del comienzo del mundial?  
+¿Qué tipo de comportamientos, o prácticas tienen los fanáticos en este tipo de eventos?  
+¿Estás familiarizado con el concepto de fixture? De ser así, explicando con tus palabras… ¿Qué es el mismo?  
 ¿Alguna vez utilizaste alguno? ¿Solo, con amigos, o familiares?
+***
+### Etapa 2: Introducción a la aplicación
+***
+¿Conoces la existencia de las aplicaciones de fixture?  
+¿Has usado alguna vez una?  
+¿Qué cosas crees que es esencial que las mismas contengan?  
+¿Qué emociones experimentas?   
+¿Sentís competitividad/rivalidad?   
+¿Cuáles son tus motivos para utilizarlas?  
+¿Qué obtienes a cambio?  
+¿Hay algo que no te agrade de estas aplicaciones  
 
-Etapa 2: Introducción a la aplicación
-¿Conoces la existencia de las aplicaciones de fixture?
-¿Has usado alguna vez una?
-¿Qué cosas crees que es esencial que las mismas contengan?
-¿Qué emociones experimentas? 
-¿Sentís competitividad/rivalidad? 
-¿Cuáles son tus motivos para utilizarlas?
-¿Qué obtienes a cambio?
-¿Hay algo que no te agrade de estas aplicaciones
---
+## Se ha realizado la entrevista:
+* [Transcripcion](investigacion/README.md)
 
-## Posibles preguntas para el cuestionario (4-8 Minutos)
+***
+## Preguntas del Cuestionario (4-8 Minutos)
 
 1. ¿Estás interesado en el futbol?
-
     - [ ] Si
     - [ ] No
 
 2. ¿Cómo calificarias tu interés?  <!-- Esto filtra la importancia del requerimiento -->
-
     - [ ] 1 (Alto)
     - [ ] 2
     - [ ] 3
@@ -172,6 +175,9 @@ Etapa 2: Introducción a la aplicación
 | ------------- |
 
 ---
+
+* [Transcripcion](investigacion/README.md)
+
 
 Evidencia de actividades de investigación
 
