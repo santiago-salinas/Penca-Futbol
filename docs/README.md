@@ -115,6 +115,27 @@ Resumen de commits y evolución del proyecto
 # Elicitación
 
 ---
+## Etapas y posibles preguntas guía para la entrevista (10 minutos)
+Etapa 1: Introducción casual
+¿Es el fútbol uno de tus intereses? / ¿Te interesa el fútbol?
+En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo? 
+¿Cómo lo disfrutas?
+¿Estás al tanto del comienzo del mundial?
+¿Qué tipo de comportamientos, o prácticas tienen los fanáticos en este tipo de eventos?
+¿Estás familiarizado con el concepto de fixture? De ser así, explicando con tus palabras… ¿Qué es el mismo?
+¿Alguna vez utilizaste alguno? ¿Solo, con amigos, o familiares?
+
+Etapa 2: Introducción a la aplicación
+¿Conoces la existencia de las aplicaciones de fixture?
+¿Has usado alguna vez una?
+¿Qué cosas crees que es esencial que las mismas contengan?
+¿Qué emociones experimentas? 
+¿Sentís competitividad/rivalidad? 
+¿Cuáles son tus motivos para utilizarlas?
+¿Qué obtienes a cambio?
+¿Hay algo que no te agrade de estas aplicaciones
+--
+
 ## Posibles preguntas para el cuestionario (4-8 Minutos)
 
 1. ¿Estás interesado en el futbol?
@@ -132,23 +153,23 @@ Resumen de commits y evolución del proyecto
 
 3. ¿Qué conoces como Fixture / Penca?
 
-| Inserte texto | 
-| ------------- | 
+| Inserte texto |
+| ------------- |
 
 4. ¿Qué te gusta de las apps de Fixture / Penca actuales?
 
-| Inserte texto | 
-| ------------- | 
+| Inserte texto |
+| ------------- |
 
 5. ¿Qué NO te gusta de las apps actuales?
 
-| Inserte texto | 
-| ------------- | 
+| Inserte texto |
+| ------------- |
 
 6. ¿Qué consideras es un buen incentivo o recompensa para su uso?
 
-| Inserte texto | 
-| ------------- | 
+| Inserte texto |
+| ------------- |
 
 ---
 
