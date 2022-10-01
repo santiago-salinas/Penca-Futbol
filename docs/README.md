@@ -270,6 +270,7 @@ Referencias a fuentes de información
 ## Caracterización de usuarios: User Personas
 ![](investigacion/UPersona1.png)
 ![](investigacion/UPersona2.jpeg)
+![](investigacion/UPersona3.png)
 ## Modelo conceptual del problema
 ![](investigacion/modelo.png)
 # Especificación
