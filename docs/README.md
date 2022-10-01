@@ -77,6 +77,15 @@ Si nos encontramos con algun tipo de error, que nos indique que la rama no exist
 
 Este ultimo push se nos exige para generar una rama visible en el github
 ***
+Si un compañero, o nostros mismos tenemos el clon del git desde otro computador, podemos obtener la ultima version subida a github haciendo:
+
+`$ git pull`
+***
+A lo largo del proyecto podremos chequear estos commits y sus hashes asociados con el comando
+
+`$ git log`
+
+***
 Luego de completar ciertas metas arbitrarias, o cuando consideremos que nuestro proyecto se encuentra en una etapa sin errores y funcional. Podremos realizar un merge a main, esto es, transferir todo nuestro trabajo de nuestra rama develop a la principal.
 
 Hablaremos más adelante de esto en la sección de versionado.
