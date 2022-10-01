@@ -176,7 +176,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 ¿Hay algo que no te agrade de estas aplicaciones  
 
 ## Se ha realizado la entrevista:
-* [Resultados](investigacion/README.md)
+* [Transcripción](investigacion/README.md)
 
 ***
 ## Preguntas del Cuestionario (4-8 Minutos)
@@ -214,7 +214,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 
 ---
 
-* [Transcripción](investigacion/README.md)
+* [Resultados](investigacion/README.md)
 
 ***
 ## Ingeniería Reversa
@@ -264,7 +264,7 @@ Evidencia de actividades de investigación
 Referencias a fuentes de información
 
 Caracterización de usuarios: User Personas
-
+![](investigacion/UPersona1.png)
 Modelo conceptual del problema
 
 # Especificación
