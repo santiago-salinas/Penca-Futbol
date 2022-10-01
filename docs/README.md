@@ -129,11 +129,21 @@ Siendo que esto es simplemente texto, si nuestra organización así lo necesite,
 # Versionado
 
 Buenas prácticas de versionado
-
+> "Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante."
+> (Pro Git - About Version Control, https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 Uso de ramas separadas de 'main'
+## Buenas prácticas de versionado
 
 Resumen de commits y evolución del proyecto
+Para realizar el versionado de nuestro trabajo utilizamos Git, un sistema de control de versiones distribuido que nos permite tener repositorios locales completamente funcionales, los cuales son clones del proyecto (situado en un repositorio remoto), lo cual facilita el trabajo simultáneo, mantener un registro de los cambios realizados por cada integrante, así como la opción de volver hacia atrás.
+A esta herramienta se le suma Github, la cual es una plataforma donde se puede guardar la documentación de los proyectos online (repositorio remoto).
 
+## Uso de ramas separadas de "main"
+
+Una rama es una "copia" de nuestro proyecto en la cual podemos realizar cambios sin afectar a la rama principal; para luego poder fusionarlas y tener un historial de cambios más limpio. Es una función esencial en este tipo de proyectos, ya sea para agregar funciones o arreglar errores, y así evitar que código inestable se fusione con el código base principal.
+En nuestro caso utilizaremos dos ramas: main y develop. La rama main aloja las versiones estables del proyecto (que no están en constante cambio), mientras que develop es la de uso diario sobre la que trabajaremos de forma continua.
+
+## Resumen de commits y evolución del proyecto
 
 
 # Elicitación
@@ -263,10 +273,11 @@ Evidencia de actividades de investigación
 
 Referencias a fuentes de información
 
-Caracterización de usuarios: User Personas
+***
+## Caracterización de usuarios: User Personas
 ![](investigacion/UPersona1.png)
-Modelo conceptual del problema
-
+## Modelo conceptual del problema
+![](investigacion/modelo.png)
 # Especificación
 
 Definición de requerimientos funcionales y no funcionales
