@@ -42,6 +42,8 @@ Por ejemplo:
 `$ git checkout -B develop`
 
 Si la rama ya existía, la reinicia.
+
+https://git-scm.com/docs/git-checkout
 ***
 
 Ya parados sobre la rama develop, podemos hacer cambios en nuestros documentos. Cuando estemos listos para crear una instancia/*snapshot*, de nuestro trabajo debemos realizar un **commit**
@@ -75,6 +77,19 @@ Si nos encontramos con algun tipo de error, que nos indique que la rama no exist
 
 Este ultimo push se nos exige para generar una rama visible en el github
 ***
+Luego de completar ciertas metas arbitrarias, o cuando consideremos que nuestro proyecto se encuentra en una etapa sin errores y funcional. Podremos realizar un merge a main, esto es, transferir todo nuestro trabajo de nuestra rama develop a la principal.
+
+Hablaremos más adelante de esto en la sección de versionado.
+
+Para esto nos situaremos en la rama main utilizando:
+
+`$ git checkout main`
+
+Y realizamos el merge con main
+
+`$ git merge develop`
+
+Puede que en durante este proceso tengamos que resolver algún conflicto debido al merge. Teniendo que seleccionar que partes mantener y cuales cambiar entre las dos versiones.
 
 ## Conventional commits
 
@@ -104,20 +119,11 @@ Siendo que esto es simplemente texto, si nuestra organización así lo necesite,
 
 # Versionado
 
-> "Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante."
-> (Pro Git - About Version Control, https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+Buenas prácticas de versionado
 
-## Buenas prácticas de versionado
+Uso de ramas separadas de 'main'
 
-Para realizar el versionado de nuestro trabajo utilizamos Git, un sistema de control de versiones distribuido que nos permite tener repositorios locales completamente funcionales, los cuales son clones del proyecto (situado en un repositorio remoto), lo cual facilita el trabajo simultáneo, mantener un registro de los cambios realizados por cada integrante, así como la opción de volver hacia atrás.
-A esta herramienta se le suma Github, la cual es una plataforma donde se puede guardar la documentación de los proyectos online (repositorio remoto).
-
-## Uso de ramas separadas de "main"
-
-Una rama es una "copia" de nuestro proyecto en la cual podemos realizar cambios sin afectar a la rama principal; para luego poder fusionarlas y tener un historial de cambios más limpio. Es una función esencial en este tipo de proyectos, ya sea para agregar funciones o arreglar errores, y así evitar que código inestable se fucione con el código base principal.
-En nuestro caso utilizaremos dos ramas: main y develop. La rama main aloja las versiones estables del proyecto (que no están en constante cambio), mientras que develop es la de uso diario sobre la que trabajaremos de forma continua.
-
-## Resumen de commits y evolución del proyecto
+Resumen de commits y evolución del proyecto
 
 
 
@@ -161,7 +167,7 @@ En caso de serlo, ¿Cómo manifiestas tu interés hacía el mismo?
 ¿Hay algo que no te agrade de estas aplicaciones  
 
 ## Se ha realizado la entrevista:
-* [Transcripción](investigacion/README.md)
+* [Resultados](investigacion/README.md)
 
 ***
 ## Preguntas del Cuestionario (4-8 Minutos)
@@ -208,10 +214,11 @@ Hemos analizado dos aplicativos populares en el mercado iOS:
 (Las imágenes pueden variar según el dispositivo, el análisis fue hecho sobre un iPhone 8)
 
 [World Cup App](https://apps.apple.com/uy/app/world-cup-app-2022/id793118251)  
-[Penca Ovación Movistar](https://apps.apple.com/uy/app/penca-ovaci%C3%B3n-movistar/id1357606778) 
-
-![](investigacion/reversaPOM.jpg)
 ![](investigacion/reversaWCA.jpg) 
+
+[Penca Ovación Movistar](https://apps.apple.com/uy/app/penca-ovaci%C3%B3n-movistar/id1357606778) 
+![](investigacion/reversaPOM.jpg)
+
 
 Pantalla de Inicio:  
 World Cup App
