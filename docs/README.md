@@ -147,23 +147,16 @@ En nuestro caso utilizaremos dos ramas: main y develop. La rama main aloja las v
 
 
 # Elicitación
-
 Técnicas de elicitación utilizadas:  
-1. Entrevista
-2. Cuestionario
-3. Ingeniería Reversa
+Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarollar.
 
-### Entrevista:  
-Que es
+Encuesta: Una encuesta es un formulario con preguntas, el cual se presenta a un grupo de personas para que el mismo lo complete, con el objetivo de desarrollar la solución a un problema en base a las mismas.
 
-### Cuestionario:
-Que es
+Ingeniería inversa: La ingeniería inversa es un proceso en cual se observa la construcción, diseño, y demás características de un producto ya construido, para así crear uno igual.
 
-### Ingeniería Reversa:
-Se basa en el análisis actual del mercado, se observa como otros han implementado ideas similares; y en base a esto se destacan características esenciales.
-***
+User Persona: Los User Persona son un modelo ficticio de usuarios, que ayuda a generar una idea general de los motivos, necesidades, frustraciones, habitos que tiene el mismo, y así poder ofrecer un producto que se adapte a todas esas características.
+
 ## Etapas y posibles preguntas guía para la entrevista (10 minutos)
-
 ### Etapa 1: Introducción casual
 
 ¿Es el fútbol uno de tus intereses? / ¿Te interesa el fútbol?  
