@@ -297,11 +297,6 @@ Descripción: El usuario debe ser capaz de insertar una predicción a los próxi
 
 Prioridad: Altísima
 
-User Stories / Use Cases detallados
-
-Bocetos de IU
-
-
 RF: Estadísticas Pre-Producción
 Actor: Usuario
 
@@ -315,6 +310,31 @@ Actor: Usuario
 Descripción: El sistema debe presentarle al usuario, la posibilidad de mostrar sus logros de forma fácil frente a sus pares. Definimos un logro, como un objetivo arbitrario al cual se le asigna un cierto “badge” icono a él.
 
 Prioridad: Media
+
+RF: Puntos 
+Actor: Usuario
+
+Descripción: El sistema debe presentarle al usuario, la posibilidad de mostrar sus puntos de forma fácil. Estos puntos se obtienen según qué tan acertadas han sido las predicciones del usuario.
+
+Prioridad: Alta
+
+RF: Canjear Puntos 
+Actor: Usuario
+
+Descripción: El sistema debe presentar al usuario, la posibilidad de canjear sus puntos en una tienda online, donde la misma podría contener objetos tales como camisetas, figuritas, y de más cosas.
+
+Prioridad: Baja
+
+RF: Hacer grupo con códigos de amigo (sin login) 
+Actor: Usuario
+
+Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos. 
+
+Prioridad: Media
+
+## User Stories / Use Cases detallados
+
+## Bocetos de IU
 
 
 # Validación y verificación
