@@ -275,7 +275,27 @@ Referencias a fuentes de información
 ![](investigacion/modelo.png)
 # Especificación
 
-Definición de requerimientos funcionales y no funcionales
+# Definición de requerimientos funcionales y no funcionales
+RF: No Login 
+Actor: Usuario
+
+Descripción: El sistema debe funcionar sin que el usuario final, se creé una cuenta. Los datos se guardan de forma local.
+
+Prioridad: Alta
+ 
+RF: Ver Partidos Próximos 
+Actor: Usuario
+
+Descripción: El sistema debe mostrar un listado de los próximos partidos a jugar en la pantalla de inicio.
+
+Prioridad: Alta
+
+RF: Predicción 
+Actor: Usuario
+
+Descripción: El usuario debe ser capaz de insertar una predicción a los próximos partidos.
+
+Prioridad: Altísima
 
 User Stories / Use Cases detallados
 
