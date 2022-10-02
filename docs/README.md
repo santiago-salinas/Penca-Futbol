@@ -334,7 +334,6 @@ Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de código
 Prioridad: Media
 
 ### Requerimientos no funcionales
-No funcionales:
 
 RNF1: Especificación de estilo
 Descripción: El sistema debe 
@@ -387,6 +386,25 @@ Como usuario
 	Para mostrarle a sus pares
 Criterios de aceptación: 
 	La visualización en pantalla de los puntos y logros del usuario
+
+US: 
+Título: Grupo
+Narrativa: 
+    Como usuario
+	Quiero crear o unirme a un grupo
+	Para pertenecer a uno
+Criterios de aceptación: 
+	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este
+    
+    
+US: 
+Título: Canje
+Narrativa: 
+Como usuario
+	Quiero canjear mis puntos
+	Para obtener un premio físico
+Criterios de aceptación: 
+Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un producto a  cambio. Se le otorga un código para cambiar en una tienda afiliada.
 
 
 ## Bocetos de IU
