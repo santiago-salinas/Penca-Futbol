@@ -367,7 +367,7 @@ Descripción: Uso de librerías de diseño como MDWC
 
 
 ## User Stories / Use Cases detallados
-
+### User Stories 
 US: 
 Título: Partidos
 Narrativa: 
@@ -424,6 +424,26 @@ Como usuario
 	Para obtener un premio físico
 Criterios de aceptación: 
 Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un producto a  cambio. Se le otorga un código para cambiar en una tienda afiliada.
+
+
+### User Cases
+**Título:** Ver partidos próximos
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores | Respuesta del sistema | 
+| -------- | -------- | 
+| 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
+
+
+**Título:** Predecir
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores | Respuesta del sistema | 
+| -------- | -------- | 
+| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
+| 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
 
 
 ## Bocetos de IU
