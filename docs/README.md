@@ -481,7 +481,8 @@ UC:
 **5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"
 
 ## Bocetos de IU
-
+![](bocetosiu/UC1.png)
+![](bocetosiu/UC2.png)
 
 # Validación y verificación
 
