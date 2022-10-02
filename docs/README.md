@@ -334,6 +334,24 @@ Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de código
 Prioridad: Media
 
 ### Requerimientos no funcionales
+No funcionales:
+
+RNF1: Especificación de estilo
+Descripción: El sistema debe 
+
+https://material.io/resources/color
+Nombre de la app: Mundial
+Colors primary: Green 900, secondary: Light Blue 800
+Font: Roboto
+Icons: filled
+
+
+RNF2: Números grandes.
+Descripción: El sistema debe presentar los scores y predicciones en un formato grande, de forma que el usuario pueda ver de forma rápida y clara, sin mucho esfuerzo.
+
+RNF3: Responsive
+Descripción: El sistema debe ser tanto web como mobile
+
 RNF4: Minimizar Uso de Ads 
 Descripción: El sistema deberá implementar anuncios no intrusivos, para no agobiar al usuario que lo utiliza.
 
