@@ -369,6 +369,26 @@ Descripción: Uso de librerías de diseño como MDWC
 
 ## User Stories / Use Cases detallados
 
+US:
+Título: Obtención de puntos
+Narrativa: 
+Como usuario
+	Quiero obtener puntos
+	Para luego canjearlos por premios
+Criterios de aceptación: 
+	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.
+	
+
+US:
+Título: Status
+Narrativa: 
+Como usuario
+	Quiero ver mis puntos y logros
+	Para mostrarle a sus pares
+Criterios de aceptación: 
+	La visualización en pantalla de los puntos y logros del usuario
+
+
 ## Bocetos de IU
 
 
