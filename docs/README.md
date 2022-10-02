@@ -276,6 +276,7 @@ Referencias a fuentes de información
 # Especificación
 
 # Definición de requerimientos funcionales y no funcionales
+### Requerimientos funcionales
 RF: No Login 
 Actor: Usuario
 
@@ -331,6 +332,15 @@ Actor: Usuario
 Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos. 
 
 Prioridad: Media
+
+### Requerimientos no funcionales
+RNF4: Minimizar Uso de Ads 
+Descripción: El sistema deberá implementar anuncios no intrusivos, para no agobiar al usuario que lo utiliza.
+
+RNF5: Sencilla 
+Descripción: El sistema debe ser simple y fácil de utilizar.
+
+
 
 ## User Stories / Use Cases detallados
 
