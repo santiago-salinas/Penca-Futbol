@@ -483,6 +483,8 @@ UC:
 ## Bocetos de IU
 ![](bocetosiu/UC1.png)
 ![](bocetosiu/UC2.png)
+![](bocetosiu/UC5.png)
+![](bocetosiu/UC6.png)
 
 # Validación y verificación
 
