@@ -368,6 +368,25 @@ Descripción: Uso de librerías de diseño como MDWC
 
 ## User Stories / Use Cases detallados
 
+US: 
+Título: Partidos
+Narrativa: 
+Como usuario
+	Quiero ver los partidos
+	Para estar informado
+Criterios de aceptación: 
+	Veo los partidos
+
+US:
+Título: Predecir
+Narrativa: 
+Como usuario
+	Quiero predecir el resultado de un partido
+	Para ver que tan acertado estoy
+Criterios de aceptación: 
+El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema
+
+
 US:
 Título: Obtención de puntos
 Narrativa: 
