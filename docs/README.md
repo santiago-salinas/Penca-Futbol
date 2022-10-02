@@ -427,6 +427,8 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 
 
 ### User Cases
+
+UC:
 **Título:** Ver partidos próximos
 **Actor:** Usuario
 
@@ -435,7 +437,7 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 | -------- | -------- | 
 | 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 
-
+UC:
 **Título:** Predecir
 **Actor:** Usuario
 
@@ -445,6 +447,38 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 | 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
 | 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
 
+UC:
+**Título:** Grupos
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores| Respuesta del sistema |
+| -------- | -------- |
+| 1. Selecciona área "Grupo" | 2. Muestra los grupos a los que pertenece  |
+| 3. Selecciona "Crear grupo" | 4. Muestra un código único para ese nuevo grupo |
+| 5. Selecciona "Unirse a grupo" | 6. Muestra un campo de texto para ingresar el código |
+| 7. Ingresa el código | 8. Agrega al usuario al grupo |
+
+**Curso alternativo:**
+
+
+**7.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe"
+
+UC:
+**Título:** Canje
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores | Respuesta del sistema | 
+| -------- | -------- | 
+| 1. Selecciona el área "Canje" | 2. Muestra una lista con los productos disponibles | 
+| 3. Selecciona un producto de la lista | 4. Muestra los detalles del producto | 
+| 5. Selecciona "Confirmar canje" | 6. Muestra código del producto y dirección para ir a buscarlo | 
+
+**Curso alternativo:**
+
+
+**5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"
 
 ## Bocetos de IU
 
