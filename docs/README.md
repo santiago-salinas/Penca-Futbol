@@ -275,7 +275,7 @@ Referencias a fuentes de información
 ![](investigacion/modelo.png)
 # Especificación
 
-# Definición de requerimientos funcionales y no funcionales
+## Definición de requerimientos funcionales y no funcionales
 ### Requerimientos funcionales
 RF: No Login 
 Actor: Usuario
@@ -345,7 +345,6 @@ Colors primary: Green 900, secondary: Light Blue 800
 Font: Roboto
 Icons: filled
 
-
 RNF2: Números grandes.
 Descripción: El sistema debe presentar los scores y predicciones en un formato grande, de forma que el usuario pueda ver de forma rápida y clara, sin mucho esfuerzo.
 
@@ -358,6 +357,14 @@ Descripción: El sistema deberá implementar anuncios no intrusivos, para no ago
 RNF5: Sencilla 
 Descripción: El sistema debe ser simple y fácil de utilizar.
 
+RNF6: Navegación 
+Descripción: Página única con navegación entre secciones
+
+RNF7: Instantaneidad 
+Descripción: El sistema deberá ser rápido en cuanto a la muestra de resultados y entrega de puntos.
+
+RNF8: Material Design Web Components 
+Descripción: Uso de librerías de diseño como MDWC
 
 
 ## User Stories / Use Cases detallados
