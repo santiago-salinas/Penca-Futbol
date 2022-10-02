@@ -301,6 +301,22 @@ User Stories / Use Cases detallados
 
 Bocetos de IU
 
+
+RF: Estadísticas Pre-Producción
+Actor: Usuario
+
+Descripción: El usuario debe estar informado de ciertas estadísticas al momento de realizar la predicción. No todos los usuarios saben cómo juegan ciertos países, por lo que brindar esta información da una mano. Aquellos más metidos en el fútbol, tendrán ventaja de igual forma al saber las estrategias de cada equipo.
+
+Prioridad: Media
+
+RF: Logros
+Actor: Usuario
+
+Descripción: El sistema debe presentarle al usuario, la posibilidad de mostrar sus logros de forma fácil frente a sus pares. Definimos un logro, como un objetivo arbitrario al cual se le asigna un cierto “badge” icono a él.
+
+Prioridad: Media
+
+
 # Validación y verificación
 
 Verificar la especificación
