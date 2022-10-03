@@ -1,5 +1,4 @@
 # Informe académico entrega 1
-Fecha de entrega: 3-oct-2021
 
 # Repositorio Git
 
@@ -71,13 +70,13 @@ Finalmente, para que nuestros cambios se vean reflejados en la web de Github. Fi
 
 `$ git push`
 
-Si nos encontramos con algun tipo de error, que nos indique que la rama no existe de forma remota, repetimos el comando anterior de la siguiente forma:
+Si nos encontramos con algún tipo de error, que nos indique que la rama no existe de forma remota, repetimos el comando anterior de la siguiente forma:
 
 `$ git push --set-upstream origin develop`
 
 Este ultimo push se nos exige para generar una rama visible en el github
 ***
-Si un compañero, o nostros mismos tenemos el clon del git desde otro computador, podemos obtener la ultima version subida a github haciendo:
+Si un compañero, o nosotros mismos tenemos el clon del git desde otro computador, podemos obtener la ultima version subida a github haciendo:
 
 `$ git pull`
 ***
@@ -148,15 +147,27 @@ Pero aquí dejamos unos pocos commits como resumen:
 
 ![](investigacion/commits.png)
 
+# Glosario   
+Fixture: Un fixture es todo el conjunto de partidos que se juegan entre los equipos durante un campeonato o temporada. Comúnmente asociado a hacer uso de esta información al realizar apuestas sobre los diferentes posibles resultados finales.    
+Penca: Una penca es un juego de apuestas donde se busca adivinar un resultado final.   
+Predicción: Anunciar un posible resultado del futuro.   
+Aplicación de fixture: Aplicación la cual permite realizar diferentes apuestas de forma más tecnológica.   
+Estadística: Determinar los diferentes valores de un algo, en base a una o diferentes características.   
+Canje: Intercambio de objetos, o cosas, no necesariamente de la misma índole.
+Usuario: Persona que utiliza la aplicación.   
+
+
+
+
 # Elicitación
 Técnicas de elicitación utilizadas:  
-Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarollar.
+Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarrollar.
 
 Encuesta: Una encuesta es un formulario con preguntas, el cual se presenta a un grupo de personas para que el mismo lo complete, con el objetivo de desarrollar la solución a un problema en base a las mismas.
 
 Ingeniería inversa: La ingeniería inversa es un proceso en cual se observa la construcción, diseño, y demás características de un producto ya construido, para así crear uno igual.
 
-User Persona: Los User Persona son un modelo ficticio de usuarios, que ayuda a generar una idea general de los motivos, necesidades, frustraciones, habitos que tiene el mismo, y así poder ofrecer un producto que se adapte a todas esas características.
+User Persona: Los User Persona son un modelo ficticio de usuarios, que ayuda a generar una idea general de los motivos, necesidades, frustraciones, hábitos que tiene el mismo, y así poder ofrecer un producto que se adapte a todas esas características.
 
 ## Etapas y posibles preguntas guía para la entrevista (10 minutos)
 ### Etapa 1: Introducción casual
@@ -274,7 +285,7 @@ Penca Ovación Movistar
 
 ## Definición de requerimientos funcionales y no funcionales
 ## Requerimientos funcionales
-### RF1: No Login 
+### RF1: No Login
 Actor: Usuario
 
 Descripción: El sistema debe funcionar sin que el usuario final, se creé una cuenta. Los datos se guardan de forma local.
@@ -291,11 +302,11 @@ Prioridad: Alta
 ### RF3: Predicción 
 Actor: Usuario
 
-Descripción: El usuario debe ser capaz de insertar una predicción a los próximos partidos.
+Descripción: El usuario debe ser capaz de insertar una predicción por cada próximo partido. Una vez hecha, no puede modificarse.
 
 Prioridad: Alta
 ***
-### RF4: Estadísticas Pre-Producción
+### RF4: Estadísticas Pre-Predicción
 Actor: Usuario
 
 Descripción: El usuario debe estar informado de ciertas estadísticas al momento de realizar la predicción. No todos los usuarios saben cómo juegan ciertos países, por lo que brindar esta información da una mano. Aquellos más metidos en el fútbol, tendrán ventaja de igual forma al saber las estrategias de cada equipo.
@@ -326,7 +337,7 @@ Prioridad: Baja
 ### RF8: Hacer grupo con códigos de amigo (sin login) 
 Actor: Usuario
 
-Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos. 
+Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos únicos para cada grupo que se cree. Un mismo usuario puede pertenecer a varios grupos, así como salir de ellos. 
 
 Prioridad: Media
 ***
@@ -346,29 +357,30 @@ Icons: filled
 Descripción: El sistema debe presentar los scores y predicciones en un formato grande, de forma que el usuario pueda ver de forma rápida y clara, sin mucho esfuerzo.
 ***
 ### RNF3: Responsive
-Descripción: El sistema debe ser tanto web como mobile
+Descripción: El sistema debe ser tanto web (HTML 5) como mobile (Android 10 en adelante)
 ***
 ### RNF4: Minimizar Uso de Ads 
 Descripción: El sistema deberá implementar anuncios no intrusivos, para no agobiar al usuario que lo utiliza.
 ***
 ### RNF5: Sencilla 
-Descripción: El sistema debe ser simple y fácil de utilizar.
+Descripción: El sistema debe tener una presentación minimalista, con no mas de 8 acciones posibles distintas en una misma pantalla, y las mismas deberán tener un titulo descriptivo de su función.
 ***
 ### RNF6: Navegación 
 Descripción: Página única con navegación entre secciones
 ***
 ### RNF7: Instantaneidad 
-Descripción: El sistema deberá ser rápido en cuanto a la muestra de resultados y entrega de puntos.
+Descripción: El sistema deberá mostrar los resultados y calcular los puntos que puede recibir el usuario en menos de media hora luego de finalizado el partido.
 ***
 ### RNF8: Material Design Web Components 
 Descripción: Uso de librerías de diseño como MDWC
 
 ***
 ***
-## User Stories / Use Cases detallados
+## User Stories / User Cases detallados
 ### User Stories 
 ### US1: 
 Título: Partidos  
+Requerimiento asociado: RF2  
 Narrativa:  
 Como usuario  
 	Quiero ver los partidos  
@@ -378,26 +390,62 @@ Criterios de aceptación:
 ***
 ### US2:  
 Título: Predecir  
+Requerimiento asociado: RF3 , RF4
 Narrativa:   
 Como usuario  
 	Quiero predecir el resultado de un partido  
 	Para ver que tan acertado estoy  
 Criterios de aceptación:   
-El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema  
+El usuario ingresa una predicción valida en base a sus conocimientos y las estadísticas otorgadas por el sistema  
 
 ***
 ### US3:
 Título: Obtención de puntos  
+Requerimiento asociado: RF6  
 Narrativa:   
 Como usuario  
 	Quiero obtener puntos  
 	Para luego canjearlos por premios  
 Criterios de aceptación:   
 	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.  
-	
 ***
-### US4:
-Título: Status  
+### US4: 
+Título: Crear Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario  
+	Quiero crear un grupo  
+	Para pertenecer a uno  
+Criterios de aceptación:   
+	El usuario crea un grupo vacío, obteniendo el código de este  
+
+***
+### US5: 
+Título: Unirse a Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario   
+	Quiero unirme a un grupo  
+	Para pertenecer a uno  
+Criterios de aceptación:   
+	El usuario se une a un grupo, utilizando el código de este  
+
+***
+### US6: 
+Título: Ver Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario    
+	Quiero ver mis grupos    
+	Para saber como voy respecto a otros    
+Criterios de aceptación:   
+	El usuario ver el grupo  
+
+***
+
+### US7:
+Título: Status (Ver logros o puntos) 
+Requerimiento asociado: RF5 , RF6    
 Narrativa:   
 Como usuario  
 	Quiero ver mis puntos y logros  
@@ -405,19 +453,9 @@ Como usuario
 Criterios de aceptación:   
 	La visualización en pantalla de los puntos y logros del usuario
 ***
-### US5: 
-Título: Grupo  
-Narrativa:   
-    Como usuario  
-	Quiero crear o unirme a un grupo  
-	Para pertenecer a uno  
-Criterios de aceptación:   
-	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este  
-
-***
-    
-### US6: 
+### US8: 
 Título: Canje  
+Requerimiento asociado: RF7  
 Narrativa:   
 Como usuario  
 	Quiero canjear mis puntos  
@@ -429,37 +467,43 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 ### User Cases
 
 ### UC1:
-**Título:** Ver partidos próximos
+User story asociado: US1  
+**Título:** Ver partidos próximos  
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
+| Acción de los actores                        | Respuesta del sistema                                          |
+| -------------------------------------------- | -------------------------------------------------------------- |
+| 1. Selecciona “Próximos Partidos” (Figura 1) | 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 
+(Figura 1):  
 ![](bocetosiu/UC1.png)
 ***
 ### UC2:
-**Título:** Predecir
+User story asociado: US2  
+**Título:** Predecir  
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
-| 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
+| Acción de los actores                                                              | Respuesta del sistema                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” (Figura 2.1) | 2. Muestra un campo de texto para poder ingresar la predicción. (Figura 2.2) |
+| 3. Presiona el botón “Confirmar Predicción” (Figura 2.3)                           | 4. Se confirma la predicción                                                 |
 
+(Figura 2): 
 ![](bocetosiu/UC2.png)
 
 ***
 ### UC3:
-**Título:** Obtención de puntos
+User story asociado: US3    
+**Título:** Obtención de puntos  
 **Actor:** Usuario
 
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona área resultados| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
-| 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado” |
+**Curso normal:**
+| Acción de los actores                                | Respuesta del sistema                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------- |
+| 1. Selecciona área resultados (Figura 3)             | 2.Muestra los partidos de los cuales ya se conocen los resultados |
+| 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado”        |
 
 **Curso alternativo:**
 **2.1** No hay resultados, no muestra nada
@@ -468,37 +512,79 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 
 **3.2** El usuario ya reclamó previamente sus puntos  
 
+(Figura 3):  
 ![](bocetosiu/UC3.png)
 
 ***
 ### UC4:
-**Título:** Grupos
+User story asociado: US5  
+**Título:** Crear un Grupo   
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1. Selecciona área "Grupo" | 2. Muestra los grupos a los que pertenece  |
-| 3. Selecciona "Crear grupo" | 4. Muestra un código único para ese nuevo grupo |
-| 5. Selecciona "Unirse a grupo" | 6. Muestra un campo de texto para ingresar el código |
-| 7. Ingresa el código | 8. Agrega al usuario al grupo |
+| Acción de los actores                    | Respuesta del sistema                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 4.1)  | 2. Muestra los grupos a los que pertenece y arriba dos opciones        |
+| 3. Selecciona "Crear grupo" (Figura 4.1) | 4. El sistema pide el ingreso de un nombre (Figura 4.2)                |
+| 5. Ingresa un nombre                     | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.3) |
+| 5. Vuelve al menu de grupos              | 6. El sistema muestra los grupos (Figura 4.4)                          |
 
 
 **Curso alternativo:**
 
-**7.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe"   
+**5.1:** El nombre que ingreso es vacío, se pide reingreso.  
+
+(Figura 4):  
 
 ![](bocetosiu/UC4.png)
-
-***
 ### UC5:
-**Título:** Status
+User story asociado: US5  
+**Título:** Unirse a Grupo    
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1.Selecciona la opción “Perfil” en el área inferior. | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados|
+| Acción de los actores                   | Respuesta del sistema                                             |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 5.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones     |
+| 3. Selecciona "Unirse a grupo"          | 4. Muestra un campo de texto para ingresar el código (Figura 5.2) |
+| 5. Ingresa el código                    | 6. Agrega al usuario al grupo, mostrando el grupo (Figura 5.3)    |
+
+
+**Curso alternativo:**
+
+**6.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe", pide reingreso.
+
+(Figura 5):   
+![](bocetosiu/UC5.png)
+
+### UC6:
+User story asociado: US6   
+**Título:** Ver Grupo   
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores                                   | Respuesta del sistema                                         |
+| ------------------------------------------------------- | ------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 6.1)                 | 2. Muestra los grupos a los que pertenece arriba dos opciones |
+| 3. Selecciona uno de los grupos clickeando en la flecha | 5. Muestra el grupo (Figura 6.2)                              |
+
+**Curso alternativo:**
+
+**3.1:** No pertenece a ningún grupo y se le indica.
+
+(Figura 6):   
+![](bocetosiu/UC6.png)
+
+***
+### UC7:
+User story asociado: US7  
+**Título:** Status (Ver logros o puntos)
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores                                           | Respuesta del sistema                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1.Selecciona la opción “Perfil” en el área inferior. (Figura 7) | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados |
 
 **Curso alternativo:**
 
@@ -506,43 +592,83 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 
 En el área inferior, en la opción “Perfil”, el usuario es capaz de visualizar la cantidad de puntos acumulados en base a sus predicciones, al igual que sus logros.  
 
-![](bocetosiu/UC5.png)
+(Figura 7):  
+![](bocetosiu/UC7.png)
 
 ***
-### UC6:
-**Título:** Canje
+### UC8:
+User story asociado: US8  
+**Título:** Canje + Ver artículos disponibles
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona el área "Canje" | 2. Muestra una lista con los productos disponibles | 
-| 3. Selecciona un producto de la lista | 4. Muestra los detalles del producto | 
-| 5. Selecciona "Confirmar canje" | 6. Muestra código del producto y dirección para ir a buscarlo | 
+| Acción de los actores                                                                                 | Respuesta del sistema                                         |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| 1. Selecciona el área "Canje" (Figura 8.1)                                                            | 2. Muestra una lista con los productos disponibles            |
+| 3. Selecciona un producto de la lista para canjearlo o ver su comprobante si ya lo canjeo previamente | 4. Muestra los detalles del producto (Figura 8.2)             |
+| 5. Selecciona "Confirmar canje"                                                                       | 6. Muestra código del producto y dirección para ir a buscarlo |
 
 **Curso alternativo:**
 
 **5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"  
 
-![](bocetosiu/UC6.png)
+**5.2:** El usuario ya lo canjeo previamente, por lo que ira directo a ver el comprobante y lugar de retiro 
+
+(Figura 8):  
+![](bocetosiu/UC8.png)
 
 # Validación y verificación
+
+## Validación
 Realizamos un reencuentro con la persona entrevistada para presentarle el boceto de las características finales de la aplicación, su feedback fue positivo, sintió que pudimos plasmar las ideas generales que nos comentó a la perfección e ir más allá. 
 A nivel grupal sentimos que pudimos obtener los requerimientos que se esperaban para así formar la base de la aplicación.
 
+##  Verificación de los requerimientos
+
+Para verificar que nuestros requerimientos eran correctos nos basamos en que cumplan con los siguientes criterios:  
+* **Correcto:** el requerimiento provee una función que es acorde con una necesidad de los stakeholders. La función está descrita con claridad.  
+* **Factible:** es posible implementar el requerimiento dentro de las capacidades y limitaciones del sistema y el proyecto.  
+* **No ambiguo:** la definición del requerimiento debe ser comprensible; quien lo lee debe ser capaz de comprender lo que fue definido.   
+* **Verificable:** podemos definir formas de probar el requerimiento.  
+* **Consistente:** los requerimientos deben ser atómicos y no entrar en conflicto con otros o contradecirse.  
+* **Completo:** la especificación tiene el detalle suficiente para permitirle al equipo entender lo que se debe desarrollar.
+
+### Requerimientos funcionales   
+
+|              | RF1 | RF2 | RF3 | RF4 | RF5 | RF6 | RF7 | RF8 |
+|------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Correcto** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Factible** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **No ambiguo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Verificable** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Consistente** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Completo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+
+### Requerimientos no funcionales   
+
+|              | RNF1 | RNF2 | RNF3 | RNF4 | RNF5 | RNF6 | RNF7 | RNF8 |
+|------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| **Correcto** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Factible** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **No ambiguo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Verificable** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Consistente** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Completo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+
+**Fuente:** Edgar Fernández, (2021, 5 de julio). *Cómo Deleitar A Tus Usuarios: Aprende La Validación De Requerimientos*. Edgar Fernández software industry coach.https://www.edgarfernandez.com/2021/07/05/como-deleitar-a-tus-usuarios-aprende-la-validacion-de-requerimientos/
 
 # Reflexión
 ## Detalle del trabajo individual
 
-## Santi
+### Santi
 A grandes rasgos considero que todo el equipo trabajó muy bien, hay trabajos por fuera de la computadora, como instancias de reunión, charla y puestas a punto que también se dieron y fueron clave para el desarrollo del mismo. Personalmente, trabajé en la escritura de los comandos administré las respuestas del cuestionario y participé de la entrevista que se le realizó a Giuliana; hice el análisis de 2 apps ofrecidas en el mercado; un user persona y las diagramaciones en figma; por último trabajé en el listado de requerimientos e identifique algunos user stories y cases.
 
-## Nati
-Al principio trabajamos más de forma individual, separando el trabajo que debia hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
+### Nati
+Al principio trabajamos más de forma individual, separando el trabajo que debía hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
 En particular hice la sección de versionado, el UPersona de Paulina y un par de User Stories y Use Cases. También ayudé un poco a la hora de hacer las preguntas de la entrevista/cuestionario.
 
-## María Noel
-Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, defini cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
+### María Noel
+Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, definí cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
 
 ## Aprendizaje
 Durante el proyecto pudimos aprender a utilizar git y github, familiarizarnos con los comandos y el uso de las ramas, ya que no todos teníamos conocimiento al respecto. Además vemos como algo positivo, que nos puede servir para el futuro, las técnicas de elicitación utilizadas y el uso de de User Stories y Use Cases. A grandes rasgos aprendimos la ingeniería de procesos, y más específicamente la parte de requerimientos y cómo extraer los mismos. También quizás no como aprendizaje como tal, pero se reforzaron los diferentes métodos de organización que se utilizan a la hora de trabajar en grupo, como lo es el análisis fuertes y debilidades de cada uno, la distribución equitativa de cada una de las partes y la validación y acuerdo del grupo en cada uno de los pasos dados, por más pequeño que fuese.
