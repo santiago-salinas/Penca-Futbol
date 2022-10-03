@@ -523,10 +523,9 @@ En el área inferior, en la opción “Perfil”, el usuario es capaz de visuali
 ![](bocetosiu/UC6.png)
 
 # Validación y verificación
+Realizamos un reencuentro con la persona entrevistada para presentarle el boceto de las características finales de la aplicación, su feedback fue positivo, sintió que pudimos plasmar las ideas generales que nos comentó a la perfección e ir más allá. 
+A nivel grupal sentimos que pudimos obtener los requerimientos que se esperaban para así formar la base de la aplicación.
 
-Verificar la especificación
-
-Validar la solución con personas no involucradas en el proyecto
 
 # Reflexión
 
