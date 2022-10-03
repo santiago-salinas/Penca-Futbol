@@ -301,7 +301,7 @@ Prioridad: Alta
 ### RF3: Predicción 
 Actor: Usuario
 
-Descripción: El usuario debe ser capaz de insertar una predicción a los próximos partidos.
+Descripción: El usuario debe ser capaz de insertar una predicción por cada próximo partido. Una vez hecha, no puede modificarse.
 
 Prioridad: Alta
 ***
@@ -336,7 +336,7 @@ Prioridad: Baja
 ### RF8: Hacer grupo con códigos de amigo (sin login) 
 Actor: Usuario
 
-Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos. 
+Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos únicos para cada grupo que se cree. Un mismo usuario puede pertenecer a varios grupos, así como salir de ellos. 
 
 Prioridad: Media
 ***
@@ -356,19 +356,19 @@ Icons: filled
 Descripción: El sistema debe presentar los scores y predicciones en un formato grande, de forma que el usuario pueda ver de forma rápida y clara, sin mucho esfuerzo.
 ***
 ### RNF3: Responsive
-Descripción: El sistema debe ser tanto web como mobile
+Descripción: El sistema debe ser tanto web (HTML 5) como mobile (Android 10 en adelante)
 ***
 ### RNF4: Minimizar Uso de Ads 
 Descripción: El sistema deberá implementar anuncios no intrusivos, para no agobiar al usuario que lo utiliza.
 ***
 ### RNF5: Sencilla 
-Descripción: El sistema debe ser simple y fácil de utilizar.
+Descripción: El sistema debe tener una presentación minimalista, con no mas de 8 acciones posibles distintas en una misma pantalla, y las mismas deberán tener un titulo descriptivo de su función.
 ***
 ### RNF6: Navegación 
 Descripción: Página única con navegación entre secciones
 ***
 ### RNF7: Instantaneidad 
-Descripción: El sistema deberá ser rápido en cuanto a la muestra de resultados y entrega de puntos.
+Descripción: El sistema deberá mostrar los resultados y calcular los puntos que puede recibir el usuario en menos de media hora luego de finalizado el partido.
 ***
 ### RNF8: Material Design Web Components 
 Descripción: Uso de librerías de diseño como MDWC
