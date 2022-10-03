@@ -368,7 +368,7 @@ Descripción: Uso de librerías de diseño como MDWC
 
 ## User Stories / Use Cases detallados
 ### User Stories 
-US: 
+US1: 
 Título: Partidos
 Narrativa: 
 Como usuario
@@ -377,7 +377,7 @@ Como usuario
 Criterios de aceptación: 
 	Veo los partidos
 
-US:
+US2:
 Título: Predecir
 Narrativa: 
 Como usuario
@@ -387,7 +387,7 @@ Criterios de aceptación:
 El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema
 
 
-US:
+US3:
 Título: Obtención de puntos
 Narrativa: 
 Como usuario
@@ -397,7 +397,7 @@ Criterios de aceptación:
 	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.
 	
 
-US:
+US4:
 Título: Status
 Narrativa: 
 Como usuario
@@ -406,7 +406,7 @@ Como usuario
 Criterios de aceptación: 
 	La visualización en pantalla de los puntos y logros del usuario
 
-US: 
+US5: 
 Título: Grupo
 Narrativa: 
     Como usuario
@@ -416,7 +416,7 @@ Criterios de aceptación:
 	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este
     
     
-US: 
+US6: 
 Título: Canje
 Narrativa: 
 Como usuario
@@ -428,7 +428,7 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 
 ### User Cases
 
-UC:
+UC1:
 **Título:** Ver partidos próximos
 **Actor:** Usuario
 
@@ -436,8 +436,8 @@ UC:
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
 | 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
-
-UC:
+***
+UC2:
 **Título:** Predecir
 **Actor:** Usuario
 
@@ -447,7 +447,25 @@ UC:
 | 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
 | 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
 
-UC:
+***
+UC3:
+**Título:** Obtención de puntos
+**Actor:** Usuario
+
+| Acción de los actores | Respuesta del sistema | 
+| -------- | -------- | 
+| 1. Selecciona área resultados| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
+| 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado” |
+
+**Curso alternativo:**
+**2.1** No hay resultados, no muestra nada
+
+**3.1** El usuario no tiene nada para reclamar, porque no ingresó una predicción a ese partido, solo ve el resultado.
+
+**3.2** El usuario ya reclamó previamente sus puntos
+
+***
+UC4:
 **Título:** Grupos
 **Actor:** Usuario
 
@@ -461,10 +479,27 @@ UC:
 
 **Curso alternativo:**
 
-
 **7.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe"
+***
+UC5:
+**Título:** Status
+**Actor:** Usuario
 
-UC:
+**Curso normal:**
+| Acción de los actores| Respuesta del sistema |
+| -------- | -------- |
+| 1.Selecciona la opción “Perfil” en el área inferior. | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados|
+
+**Curso alternativo:**
+
+**2.1** Si no hay logros, el sistema lo indicará
+
+En el área inferior, en la opción “Perfil”, el usuario es capaz de visualizar la cantidad de puntos acumulados en base a sus predicciones, al igual que sus logros.
+
+***
+
+***
+UC6:
 **Título:** Canje
 **Actor:** Usuario
 
@@ -476,7 +511,6 @@ UC:
 | 5. Selecciona "Confirmar canje" | 6. Muestra código del producto y dirección para ir a buscarlo | 
 
 **Curso alternativo:**
-
 
 **5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"
 
