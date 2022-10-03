@@ -1,6 +1,4 @@
 # Informe académico entrega 1
-Fecha de entrega: 18-oct-2021
-
 # Repositorio Git
 
 Como parte del proceso de **Ingeniería de Software**, por el lado de procesos de apoyo, utilizaremos una herramienta de ***Software Control Management*** (Gestión de control de software) llamada **Git**.
@@ -274,7 +272,7 @@ Penca Ovación Movistar
 
 ## Definición de requerimientos funcionales y no funcionales
 ## Requerimientos funcionales
-### RF1: No Login 
+### RF1: No Login
 Actor: Usuario
 
 Descripción: El sistema debe funcionar sin que el usuario final, se creé una cuenta. Los datos se guardan de forma local.
@@ -295,7 +293,7 @@ Descripción: El usuario debe ser capaz de insertar una predicción a los próxi
 
 Prioridad: Alta
 ***
-### RF4: Estadísticas Pre-Producción
+### RF4: Estadísticas Pre-Predicción
 Actor: Usuario
 
 Descripción: El usuario debe estar informado de ciertas estadísticas al momento de realizar la predicción. No todos los usuarios saben cómo juegan ciertos países, por lo que brindar esta información da una mano. Aquellos más metidos en el fútbol, tendrán ventaja de igual forma al saber las estrategias de cada equipo.
@@ -365,10 +363,11 @@ Descripción: Uso de librerías de diseño como MDWC
 
 ***
 ***
-## User Stories / Use Cases detallados
+## User Stories / User Cases detallados
 ### User Stories 
 ### US1: 
 Título: Partidos  
+Requerimiento asociado: RF2  
 Narrativa:  
 Como usuario  
 	Quiero ver los partidos  
@@ -378,16 +377,18 @@ Criterios de aceptación:
 ***
 ### US2:  
 Título: Predecir  
+Requerimiento asociado: RF3 , RF4
 Narrativa:   
 Como usuario  
 	Quiero predecir el resultado de un partido  
 	Para ver que tan acertado estoy  
 Criterios de aceptación:   
-El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema  
+El usuario ingresa una predicción valida en base a sus conocimientos y las estadísticas otorgadas por el sistema  
 
 ***
 ### US3:
 Título: Obtención de puntos  
+Requerimiento asociado: RF6  
 Narrativa:   
 Como usuario  
 	Quiero obtener puntos  
@@ -398,6 +399,7 @@ Criterios de aceptación:
 ***
 ### US4:
 Título: Status  
+Requerimiento asociado: RF5 , RF6    
 Narrativa:   
 Como usuario  
 	Quiero ver mis puntos y logros  
@@ -407,6 +409,7 @@ Criterios de aceptación:
 ***
 ### US5: 
 Título: Grupo  
+Requerimiento asociado: RF8  
 Narrativa:   
     Como usuario  
 	Quiero crear o unirme a un grupo  
@@ -418,6 +421,7 @@ Criterios de aceptación:
     
 ### US6: 
 Título: Canje  
+Requerimiento asociado: RF7  
 Narrativa:   
 Como usuario  
 	Quiero canjear mis puntos  
@@ -429,7 +433,8 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 ### User Cases
 
 ### UC1:
-**Título:** Ver partidos próximos
+User story asociado: US1  
+**Título:** Ver partidos próximos  
 **Actor:** Usuario
 
 **Curso normal:**
@@ -437,10 +442,12 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 | -------- | -------- | 
 | 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 
+(Figura 1):  
 ![](bocetosiu/UC1.png)
 ***
 ### UC2:
-**Título:** Predecir
+User story asociado: US2  
+**Título:** Predecir  
 **Actor:** Usuario
 
 **Curso normal:**
@@ -449,13 +456,16 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 | 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
 | 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
 
+(Figura 2): 
 ![](bocetosiu/UC2.png)
 
 ***
 ### UC3:
-**Título:** Obtención de puntos
+User story asociado: US3    
+**Título:** Obtención de puntos  
 **Actor:** Usuario
 
+**Curso normal:**
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
 | 1. Selecciona área resultados| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
@@ -468,30 +478,50 @@ Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un product
 
 **3.2** El usuario ya reclamó previamente sus puntos  
 
+(Figura 3): 
 ![](bocetosiu/UC3.png)
 
 ***
 ### UC4:
-**Título:** Grupos
+User story asociado: US5  
+**Título:** Crear un Grupo
 **Actor:** Usuario
 
 **Curso normal:**
 | Acción de los actores| Respuesta del sistema |
 | -------- | -------- |
-| 1. Selecciona área "Grupo" | 2. Muestra los grupos a los que pertenece  |
-| 3. Selecciona "Crear grupo" | 4. Muestra un código único para ese nuevo grupo |
-| 5. Selecciona "Unirse a grupo" | 6. Muestra un campo de texto para ingresar el código |
-| 7. Ingresa el código | 8. Agrega al usuario al grupo |
+| 1. Selecciona área "Grupo" (Figura 4.1) | 2. Muestra los grupos a los que pertenece y arriba dos opciones|
+| 3. Selecciona "Crear grupo" (Figura 4.1)| 4. El sistema pide el ingreso de un nombre |
+| 5. Ingresa un nombre | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.2)|
 
 
 **Curso alternativo:**
 
-**7.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe"   
+**5.1:** El nombre que ingreso es vacío, se pide reingreso.
 
+### UC5:
+User story asociado: US5  
+**Título:** Unirse a Grupo
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores| Respuesta del sistema |
+| -------- | -------- |
+| 1. Selecciona área "Grupo" (Figura 4.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
+| 3. Selecciona "Unirse a grupo" | 4. Muestra un campo de texto para ingresar el código |
+| 5. Ingresa el código | 6. Agrega al usuario al grupo |
+
+
+**Curso alternativo:**
+
+**6.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe", pide reingreso.
+
+(Figura 4.1 4.2 4.3 4.4): 
 ![](bocetosiu/UC4.png)
 
 ***
-### UC5:
+### UC6:
+User story asociado: US4  
 **Título:** Status
 **Actor:** Usuario
 
@@ -509,8 +539,9 @@ En el área inferior, en la opción “Perfil”, el usuario es capaz de visuali
 ![](bocetosiu/UC5.png)
 
 ***
-### UC6:
-**Título:** Canje
+### UC7:
+User story asociado: US6  
+**Título:** Canje + Ver artículos disponibles
 **Actor:** Usuario
 
 **Curso normal:**
@@ -523,6 +554,7 @@ En el área inferior, en la opción “Perfil”, el usuario es capaz de visuali
 **Curso alternativo:**
 
 **5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"  
+
 
 ![](bocetosiu/UC6.png)
 
@@ -538,14 +570,14 @@ A nivel grupal sentimos que pudimos obtener los requerimientos que se esperaban 
 A grandes rasgos considero que todo el equipo trabajó muy bien, hay trabajos por fuera de la computadora, como instancias de reunión, charla y puestas a punto que también se dieron y fueron clave para el desarrollo del mismo. Personalmente, trabajé en la escritura de los comandos administré las respuestas del cuestionario y participé de la entrevista que se le realizó a Giuliana; hice el análisis de 2 apps ofrecidas en el mercado; un user persona y las diagramaciones en figma; por último trabajé en el listado de requerimientos e identifique algunos user stories y cases.
 
 ## Nati
-Al principio trabajamos más de forma individual, separando el trabajo que debia hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
+Al principio trabajamos más de forma individual, separando el trabajo que debía hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
 En particular hice la sección de versionado, el UPersona de Paulina y un par de User Stories y Use Cases. También ayudé un poco a la hora de hacer las preguntas de la entrevista/cuestionario.
 
 ## María Noel
-Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, defini cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
+Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, definí cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
 
 ## Aprendizaje
 Durante el proyecto pudimos aprender a utilizar git y github, familiarizarnos con los comandos y el uso de las ramas, ya que no todos teníamos conocimiento al respecto. Además vemos como algo positivo, que nos puede servir para el futuro, las técnicas de elicitación utilizadas y el uso de de User Stories y Use Cases. A grandes rasgos aprendimos la ingeniería de procesos, y más específicamente la parte de requerimientos y cómo extraer los mismos. También quizás no como aprendizaje como tal, pero se reforzaron los diferentes métodos de organización que se utilizan a la hora de trabajar en grupo, como lo es el análisis fuertes y debilidades de cada uno, la distribución equitativa de cada una de las partes y la validación y acuerdo del grupo en cada uno de los pasos dados, por más pequeño que fuese.
 
 ## Técnicas aplicadas.
-Buenas prácticas de versionado, conventional commits, entrevistas, cuestionarios, user personas, herramientas de diseño (fimga).
+Buenas prácticas de versionado, conventional commits, entrevistas, cuestionarios, user personas, herramientas de diseño (figma).
