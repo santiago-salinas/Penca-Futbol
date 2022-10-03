@@ -547,4 +547,5 @@ Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requer
 ## Aprendizaje
 Durante el proyecto pudimos aprender a utilizar git y github, familiarizarnos con los comandos y el uso de las ramas, ya que no todos teníamos conocimiento al respecto. Además vemos como algo positivo, que nos puede servir para el futuro, las técnicas de elicitación utilizadas y el uso de de User Stories y Use Cases. A grandes rasgos aprendimos la ingeniería de procesos, y más específicamente la parte de requerimientos y cómo extraer los mismos. También quizás no como aprendizaje como tal, pero se reforzaron los diferentes métodos de organización que se utilizan a la hora de trabajar en grupo, como lo es el análisis fuertes y debilidades de cada uno, la distribución equitativa de cada una de las partes y la validación y acuerdo del grupo en cada uno de los pasos dados, por más pequeño que fuese.
 
-## Técnicas de elicitación aplicadas.
+## Técnicas aplicadas.
+Buenas prácticas de versionado, conventional commits, entrevistas, cuestionarios, user personas, herramientas de diseño (fimga).
