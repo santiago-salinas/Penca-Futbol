@@ -143,6 +143,10 @@ En nuestro caso utilizaremos dos ramas: main y develop. La rama main aloja las v
 
 ## Resumen de commits y evolución del proyecto
 
+Para ver el historial de commits completo se puede acceder a https://github.com/ORTFIS2022/obligatorio-vazquez-fernandez-salinas/commits/main  
+Pero aquí dejamos unos pocos commits como resumen:  
+
+![](investigacion/commits.png)
 
 # Elicitación
 Técnicas de elicitación utilizadas:  
