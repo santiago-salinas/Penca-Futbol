@@ -13,7 +13,7 @@ Git nos permitirá crear repositorios tanto locales como hacer uso de repositori
 
 Para poder hacer uso de esta herramienta hay que tener instalado [Git](https://git-scm.com/) en nuestra computadora.
 
-Nuestro repositorio fue originalmente creador desde Github, por lo que no tendremos que inicializarlo nosotros de forma manual. Pero para poder trabajar en el de forma local debemos obtener una imagen del mismo haciendo uso del siguiente comando desde la terminal
+Nuestro repositorio fue originalmente creado desde Github, por lo que no tendremos que inicializarlo nosotros de forma manual. Pero para poder trabajar en el de forma local debemos obtener una imagen del mismo haciendo uso del siguiente comando desde la terminal
 
 `$ git clone <url>`
 
@@ -128,13 +128,11 @@ Siendo que esto es simplemente texto, si nuestra organización así lo necesite,
 
 # Versionado
 
-Buenas prácticas de versionado
 > "Un control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante."
 > (Pro Git - About Version Control, https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
-Uso de ramas separadas de 'main'
+
 ## Buenas prácticas de versionado
 
-Resumen de commits y evolución del proyecto
 Para realizar el versionado de nuestro trabajo utilizamos Git, un sistema de control de versiones distribuido que nos permite tener repositorios locales completamente funcionales, los cuales son clones del proyecto (situado en un repositorio remoto), lo cual facilita el trabajo simultáneo, mantener un registro de los cambios realizados por cada integrante, así como la opción de volver hacia atrás.
 A esta herramienta se le suma Github, la cual es una plataforma donde se puede guardar la documentación de los proyectos online (repositorio remoto).
 
@@ -262,11 +260,6 @@ Penca Ovación Movistar
 
 ***
 
-Evidencia de actividades de investigación
-
-Referencias a fuentes de información
-
-***
 ## Caracterización de usuarios: User Personas
 ![](investigacion/UPersona1.png)
 ![](investigacion/UPersona2.jpeg)
