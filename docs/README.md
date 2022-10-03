@@ -537,6 +537,12 @@ A grandes rasgos considero que todo el equipo trabajó muy bien, hay trabajos po
 Al principio trabajamos más de forma individual, separando el trabajo que debia hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
 En particular hice la sección de versionado, el UPersona de Paulina y un par de User Stories y Use Cases. También ayudé un poco a la hora de hacer las preguntas de la entrevista/cuestionario.
 
+## María Noel
+Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, defini cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
+
+
+
+
 
 
 Técnicas aplicadas y aprendizajes
