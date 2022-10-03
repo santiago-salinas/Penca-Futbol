@@ -617,21 +617,56 @@ User story asociado: US8
 ![](bocetosiu/UC8.png)
 
 # Validación y verificación
+
+## Validación
 Realizamos un reencuentro con la persona entrevistada para presentarle el boceto de las características finales de la aplicación, su feedback fue positivo, sintió que pudimos plasmar las ideas generales que nos comentó a la perfección e ir más allá. 
 A nivel grupal sentimos que pudimos obtener los requerimientos que se esperaban para así formar la base de la aplicación.
 
+##  Verificación de los requerimientos
+
+Para verificar que nuestros requerimientos eran correctos nos basamos en que cumplan con los siguientes criterios:  
+* **Correcto:** el requerimiento provee una función que es acorde con una necesidad de los stakeholders. La función está descrita con claridad.  
+* **Factible:** es posible implementar el requerimiento dentro de las capacidades y limitaciones del sistema y el proyecto.  
+* **No ambiguo:** la definición del requerimiento debe ser comprensible; quien lo lee debe ser capaz de comprender lo que fue definido.   
+* **Verificable:** podemos definir formas de probar el requerimiento.  
+* **Consistente:** los requerimientos deben ser atómicos y no entrar en conflicto con otros o contradecirse.  
+* **Completo:** la especificación tiene el detalle suficiente para permitirle al equipo entender lo que se debe desarrollar.
+
+### Requerimientos funcionales   
+
+|              | RF1 | RF2 | RF3 | RF4 | RF5 | RF6 | RF7 | RF8 |
+|------------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Correcto** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Factible** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **No ambiguo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Verificable** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Consistente** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Completo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+
+### Requerimientos no funcionales   
+
+|              | RNF1 | RNF2 | RNF3 | RNF4 | RNF5 | RNF6 | RNF7 | RNF8 |
+|------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| **Correcto** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Factible** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **No ambiguo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Verificable** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Consistente** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+| **Completo** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** | **✓** |
+
+**Fuente:** Edgar Fernández, (2021, 5 de julio). *Cómo Deleitar A Tus Usuarios: Aprende La Validación De Requerimientos*. Edgar Fernández software industry coach.https://www.edgarfernandez.com/2021/07/05/como-deleitar-a-tus-usuarios-aprende-la-validacion-de-requerimientos/
 
 # Reflexión
 ## Detalle del trabajo individual
 
-## Santi
+### Santi
 A grandes rasgos considero que todo el equipo trabajó muy bien, hay trabajos por fuera de la computadora, como instancias de reunión, charla y puestas a punto que también se dieron y fueron clave para el desarrollo del mismo. Personalmente, trabajé en la escritura de los comandos administré las respuestas del cuestionario y participé de la entrevista que se le realizó a Giuliana; hice el análisis de 2 apps ofrecidas en el mercado; un user persona y las diagramaciones en figma; por último trabajé en el listado de requerimientos e identifique algunos user stories y cases.
 
-## Nati
+### Nati
 Al principio trabajamos más de forma individual, separando el trabajo que debía hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
 En particular hice la sección de versionado, el UPersona de Paulina y un par de User Stories y Use Cases. También ayudé un poco a la hora de hacer las preguntas de la entrevista/cuestionario.
 
-## María Noel
+### María Noel
 Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, definí cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
 
 ## Aprendizaje
