@@ -16,13 +16,6 @@ Los informes académicos para cada entrega se realizan en los archivos README.md
 * [Informe entrega 1](docs/README.md)
 * [Informe entrega 2](src/README.md)
 
-| Fechas
-|-----------
-| Lectura: 21-mar-2022
-| Entrega 1: 21-nov-2022
-| Code freeze: 20-jun-2022
-| Entrega 2: 28-nov-2022
-
 [Letra del proyecto](letra.md)
 
 [Instalación](install.md)
