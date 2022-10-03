@@ -517,6 +517,8 @@ UC6:
 ## Bocetos de IU
 ![](bocetosiu/UC1.png)
 ![](bocetosiu/UC2.png)
+![](bocetosiu/UC3.png)
+![](bocetosiu/UC4.png)
 ![](bocetosiu/UC5.png)
 ![](bocetosiu/UC6.png)
 
