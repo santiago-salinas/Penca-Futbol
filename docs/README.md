@@ -371,61 +371,61 @@ Descripción: Uso de librerías de diseño como MDWC
 ## User Stories / Use Cases detallados
 ### User Stories 
 ### US1: 
-Título: Partidos
-Narrativa: 
-Como usuario
-	Quiero ver los partidos
-	Para estar informado
-Criterios de aceptación: 
-	Veo los partidos
+Título: Partidos  
+Narrativa:  
+Como usuario  
+	Quiero ver los partidos  
+	Para estar informado  
+Criterios de aceptación:  
+	Veo los partidos  
 ***
-### US2:
-Título: Predecir
-Narrativa: 
-Como usuario
-	Quiero predecir el resultado de un partido
-	Para ver que tan acertado estoy
-Criterios de aceptación: 
-El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema
+### US2:  
+Título: Predecir  
+Narrativa:   
+Como usuario  
+	Quiero predecir el resultado de un partido  
+	Para ver que tan acertado estoy  
+Criterios de aceptación:   
+El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema  
 
 ***
 ### US3:
-Título: Obtención de puntos
-Narrativa: 
-Como usuario
-	Quiero obtener puntos
-	Para luego canjearlos por premios
-Criterios de aceptación: 
-	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.
+Título: Obtención de puntos  
+Narrativa:   
+Como usuario  
+	Quiero obtener puntos  
+	Para luego canjearlos por premios  
+Criterios de aceptación:   
+	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.  
 	
 ***
 ### US4:
-Título: Status
-Narrativa: 
-Como usuario
-	Quiero ver mis puntos y logros
-	Para mostrarle a sus pares
-Criterios de aceptación: 
+Título: Status  
+Narrativa:   
+Como usuario  
+	Quiero ver mis puntos y logros  
+	Para mostrarle a sus pares  
+Criterios de aceptación:   
 	La visualización en pantalla de los puntos y logros del usuario
 ***
 ### US5: 
-Título: Grupo
-Narrativa: 
-    Como usuario
-	Quiero crear o unirme a un grupo
-	Para pertenecer a uno
-Criterios de aceptación: 
-	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este
+Título: Grupo  
+Narrativa:   
+    Como usuario  
+	Quiero crear o unirme a un grupo  
+	Para pertenecer a uno  
+Criterios de aceptación:   
+	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este  
 
 ***
     
 ### US6: 
-Título: Canje
-Narrativa: 
-Como usuario
-	Quiero canjear mis puntos
-	Para obtener un premio físico
-Criterios de aceptación: 
+Título: Canje  
+Narrativa:   
+Como usuario  
+	Quiero canjear mis puntos  
+	Para obtener un premio físico  
+Criterios de aceptación:   
 Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un producto a  cambio. Se le otorga un código para cambiar en una tienda afiliada.
 
 ***
