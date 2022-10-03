@@ -459,9 +459,9 @@ User story asociado: US1
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona “Próximos Partidos” (Figura 1)| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
+| Acción de los actores                        | Respuesta del sistema                                          |
+| -------------------------------------------- | -------------------------------------------------------------- |
+| 1. Selecciona “Próximos Partidos” (Figura 1) | 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 
 (Figura 1):  
 ![](bocetosiu/UC1.png)
@@ -472,10 +472,10 @@ User story asociado: US2
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” (Figura 2.1)| 2. Muestra un campo de texto para poder ingresar la predicción. (Figura 2.2) | 
-| 3. Presiona el botón “Confirmar Predicción” (Figura 2.3) | 4. Se confirma la predicción |
+| Acción de los actores                                                              | Respuesta del sistema                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” (Figura 2.1) | 2. Muestra un campo de texto para poder ingresar la predicción. (Figura 2.2) |
+| 3. Presiona el botón “Confirmar Predicción” (Figura 2.3)                           | 4. Se confirma la predicción                                                 |
 
 (Figura 2): 
 ![](bocetosiu/UC2.png)
@@ -487,10 +487,10 @@ User story asociado: US3
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona área resultados (Figura 3)| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
-| 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado” |
+| Acción de los actores                                | Respuesta del sistema                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------- |
+| 1. Selecciona área resultados (Figura 3)             | 2.Muestra los partidos de los cuales ya se conocen los resultados |
+| 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado”        |
 
 **Curso alternativo:**
 **2.1** No hay resultados, no muestra nada
@@ -509,12 +509,12 @@ User story asociado: US5
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1. Selecciona área "Grupo" (Figura 4.1) | 2. Muestra los grupos a los que pertenece y arriba dos opciones|
-| 3. Selecciona "Crear grupo" (Figura 4.1)| 4. El sistema pide el ingreso de un nombre (Figura 4.2)|
-| 5. Ingresa un nombre | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.3)|
-| 5. Vuelve al menu de grupos | 6. El sistema muestra los grupos (Figura 4.4)|
+| Acción de los actores                    | Respuesta del sistema                                                  |
+| ---------------------------------------- | ---------------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 4.1)  | 2. Muestra los grupos a los que pertenece y arriba dos opciones        |
+| 3. Selecciona "Crear grupo" (Figura 4.1) | 4. El sistema pide el ingreso de un nombre (Figura 4.2)                |
+| 5. Ingresa un nombre                     | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.3) |
+| 5. Vuelve al menu de grupos              | 6. El sistema muestra los grupos (Figura 4.4)                          |
 
 
 **Curso alternativo:**
@@ -530,11 +530,11 @@ User story asociado: US5
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1. Selecciona área "Grupo" (Figura 5.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
-| 3. Selecciona "Unirse a grupo" | 4. Muestra un campo de texto para ingresar el código (Figura 5.2)|
-| 5. Ingresa el código | 6. Agrega al usuario al grupo, mostrando el grupo (Figura 5.3)|
+| Acción de los actores                   | Respuesta del sistema                                             |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 5.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones     |
+| 3. Selecciona "Unirse a grupo"          | 4. Muestra un campo de texto para ingresar el código (Figura 5.2) |
+| 5. Ingresa el código                    | 6. Agrega al usuario al grupo, mostrando el grupo (Figura 5.3)    |
 
 
 **Curso alternativo:**
@@ -550,10 +550,10 @@ User story asociado: US6
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1. Selecciona área "Grupo" (Figura 6.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
-| 3. Selecciona uno de los grupos clickeando en la flecha | 5. Muestra el grupo (Figura 6.2)|
+| Acción de los actores                                   | Respuesta del sistema                                         |
+| ------------------------------------------------------- | ------------------------------------------------------------- |
+| 1. Selecciona área "Grupo" (Figura 6.1)                 | 2. Muestra los grupos a los que pertenece arriba dos opciones |
+| 3. Selecciona uno de los grupos clickeando en la flecha | 5. Muestra el grupo (Figura 6.2)                              |
 
 **Curso alternativo:**
 
@@ -569,9 +569,9 @@ User story asociado: US7
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores| Respuesta del sistema |
-| -------- | -------- |
-| 1.Selecciona la opción “Perfil” en el área inferior. (Figura 7) | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados|
+| Acción de los actores                                           | Respuesta del sistema                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 1.Selecciona la opción “Perfil” en el área inferior. (Figura 7) | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados |
 
 **Curso alternativo:**
 
@@ -589,11 +589,11 @@ User story asociado: US8
 **Actor:** Usuario
 
 **Curso normal:**
-| Acción de los actores | Respuesta del sistema | 
-| -------- | -------- | 
-| 1. Selecciona el área "Canje" (Figura 8.1) | 2. Muestra una lista con los productos disponibles | 
-| 3. Selecciona un producto de la lista para canjearlo o ver su comprobante si ya lo canjeo previamente | 4. Muestra los detalles del producto (Figura 8.2) | 
-| 5. Selecciona "Confirmar canje" | 6. Muestra código del producto y dirección para ir a buscarlo | 
+| Acción de los actores                                                                                 | Respuesta del sistema                                         |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| 1. Selecciona el área "Canje" (Figura 8.1)                                                            | 2. Muestra una lista con los productos disponibles            |
+| 3. Selecciona un producto de la lista para canjearlo o ver su comprobante si ya lo canjeo previamente | 4. Muestra los detalles del producto (Figura 8.2)             |
+| 5. Selecciona "Confirmar canje"                                                                       | 6. Muestra código del producto y dirección para ir a buscarlo |
 
 **Curso alternativo:**
 
