@@ -276,66 +276,67 @@ Referencias a fuentes de información
 # Especificación
 
 ## Definición de requerimientos funcionales y no funcionales
-### Requerimientos funcionales
-RF: No Login 
+## Requerimientos funcionales
+### RF1: No Login 
 Actor: Usuario
 
 Descripción: El sistema debe funcionar sin que el usuario final, se creé una cuenta. Los datos se guardan de forma local.
 
 Prioridad: Alta
- 
-RF: Ver Partidos Próximos 
+***
+### RF2: Ver Partidos Próximos 
 Actor: Usuario
 
 Descripción: El sistema debe mostrar un listado de los próximos partidos a jugar en la pantalla de inicio.
 
 Prioridad: Alta
-
-RF: Predicción 
+***
+### RF3: Predicción 
 Actor: Usuario
 
 Descripción: El usuario debe ser capaz de insertar una predicción a los próximos partidos.
 
-Prioridad: Altísima
-
-RF: Estadísticas Pre-Producción
+Prioridad: Alta
+***
+### RF4: Estadísticas Pre-Producción
 Actor: Usuario
 
 Descripción: El usuario debe estar informado de ciertas estadísticas al momento de realizar la predicción. No todos los usuarios saben cómo juegan ciertos países, por lo que brindar esta información da una mano. Aquellos más metidos en el fútbol, tendrán ventaja de igual forma al saber las estrategias de cada equipo.
 
 Prioridad: Media
-
-RF: Logros
+***
+### RF5: Logros
 Actor: Usuario
 
 Descripción: El sistema debe presentarle al usuario, la posibilidad de mostrar sus logros de forma fácil frente a sus pares. Definimos un logro, como un objetivo arbitrario al cual se le asigna un cierto “badge” icono a él.
 
 Prioridad: Media
-
-RF: Puntos 
+***
+### RF6: Puntos 
 Actor: Usuario
 
 Descripción: El sistema debe presentarle al usuario, la posibilidad de mostrar sus puntos de forma fácil. Estos puntos se obtienen según qué tan acertadas han sido las predicciones del usuario.
 
 Prioridad: Alta
-
-RF: Canjear Puntos 
+***
+### RF7: Canjear Puntos 
 Actor: Usuario
 
 Descripción: El sistema debe presentar al usuario, la posibilidad de canjear sus puntos en una tienda online, donde la misma podría contener objetos tales como camisetas, figuritas, y de más cosas.
 
 Prioridad: Baja
-
-RF: Hacer grupo con códigos de amigo (sin login) 
+***
+### RF8: Hacer grupo con códigos de amigo (sin login) 
 Actor: Usuario
 
 Descripción: El usuario podrá unirse o crear un grupo, haciendo uso de códigos. 
 
 Prioridad: Media
-
-### Requerimientos no funcionales
-
-RNF1: Especificación de estilo
+***
+## Requerimientos no funcionales
+***
+***
+### RNF1: Especificación de estilo
 Descripción: El sistema debe 
 
 https://material.io/resources/color
@@ -343,32 +344,33 @@ Nombre de la app: Mundial
 Colors primary: Green 900, secondary: Light Blue 800
 Font: Roboto
 Icons: filled
-
-RNF2: Números grandes.
+***
+### RNF2: Números grandes.
 Descripción: El sistema debe presentar los scores y predicciones en un formato grande, de forma que el usuario pueda ver de forma rápida y clara, sin mucho esfuerzo.
-
-RNF3: Responsive
+***
+### RNF3: Responsive
 Descripción: El sistema debe ser tanto web como mobile
-
-RNF4: Minimizar Uso de Ads 
+***
+### RNF4: Minimizar Uso de Ads 
 Descripción: El sistema deberá implementar anuncios no intrusivos, para no agobiar al usuario que lo utiliza.
-
-RNF5: Sencilla 
+***
+### RNF5: Sencilla 
 Descripción: El sistema debe ser simple y fácil de utilizar.
-
-RNF6: Navegación 
+***
+### RNF6: Navegación 
 Descripción: Página única con navegación entre secciones
-
-RNF7: Instantaneidad 
+***
+### RNF7: Instantaneidad 
 Descripción: El sistema deberá ser rápido en cuanto a la muestra de resultados y entrega de puntos.
-
-RNF8: Material Design Web Components 
+***
+### RNF8: Material Design Web Components 
 Descripción: Uso de librerías de diseño como MDWC
 
-
+***
+***
 ## User Stories / Use Cases detallados
 ### User Stories 
-US1: 
+### US1: 
 Título: Partidos
 Narrativa: 
 Como usuario
@@ -376,8 +378,8 @@ Como usuario
 	Para estar informado
 Criterios de aceptación: 
 	Veo los partidos
-
-US2:
+***
+### US2:
 Título: Predecir
 Narrativa: 
 Como usuario
@@ -386,8 +388,8 @@ Como usuario
 Criterios de aceptación: 
 El usuario ingresa una prediccion valida en base a sus conocimientos y las estadísticas otorgadas por el sistema
 
-
-US3:
+***
+### US3:
 Título: Obtención de puntos
 Narrativa: 
 Como usuario
@@ -396,8 +398,8 @@ Como usuario
 Criterios de aceptación: 
 	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.
 	
-
-US4:
+***
+### US4:
 Título: Status
 Narrativa: 
 Como usuario
@@ -405,8 +407,8 @@ Como usuario
 	Para mostrarle a sus pares
 Criterios de aceptación: 
 	La visualización en pantalla de los puntos y logros del usuario
-
-US5: 
+***
+### US5: 
 Título: Grupo
 Narrativa: 
     Como usuario
@@ -414,9 +416,10 @@ Narrativa:
 	Para pertenecer a uno
 Criterios de aceptación: 
 	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este
+
+***
     
-    
-US6: 
+### US6: 
 Título: Canje
 Narrativa: 
 Como usuario
@@ -425,10 +428,10 @@ Como usuario
 Criterios de aceptación: 
 Si el usuario alcanza la cantidad requerida de puntos, podrá recibir un producto a  cambio. Se le otorga un código para cambiar en una tienda afiliada.
 
-
+***
 ### User Cases
 
-UC1:
+### UC1:
 **Título:** Ver partidos próximos
 **Actor:** Usuario
 
@@ -437,7 +440,7 @@ UC1:
 | -------- | -------- | 
 | 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 ***
-UC2:
+### UC2:
 **Título:** Predecir
 **Actor:** Usuario
 
@@ -448,7 +451,7 @@ UC2:
 | 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
 
 ***
-UC3:
+### UC3:
 **Título:** Obtención de puntos
 **Actor:** Usuario
 
@@ -465,7 +468,7 @@ UC3:
 **3.2** El usuario ya reclamó previamente sus puntos
 
 ***
-UC4:
+### UC4:
 **Título:** Grupos
 **Actor:** Usuario
 
@@ -481,7 +484,7 @@ UC4:
 
 **7.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe"
 ***
-UC5:
+### UC5:
 **Título:** Status
 **Actor:** Usuario
 
@@ -497,9 +500,7 @@ UC5:
 En el área inferior, en la opción “Perfil”, el usuario es capaz de visualizar la cantidad de puntos acumulados en base a sus predicciones, al igual que sus logros.
 
 ***
-
-***
-UC6:
+### UC6:
 **Título:** Canje
 **Actor:** Usuario
 
