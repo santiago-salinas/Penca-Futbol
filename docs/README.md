@@ -528,11 +528,15 @@ A nivel grupal sentimos que pudimos obtener los requerimientos que se esperaban 
 
 
 # Reflexión
+## Detalle del trabajo individual
+
 ## Santi
 A grandes rasgos considero que todo el equipo trabajó muy bien, hay trabajos por fuera de la computadora, como instancias de reunión, charla y puestas a punto que también se dieron y fueron clave para el desarrollo del mismo. Personalmente, trabajé en la escritura de los comandos administré las respuestas del cuestionario y participé de la entrevista que se le realizó a Giuliana; hice el análisis de 2 apps ofrecidas en el mercado; un user persona y las diagramaciones en figma; por último trabajé en el listado de requerimientos e identifique algunos user stories y cases.
 
+## Nati
+Al principio trabajamos más de forma individual, separando el trabajo que debia hacer cada uno, mientras que más al final del proyecto trabajamos un poco en conjunto para poner ideas en común.
+En particular hice la sección de versionado, el UPersona de Paulina y un par de User Stories y Use Cases. También ayudé un poco a la hora de hacer las preguntas de la entrevista/cuestionario.
 
 
-Detalle del trabajo individual
 
 Técnicas aplicadas y aprendizajes
