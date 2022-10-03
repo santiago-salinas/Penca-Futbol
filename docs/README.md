@@ -540,9 +540,7 @@ En particular hice la sección de versionado, el UPersona de Paulina y un par de
 ## María Noel
 Dependiendo las diferentes etapas del proyecto, hubieron tiempos donde se requería el trabajo en conjunto, mientras otras permitían que cada integrante pudiese desarrollarse de forma individual y de forma libre, aunque a pesar de trabajar en esta forma disjunta, siempre se corroboraba y/o checkeaba con el resto del grupo, haciendo que ninguna parte sea totalmente unipersonal. Particularmente, trabajé organizando y reescribiendo las preguntas y etapas guía para la entrevista, participé de la entrevista realizada, y realicé la transcripción de la misma, defini cada una de las técnicas de elicitación utilizadas durante esta primera instancia, aporte mi versión de user persona, al igual que la realización de algunos user cases, y como último desarrolle la verificación final, teniendo en cuenta la persona entrevistada y la opinión de mis compañeros de trabajo.
 
+## Aprendizaje
+Durante el proyecto pudimos aprender a utilizar git y github, familiarizarnos con los comandos y el uso de las ramas, ya que no todos teníamos conocimiento al respecto. Además vemos como algo positivo, que nos puede servir para el futuro, las técnicas de elicitación utilizadas y el uso de de User Stories y Use Cases. A grandes rasgos aprendimos la ingeniería de procesos, y más específicamente la parte de requerimientos y cómo extraer los mismos. También quizás no como aprendizaje como tal, pero se reforzaron los diferentes métodos de organización que se utilizan a la hora de trabajar en grupo, como lo es el análisis fuertes y debilidades de cada uno, la distribución equitativa de cada una de las partes y la validación y acuerdo del grupo en cada uno de los pasos dados, por más pequeño que fuese.
 
-
-
-
-
-Técnicas aplicadas y aprendizajes
+## Técnicas de elicitación aplicadas.
