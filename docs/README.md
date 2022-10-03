@@ -146,6 +146,18 @@ Pero aquí dejamos unos pocos commits como resumen:
 
 ![](investigacion/commits.png)
 
+# Glosario   
+Fixture: Un fixture es todo el conjunto de partidos que se juegan entre los equipos durante un campeonato o temporada. Comúnmente asociado a hacer uso de esta información al realizar apuestas sobre los diferentes posibles resultados finales.    
+Penca: Una penca es un juego de apuestas donde se busca adivinar un resultado final.   
+Predicción: Anunciar un posible resultado del futuro.   
+Aplicación de fixture: Aplicación la cual permite realizar diferentes apuestas de forma más tecnológica.   
+Estadística: Determinar los diferentes valores de un algo, en base a una o diferentes características.   
+Canje: Intercambio de objetos, o cosas, no necesariamente de la misma índole.
+Usuario: Persona que utiliza la aplicación.   
+
+
+
+
 # Elicitación
 Técnicas de elicitación utilizadas:  
 Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarrollar.
