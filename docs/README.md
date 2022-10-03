@@ -69,13 +69,13 @@ Finalmente, para que nuestros cambios se vean reflejados en la web de Github. Fi
 
 `$ git push`
 
-Si nos encontramos con algun tipo de error, que nos indique que la rama no existe de forma remota, repetimos el comando anterior de la siguiente forma:
+Si nos encontramos con algún tipo de error, que nos indique que la rama no existe de forma remota, repetimos el comando anterior de la siguiente forma:
 
 `$ git push --set-upstream origin develop`
 
 Este ultimo push se nos exige para generar una rama visible en el github
 ***
-Si un compañero, o nostros mismos tenemos el clon del git desde otro computador, podemos obtener la ultima version subida a github haciendo:
+Si un compañero, o nosotros mismos tenemos el clon del git desde otro computador, podemos obtener la ultima version subida a github haciendo:
 
 `$ git pull`
 ***
@@ -148,13 +148,13 @@ Pero aquí dejamos unos pocos commits como resumen:
 
 # Elicitación
 Técnicas de elicitación utilizadas:  
-Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarollar.
+Entrevista: Una entrevista es una reunión entre dos personas, donde se realizan una secuencia de preguntas, cuya respuesta será de ayuda para resolver asuntos relacionados al negocio, o las características de software a desarrollar.
 
 Encuesta: Una encuesta es un formulario con preguntas, el cual se presenta a un grupo de personas para que el mismo lo complete, con el objetivo de desarrollar la solución a un problema en base a las mismas.
 
 Ingeniería inversa: La ingeniería inversa es un proceso en cual se observa la construcción, diseño, y demás características de un producto ya construido, para así crear uno igual.
 
-User Persona: Los User Persona son un modelo ficticio de usuarios, que ayuda a generar una idea general de los motivos, necesidades, frustraciones, habitos que tiene el mismo, y así poder ofrecer un producto que se adapte a todas esas características.
+User Persona: Los User Persona son un modelo ficticio de usuarios, que ayuda a generar una idea general de los motivos, necesidades, frustraciones, hábitos que tiene el mismo, y así poder ofrecer un producto que se adapte a todas esas características.
 
 ## Etapas y posibles preguntas guía para la entrevista (10 minutos)
 ### Etapa 1: Introducción casual
@@ -395,10 +395,43 @@ Como usuario
 	Para luego canjearlos por premios  
 Criterios de aceptación:   
 	Que el partido haya finalizado y están disponibles los resultados en el panel de resultados.  
-	
 ***
-### US4:
-Título: Status  
+### US4: 
+Título: Crear Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario  
+	Quiero crear un grupo  
+	Para pertenecer a uno  
+Criterios de aceptación:   
+	El usuario crea un grupo vacío, obteniendo el código de este  
+
+***
+### US5: 
+Título: Unirse a Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario   
+	Quiero unirme a un grupo  
+	Para pertenecer a uno  
+Criterios de aceptación:   
+	El usuario se une a un grupo, utilizando el código de este  
+
+***
+### US6: 
+Título: Ver Grupo  
+Requerimiento asociado: RF8  
+Narrativa:   
+    Como usuario    
+	Quiero ver mis grupos    
+	Para saber como voy respecto a otros    
+Criterios de aceptación:   
+	El usuario ver el grupo  
+
+***
+
+### US7:
+Título: Status (Ver logros o puntos) 
 Requerimiento asociado: RF5 , RF6    
 Narrativa:   
 Como usuario  
@@ -407,19 +440,7 @@ Como usuario
 Criterios de aceptación:   
 	La visualización en pantalla de los puntos y logros del usuario
 ***
-### US5: 
-Título: Grupo  
-Requerimiento asociado: RF8  
-Narrativa:   
-    Como usuario  
-	Quiero crear o unirme a un grupo  
-	Para pertenecer a uno  
-Criterios de aceptación:   
-	El usuario se une o crea un grupo vacío, obteniendo o ingresando el código de este  
-
-***
-    
-### US6: 
+### US8: 
 Título: Canje  
 Requerimiento asociado: RF7  
 Narrativa:   
@@ -440,7 +461,7 @@ User story asociado: US1
 **Curso normal:**
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
-| 1. Selecciona “Próximos Partidos”| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
+| 1. Selecciona “Próximos Partidos” (Figura 1)| 2. Muestra los partidos más inmediatos, sus equipos y horarios |
 
 (Figura 1):  
 ![](bocetosiu/UC1.png)
@@ -453,8 +474,8 @@ User story asociado: US2
 **Curso normal:**
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
-| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” | 2. Muestra un campo de texto para poder ingresar la predicción. | 
-| 3. Presiona el botón “Confirmar Predicción” | 4. Se confirma la predicción |
+| 1. Selecciona “Ingresar predicción” en el área de “Próximos partidos” (Figura 2.1)| 2. Muestra un campo de texto para poder ingresar la predicción. (Figura 2.2) | 
+| 3. Presiona el botón “Confirmar Predicción” (Figura 2.3) | 4. Se confirma la predicción |
 
 (Figura 2): 
 ![](bocetosiu/UC2.png)
@@ -468,7 +489,7 @@ User story asociado: US3
 **Curso normal:**
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
-| 1. Selecciona área resultados| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
+| 1. Selecciona área resultados (Figura 3)| 2.Muestra los partidos de los cuales ya se conocen los resultados | 
 | 3. El usuario clickea botón para reclamar sus puntos | 4. El sistema cambia el mensaje del botón a “ya reclamado” |
 
 **Curso alternativo:**
@@ -478,57 +499,79 @@ User story asociado: US3
 
 **3.2** El usuario ya reclamó previamente sus puntos  
 
-(Figura 3): 
+(Figura 3):  
 ![](bocetosiu/UC3.png)
 
 ***
 ### UC4:
 User story asociado: US5  
-**Título:** Crear un Grupo
+**Título:** Crear un Grupo   
 **Actor:** Usuario
 
 **Curso normal:**
 | Acción de los actores| Respuesta del sistema |
 | -------- | -------- |
 | 1. Selecciona área "Grupo" (Figura 4.1) | 2. Muestra los grupos a los que pertenece y arriba dos opciones|
-| 3. Selecciona "Crear grupo" (Figura 4.1)| 4. El sistema pide el ingreso de un nombre |
-| 5. Ingresa un nombre | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.2)|
+| 3. Selecciona "Crear grupo" (Figura 4.1)| 4. El sistema pide el ingreso de un nombre (Figura 4.2)|
+| 5. Ingresa un nombre | 6. El sistema genera un código único para ese nuevo grupo (Figura 4.3)|
+| 5. Vuelve al menu de grupos | 6. El sistema muestra los grupos (Figura 4.4)|
 
 
 **Curso alternativo:**
 
-**5.1:** El nombre que ingreso es vacío, se pide reingreso.
+**5.1:** El nombre que ingreso es vacío, se pide reingreso.  
 
+(Figura 4):  
+
+![](bocetosiu/UC4.png)
 ### UC5:
 User story asociado: US5  
-**Título:** Unirse a Grupo
+**Título:** Unirse a Grupo    
 **Actor:** Usuario
 
 **Curso normal:**
 | Acción de los actores| Respuesta del sistema |
 | -------- | -------- |
-| 1. Selecciona área "Grupo" (Figura 4.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
-| 3. Selecciona "Unirse a grupo" | 4. Muestra un campo de texto para ingresar el código |
-| 5. Ingresa el código | 6. Agrega al usuario al grupo |
+| 1. Selecciona área "Grupo" (Figura 5.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
+| 3. Selecciona "Unirse a grupo" | 4. Muestra un campo de texto para ingresar el código (Figura 5.2)|
+| 5. Ingresa el código | 6. Agrega al usuario al grupo, mostrando el grupo (Figura 5.3)|
 
 
 **Curso alternativo:**
 
 **6.1:** El código que ingresó el usuario no pertenece a ningún grupo: se emite el mensaje "Este código no existe", pide reingreso.
 
-(Figura 4.1 4.2 4.3 4.4): 
-![](bocetosiu/UC4.png)
+(Figura 5):   
+![](bocetosiu/UC5.png)
 
-***
 ### UC6:
-User story asociado: US4  
-**Título:** Status
+User story asociado: US6   
+**Título:** Ver Grupo   
 **Actor:** Usuario
 
 **Curso normal:**
 | Acción de los actores| Respuesta del sistema |
 | -------- | -------- |
-| 1.Selecciona la opción “Perfil” en el área inferior. | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados|
+| 1. Selecciona área "Grupo" (Figura 6.1) | 2. Muestra los grupos a los que pertenece arriba dos opciones |
+| 3. Selecciona uno de los grupos clickeando en la flecha | 5. Muestra el grupo (Figura 6.2)|
+
+**Curso alternativo:**
+
+**3.1:** No pertenece a ningún grupo y se le indica.
+
+(Figura 6):   
+![](bocetosiu/UC6.png)
+
+***
+### UC7:
+User story asociado: US7  
+**Título:** Status (Ver logros o puntos)
+**Actor:** Usuario
+
+**Curso normal:**
+| Acción de los actores| Respuesta del sistema |
+| -------- | -------- |
+| 1.Selecciona la opción “Perfil” en el área inferior. (Figura 7) | 2.Muestra el puntaje actual del usuario. Y debajo sus logros acumulados|
 
 **Curso alternativo:**
 
@@ -536,27 +579,30 @@ User story asociado: US4
 
 En el área inferior, en la opción “Perfil”, el usuario es capaz de visualizar la cantidad de puntos acumulados en base a sus predicciones, al igual que sus logros.  
 
-![](bocetosiu/UC5.png)
+(Figura 7):  
+![](bocetosiu/UC7.png)
 
 ***
-### UC7:
-User story asociado: US6  
+### UC8:
+User story asociado: US8  
 **Título:** Canje + Ver artículos disponibles
 **Actor:** Usuario
 
 **Curso normal:**
 | Acción de los actores | Respuesta del sistema | 
 | -------- | -------- | 
-| 1. Selecciona el área "Canje" | 2. Muestra una lista con los productos disponibles | 
-| 3. Selecciona un producto de la lista | 4. Muestra los detalles del producto | 
+| 1. Selecciona el área "Canje" (Figura 8.1) | 2. Muestra una lista con los productos disponibles | 
+| 3. Selecciona un producto de la lista para canjearlo o ver su comprobante si ya lo canjeo previamente | 4. Muestra los detalles del producto (Figura 8.2) | 
 | 5. Selecciona "Confirmar canje" | 6. Muestra código del producto y dirección para ir a buscarlo | 
 
 **Curso alternativo:**
 
 **5.1:** El usuario no tiene suficientes puntos: se emite el mensaje "No tienes suficientes puntos"  
 
+**5.2:** El usuario ya lo canjeo previamente, por lo que ira directo a ver el comprobante y lugar de retiro 
 
-![](bocetosiu/UC6.png)
+(Figura 8):  
+![](bocetosiu/UC8.png)
 
 # Validación y verificación
 Realizamos un reencuentro con la persona entrevistada para presentarle el boceto de las características finales de la aplicación, su feedback fue positivo, sintió que pudimos plasmar las ideas generales que nos comentó a la perfección e ir más allá. 
