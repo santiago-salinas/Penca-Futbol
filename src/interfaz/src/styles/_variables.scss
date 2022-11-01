@@ -1,7 +1,7 @@
 @use "@material/theme" with (
-  $primary: #512da8,
-  $secondary: #00796b,
-  $background: #121212,
+  $primary: #12771b,
+  $secondary: #1e68bd,
+  $background: #ffffff,
   $on-primary: #fff,
   $on-secondary: #fff
 );
@@ -11,14 +11,16 @@
 $fontFamily : 'Roboto Slab', serif;
 
 // Colors
-$background-dark: #121212;
-$primary: #512da8;
-$secondary: #00796b;
-$background: #fff;
-$on-primary: #fff;
-$on-secondary: #fff;
+$background-dark: #ffffff;
+$primary: #12771b;
+  $secondary: #1e68bd;
+  $background: #ffffff;
+  $on-primary: #fff;
+  $on-secondary: #fff;
 $expense: #FF8384;
 $income: #03B6A1;
+
+$partido: #12771b;
 
 
 
