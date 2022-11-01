@@ -35,6 +35,7 @@
   "license": "ISC",
   "dependencies": {
     "@material/button": "^13.0.0",
+    "@material/card": "^14.0.0",
     "@material/checkbox": "^13.0.0",
     "@material/drawer": "^13.0.0",
     "@material/fab": "^13.0.0",

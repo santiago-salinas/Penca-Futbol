@@ -3,10 +3,9 @@ class Partido {
         this.identificador = dataArray['identificador'];
 		this.equipo1 = dataArray['equipo1'];
 		this.equipo2 = dataArray['equipo2'];
-        //Boleano
-		this.prediccion = dataArray['prediccion'];
-        this.prediccion1 = dataArray['prediccion1'];
-        this.prediccion2 = dataArray['prediccion2'];
+		this.prediccion = dataArray['prediccion']; //booleano que indica si hay prediccion ingresada
+        this.prediccion1 = dataArray['prediccion1']; //para poner cuanto el primer equipo
+        this.prediccion2 = dataArray['prediccion2']; //para poner cuanto el segundo equipo
         this.fecha = dataArray['fecha'];
         this.type = 'Partido';
 	}
