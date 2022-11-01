@@ -93,3 +93,6 @@ const updateListTransactions = (list) => {
 }
 
 updatePartidos(instancia.getPartidosList());
+instancia.setPrediccion("001", 2, 13);
+instancia.setPrediccion("002", 12, 113);
+updatePartidos(instancia.getPartidosList());
