@@ -2,6 +2,8 @@ import Expense from "../../dominio/expense"
 import Income from "../../dominio/income";
 import Balance from "../../dominio/balance";
 import Saving from "../../dominio/saving";
+import Partido from "../../dominio/partido";
+
 
 export const changeVisibleSection = (target) => {
     document.querySelector('section.full-screen.active')?.classList.remove('active');
@@ -226,6 +228,10 @@ export const displayBalance = (balance) => {
 
 export const setTestData = () => {
     let cuenta = new Balance;
+
+    let partido1 = {'identificador': '001','equipo1': 'Uruguay','equipo2': 'Ghana','fecha': '24/12','prediccion': '0','prediccion1': '0','prediccion2': '0' };
+    let partidoObject1 = new Partido(partido1);
+    cuenta.addPartidosToList(partidoObject1);
     let dataSueldo ={
         'name': 'Sueldo','amount': 60000,'date' : '2021-10-07','currency' : 'UYU','monthly' : true
     };

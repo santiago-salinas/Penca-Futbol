@@ -5,6 +5,8 @@ class Balance {
 		this.expensesList = [];
         this.incomeList = [];
         this.savingList = [];
+
+        this.partidos = [];
 	}
 
 	getBalanceMoney() {
@@ -23,6 +25,10 @@ class Balance {
         return this.savingList;
     }
 
+    getPartidosList(){
+        return this.partidos;
+    }
+
     addExpenseToBalance(expense) {
         this.expensesList.push(expense);
         this.balanceMoney -= expense.amount;
@@ -34,6 +40,11 @@ class Balance {
     addSavingToList(saving){
         this.savingList.push(saving);
         this.savingMoney += saving.amount;
+    }
+
+    //TODO: Añadimos partidos
+    addPartidosToList(saving){
+        this.partidos.push(saving);
     }
     deleteIncomeFromList(incomeToDelete){
         this.deleteAux(this.incomeList,incomeToDelete);
