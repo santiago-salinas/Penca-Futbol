@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MisGastos</title>
-    <link rel="stylesheet" href="bundle.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MisGastos</title>
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link
+    href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900'
+    rel='stylesheet' type='text/css'>
 </head>
-          
+
 <body>
   <header class="mdc-top-app-bar app-bar" id="app-bar">
     <div class="mdc-top-app-bar__row">
@@ -51,31 +54,32 @@
       <!-- Home -->
       <section id="Inicio" class="full-screen active">
         <div class="section-content">
-        <div class="content-top">
-        <div class="chart">
-          <div class="chart-top">
-            <div class="container">
-              <div class="title">Gastos del mes</div>
-              <div class="amount"></div>
-            </div> 
+          <!--  TODO: Podremos borrar esto sin hacerlo invisible? -->
+          <div class="content-top" style="display: none;">
+            <div class="chart">
+              <div class="chart-top">
+                <div class="container">
+                  <div class="title">Gastos del mes</div>
+                  <div class="amount"></div>
+                </div>
+              </div>
+              <div class="chart-wrapper">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="balance">
+              <div class="title">
+                Tu balance actual es de:
+              </div>
+              <div class="balance-amount"></div>
+            </div>
           </div>
-          <div class="chart-wrapper">
-            <canvas id="myChart" ></canvas>
+          <div class="content-bottom">
+            <div class="title-section">Recientes</div>
+            <div class="summary">
+            </div>
           </div>
         </div>
-        <div class="balance">
-          <div class="title">
-            Tu balance actual es de:
-          </div>
-          <div class="balance-amount"></div>
-        </div>
-      </div>
-      <div class="content-bottom">
-        <div class="title-section">Recientes</div>
-        <div class="summary">
-        </div>
-      </div>
-      </div>
       </section>
       <!-- History -->
       <section id="Historial" class="full-screen">
@@ -119,7 +123,7 @@
             <div class="content-bottom">
               <span class="material-icons">
                 attach_money
-                </span>                
+              </span>
             </div>
           </div>
         </div>
@@ -135,278 +139,276 @@
             <div class="content-bottom">
               <span class="material-icons">
                 money_off
-                </span>                
+              </span>
             </div>
           </div>
         </div>
       </section>
       <!-- Expense -->
-      <section id="Gasto"class="full-screen">
+      <section id="Gasto" class="full-screen">
         <div class="section-container">
-        <div class="form-container">
-          <h2 class="section-title">Nuevo gasto</h2>
-          <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="name-label">Nombre</span>
-            <input  maxlength="15"  id="name" class="mdc-text-field__input" type="text" aria-labelledby="name-label" required>
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="amount-label">Monto</span>
-            <input max="9999999999" step=".01" id="amount" class="mdc-text-field__input" type="number" aria-labelledby="amount-laber" required>
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <label class="mdc-text-field mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="date-label">Fecha</span>
-            <input id="date" class="mdc-text-field__input" type="date" aria-labelledby="date-label" max="9999-12-31" required>
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <div class="mdc-select mdc-select--filled demo-width-class mdc-select--required">
-            <div class="mdc-select__anchor"
-                role="button"
-                aria-haspopup="listbox"
-                aria-expanded="false"
-                aria-labelledby="demo-label demo-selected-text">
-              <span class="mdc-select__ripple"></span>
-              <span id="demo-label" class="mdc-floating-label">Categoria</span>
-              <span class="mdc-select__selected-text-container">
-                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-              </span>
-              <span class="mdc-select__dropdown-icon">
-                <svg
-                    class="mdc-select__dropdown-icon-graphic"
-                    viewBox="7 10 10 5" focusable="false">
-                  <polygon
-                      class="mdc-select__dropdown-icon-inactive"
-                      stroke="none"
-                      fill-rule="evenodd"
-                      points="7 10 12 15 17 10">
-                  </polygon>
-                  <polygon
-                      class="mdc-select__dropdown-icon-active"
-                      stroke="none"
-                      fill-rule="evenodd"
-                      points="7 15 12 10 17 15">
-                  </polygon>
-                </svg>
-              </span>
+          <div class="form-container">
+            <h2 class="section-title">Nuevo gasto</h2>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="name-label">Nombre</span>
+              <input maxlength="15" id="name" class="mdc-text-field__input" type="text" aria-labelledby="name-label"
+                required>
               <span class="mdc-line-ripple"></span>
-            </div>
-          
-            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-              <ul class="mdc-deprecated-list" role="listbox" aria-label="Categoria">
-                <li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" aria-selected="true" data-value="" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Ropa" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Ropa
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Comida" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Comida
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Transporte" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Transporte
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Tecnologia" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Tecnologia
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Hogar" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Hogar
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Salidas" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Salidas
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Facturas" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Facturas
-                  </span>
-                </li>
-                <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Otro" role="option">
-                  <span class="mdc-deprecated-list-item__ripple"></span>
-                  <span class="mdc-deprecated-list-item__text">
-                    Otro
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="mdc-form-field">
-            <div id="expense" class="mdc-checkbox">
-              <input type="checkbox"
-                    class="mdc-checkbox__native-control"
-                    id="checkbox-1"/>
-              <div class="mdc-checkbox__background">
-                <svg class="mdc-checkbox__checkmark"
-                    viewBox="0 0 24 24">
-                  <path class="mdc-checkbox__checkmark-path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mdc-checkbox__mixedmark"></div>
+            </label>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="amount-label">Monto</span>
+              <input max="9999999999" step=".01" id="amount" class="mdc-text-field__input" type="number"
+                aria-labelledby="amount-laber" required>
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <label class="mdc-text-field mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="date-label">Fecha</span>
+              <input id="date" class="mdc-text-field__input" type="date" aria-labelledby="date-label" max="9999-12-31"
+                required>
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <div class="mdc-select mdc-select--filled demo-width-class mdc-select--required">
+              <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false"
+                aria-labelledby="demo-label demo-selected-text">
+                <span class="mdc-select__ripple"></span>
+                <span id="demo-label" class="mdc-floating-label">Categoria</span>
+                <span class="mdc-select__selected-text-container">
+                  <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                </span>
+                <span class="mdc-select__dropdown-icon">
+                  <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                    <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                      points="7 10 12 15 17 10">
+                    </polygon>
+                    <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                      points="7 15 12 10 17 15">
+                    </polygon>
+                  </svg>
+                </span>
+                <span class="mdc-line-ripple"></span>
               </div>
-              <div class="mdc-checkbox__ripple"></div>
+
+              <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                <ul class="mdc-deprecated-list" role="listbox" aria-label="Categoria">
+                  <li class="mdc-deprecated-list-item mdc-deprecated-list-item--selected" aria-selected="true"
+                    data-value="" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Ropa" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Ropa
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Comida" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Comida
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Transporte" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Transporte
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Tecnologia" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Tecnologia
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Hogar" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Hogar
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Salidas" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Salidas
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Facturas" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Facturas
+                    </span>
+                  </li>
+                  <li class="mdc-deprecated-list-item" aria-selected="false" data-value="Otro" role="option">
+                    <span class="mdc-deprecated-list-item__ripple"></span>
+                    <span class="mdc-deprecated-list-item__text">
+                      Otro
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <label for="checkbox-1">Programar Mensualmente</label>
+            <div class="mdc-form-field">
+              <div id="expense" class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="checkbox-1">Programar Mensualmente</label>
+            </div>
+            <button id="save-expense" class="mdc-button mdc-button--raised" value="submit">
+              <span class="mdc-button__label">Guardar</span>
+            </button>
+
           </div>
-          <button id="save-expense" class="mdc-button mdc-button--raised" value="submit">
-            <span class="mdc-button__label">Guardar</span>
-          </button>
-          
-        </div>
-        <div class="image-container">
-          <span class="material-icons">
-            trending_down
+          <div class="image-container">
+            <span class="material-icons">
+              trending_down
             </span>
+          </div>
         </div>
-      </div>
       </section>
       <!-- Income -->
       <section id="Ingreso" class="full-screen">
         <div class="section-container">
-        <div class="form-container">
-          <h2 class="section-title">Nuevo ingreso</h2>
-          <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="name-label">Nombre</span>
-            <input maxlength="15" required id="name" class="mdc-text-field__input" type="text" aria-labelledby="name-label">
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="amount-label">Monto</span>
-            <input max="9999999999" step=".01" required id="amount" class="mdc-text-field__input" type="number" aria-labelledby="amount-laber">
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <label class="mdc-text-field mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="date-label">Fecha</span>
-            <input max="9999-12-31" required id="date" class="mdc-text-field__input" type="date" aria-labelledby="date-label">
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <div class="mdc-form-field">
-            <div id="income" class="mdc-checkbox">
-              <input type="checkbox"
-                    class="mdc-checkbox__native-control"
-                    id="checkbox-1"/>
-              <div class="mdc-checkbox__background">
-                <svg class="mdc-checkbox__checkmark"
-                    viewBox="0 0 24 24">
-                  <path class="mdc-checkbox__checkmark-path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mdc-checkbox__mixedmark"></div>
+          <div class="form-container">
+            <h2 class="section-title">Nuevo ingreso</h2>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="name-label">Nombre</span>
+              <input maxlength="15" required id="name" class="mdc-text-field__input" type="text"
+                aria-labelledby="name-label">
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="amount-label">Monto</span>
+              <input max="9999999999" step=".01" required id="amount" class="mdc-text-field__input" type="number"
+                aria-labelledby="amount-laber">
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <label class="mdc-text-field mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="date-label">Fecha</span>
+              <input max="9999-12-31" required id="date" class="mdc-text-field__input" type="date"
+                aria-labelledby="date-label">
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <div class="mdc-form-field">
+              <div id="income" class="mdc-checkbox">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
               </div>
-              <div class="mdc-checkbox__ripple"></div>
+              <label for="checkbox-1">Programar Mensualmente</label>
             </div>
-            <label for="checkbox-1">Programar Mensualmente</label>
+            <button id="save-income" class="mdc-button mdc-button--raised">
+              <span class="mdc-button__label">Guardar</span>
+            </button>
           </div>
-          <button id="save-income" class="mdc-button mdc-button--raised">
-            <span class="mdc-button__label">Guardar</span>
-          </button>
-        </div>
-        <div class="image-container">
-          <span class="material-icons">
-            trending_up
+          <div class="image-container">
+            <span class="material-icons">
+              trending_up
             </span>
+          </div>
         </div>
-      </div>
       </section>
       <!-- Education -->
       <section id="Educacion" class="full-screen">
-            <div class="title">
-              <div class="cards-container">
-                <div class="container">
-                  <a  target="_blank" href="https://bettermoneyhabits.bankofamerica.com/es/saving-budgeting/ways-to-save-money">
-                    <div class="image">
-                      <img src="https://bettermoneyhabits.bankofamerica.com/content/dam/bmh/assets/hero-8simple-ways-to-save-money.svg" alt="Image">
-                    </div>
-                    <div class="info">
-                      <div class="title">8 maneras sencillas de ahorrar</div>
-                      <div class="description">A veces, lo más difícil de ahorrar dinero es empezar a hacerlo. Esta guía sobre cómo ahorrar dinero puede ayudarle paso a paso a desarrollar una estrategia sencilla y realista para que pueda ahorrar para todas sus metas de ahorros a corto y largo plazo.</div>
-                    </div>
-                  </a>
+        <div class="title">
+          <div class="cards-container">
+            <div class="container">
+              <a target="_blank"
+                href="https://bettermoneyhabits.bankofamerica.com/es/saving-budgeting/ways-to-save-money">
+                <div class="image">
+                  <img
+                    src="https://bettermoneyhabits.bankofamerica.com/content/dam/bmh/assets/hero-8simple-ways-to-save-money.svg"
+                    alt="Image">
                 </div>
-                <div class="container">
-                  <a target="_blank" href="https://www.mundodeportivo.com/uncomo/negocios/articulo/como-ahorrar-dinero-en-casa-51612.html" >
-                    <div class="image">
-                      <img src="https://t2.uc.ltmcdn.com/images/2/1/6/como_ahorrar_dinero_en_casa_51612_600.jpg" alt="Image">
-                    </div>
-                    <div class="info">
-                      <div class="title">Cómo ahorrar dinero en casa</div>
-                      <div class="description">¿No te cuadran las cuentas y te planteas cuál es la mejor forma de ahorrar dinero?... no te preocupes porque en muchas ocasiones lograr que el dinero llegue a fin de mes no es sencillo. Los gastos fijos, los no previstos, la cesta de la compra o los ...</div>
-                    </div>
-                  </a>
+                <div class="info">
+                  <div class="title">8 maneras sencillas de ahorrar</div>
+                  <div class="description">A veces, lo más difícil de ahorrar dinero es empezar a hacerlo. Esta guía
+                    sobre cómo ahorrar dinero puede ayudarle paso a paso a desarrollar una estrategia sencilla y
+                    realista para que pueda ahorrar para todas sus metas de ahorros a corto y largo plazo.</div>
                 </div>
-                <div class="container">
-                  <a target="_blank" href="https://www.infobae.com/tendencias/2018/04/10/compras-inteligentes-6-pequenos-habitos-cotidianos-para-adoptar-y-ahorrar-mas-dinero/">
-                    <div class="image">
-                      <img src="https://www.infobae.com/new-resizer/HBzEG4LaLLgh68HnS3RxD0vJORE=/1440x810/filters:format(jpg):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/04/04111232/Ahorro-1920.jpg" alt="Image">
-                    </div>
-                    <div class="info">
-                      <div class="title">Compras inteligentes:</div>
-                      <div class="description">6 pequeños hábitos cotidianos para adoptar y ahorrar más dinero.Llevar vianda al trabajo, evitar lujos innecesarios o no dejarse tentar por ciertos productos son claves a la hora de limitarse con los gastos. Los tips de un especialista para ahorrar mejor</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+              </a>
             </div>
+            <div class="container">
+              <a target="_blank"
+                href="https://www.mundodeportivo.com/uncomo/negocios/articulo/como-ahorrar-dinero-en-casa-51612.html">
+                <div class="image">
+                  <img src="https://t2.uc.ltmcdn.com/images/2/1/6/como_ahorrar_dinero_en_casa_51612_600.jpg"
+                    alt="Image">
+                </div>
+                <div class="info">
+                  <div class="title">Cómo ahorrar dinero en casa</div>
+                  <div class="description">¿No te cuadran las cuentas y te planteas cuál es la mejor forma de ahorrar
+                    dinero?... no te preocupes porque en muchas ocasiones lograr que el dinero llegue a fin de mes no es
+                    sencillo. Los gastos fijos, los no previstos, la cesta de la compra o los ...</div>
+                </div>
+              </a>
+            </div>
+            <div class="container">
+              <a target="_blank"
+                href="https://www.infobae.com/tendencias/2018/04/10/compras-inteligentes-6-pequenos-habitos-cotidianos-para-adoptar-y-ahorrar-mas-dinero/">
+                <div class="image">
+                  <img
+                    src="https://www.infobae.com/new-resizer/HBzEG4LaLLgh68HnS3RxD0vJORE=/1440x810/filters:format(jpg):quality(85)/s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/04/04111232/Ahorro-1920.jpg"
+                    alt="Image">
+                </div>
+                <div class="info">
+                  <div class="title">Compras inteligentes:</div>
+                  <div class="description">6 pequeños hábitos cotidianos para adoptar y ahorrar más dinero.Llevar vianda
+                    al trabajo, evitar lujos innecesarios o no dejarse tentar por ciertos productos son claves a la hora
+                    de limitarse con los gastos. Los tips de un especialista para ahorrar mejor</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Savings -->
-      <section id="Ahorros" class="full-screen"> 
+      <section id="Ahorros" class="full-screen">
         <div class="section-container">
           <div class="form-container">
             <h2 class="section-title">Nuevo ahorro</h2>
             <label class="mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="name-label">Nombre</span>
-              <input maxlength="15" required id="name" class="mdc-text-field__input" type="text" aria-labelledby="name-label">
+              <input maxlength="15" required id="name" class="mdc-text-field__input" type="text"
+                aria-labelledby="name-label">
               <span class="mdc-line-ripple"></span>
             </label>
             <label class="mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="amount-label">Monto</span>
-              <input max="9999999999" step=".01" required id="amount" class="mdc-text-field__input" type="number" aria-labelledby="amount-laber">
+              <input max="9999999999" step=".01" required id="amount" class="mdc-text-field__input" type="number"
+                aria-labelledby="amount-laber">
               <span class="mdc-line-ripple"></span>
             </label>
             <label class="mdc-text-field mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="date-label">Fecha</span>
-              <input required id="date" class="mdc-text-field__input" type="date" aria-labelledby="date-label" max="9999-12-31">
+              <input required id="date" class="mdc-text-field__input" type="date" aria-labelledby="date-label"
+                max="9999-12-31">
               <span class="mdc-line-ripple"></span>
             </label>
             <div class="mdc-form-field">
               <div id="saving" class="mdc-checkbox">
-                <input type="checkbox"
-                      class="mdc-checkbox__native-control"
-                      id="checkbox-1"/>
+                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
                 <div class="mdc-checkbox__background">
-                  <svg class="mdc-checkbox__checkmark"
-                      viewBox="0 0 24 24">
-                    <path class="mdc-checkbox__checkmark-path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
                   </svg>
                   <div class="mdc-checkbox__mixedmark"></div>
                 </div>
@@ -421,13 +423,13 @@
           <div class="saving-container">
           </div>
           <div class="balance-container">
-          <div class="balance">
-            <div class="title">
-              Total de ahorros:
+            <div class="balance">
+              <div class="title">
+                Total de ahorros:
+              </div>
+              <div class="balance-amount"></div>
             </div>
-            <div class="balance-amount"></div>
           </div>
-        </div>
         </div>
       </section>
       <!-- FAB -->
