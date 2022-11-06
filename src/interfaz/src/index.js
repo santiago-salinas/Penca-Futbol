@@ -10,6 +10,11 @@ const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
 });
 //Card End
 
+//Tab
+import {MDCTabBar} from '@material/tab-bar';
+const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+//Tab end
+
 //Datos de prueba
 let instancia = new Sistema;
 let partido001 = new Partido({ 'identificador': '001',  'equipo1': 'Uruguay', 'equipo2': 'Ghana',  'prediccion': true,  'prediccion1': 1,   'prediccion2': 2,'fecha': 'Martes 13','type': 'Partido'});
@@ -94,5 +99,4 @@ const updateListTransactions = (list) => {
 
 updatePartidos(instancia.getPartidosList());
 instancia.setPrediccion("001", 2, 13);
-instancia.setPrediccion("002", 12, 113);
 updatePartidos(instancia.getPartidosList());
