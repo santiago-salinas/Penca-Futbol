@@ -1,39 +1,53 @@
 import "./styles/index.scss";
 //Card JavaScript instantiation
-import {MDCRipple} from '@material/ripple';
+import { MDCRipple } from '@material/ripple';
 import Sistema from "../../dominio/sistema";
 import Partido from "../../dominio/partido";
 
 const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
-const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
   return new MDCRipple(el);
 });
 //Card End
 
 //Tab
-import {MDCTabBar} from '@material/tab-bar';
+import { MDCTabBar } from '@material/tab-bar';
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+
+
+
 //Tab end
 
 //Datos de prueba
 let instancia = new Sistema;
-let partido001 = new Partido({ 'identificador': '001',  'equipo1': 'Uruguay', 'equipo2': 'Ghana',  'prediccion': true,  'prediccion1': 1,   'prediccion2': 2,'fecha': 'Martes 13','type': 'Partido'});
-let partido002 = new Partido({ 'identificador': '002',  'equipo1': 'Uruguay', 'equipo2': 'México',  'prediccion': false,  'prediccion1': 3,   'prediccion2': 4,'fecha': 'Martes 23','type': 'Partido'});
+let partido001 = new Partido({ 'identificador': '001', 'equipo1': 'Uruguay', 'equipo2': 'Ghana', 'prediccion': true, 'prediccion1': 1, 'prediccion2': 2, 'fecha': 'Martes 13', 'type': 'Partido' });
+let partido002 = new Partido({ 'identificador': '002', 'equipo1': 'Uruguay', 'equipo2': 'México', 'prediccion': false, 'prediccion1': 3, 'prediccion2': 4, 'fecha': 'Martes 23', 'type': 'Partido' });
 
 
 instancia.addPartido(partido001);
 instancia.addPartido(partido002);
 
+let contenido = document.querySelectorAll('#Pantalla');
+tabBar.listen('MDCTabBar:activated', function (event) {
+  //Obtiene el elemento seleccionado del tab
+  console.log(event.detail.index);
+  console.log(contenido);
+  document.querySelector('#Pantalla .show').classList.add('hide');
+  document.querySelector('#Pantalla .show').classList.remove('show');
+  contenido[0].children[event.detail.index].classList.add('show');
+  contenido[0].children[event.detail.index].classList.remove('hide');
+  console.log(contenido[0].children[event.detail.index]);
 
+})
 
-const updatePartidos  = (listaPartidos) => {
+const updatePartidos = (listaPartidos) => {
   var container = document.querySelector(".container");
-    container.innerHTML = ''; //esto limpia 
-    listaPartidos.forEach((partido) => {
-        let cartaPartido = document.createElement("div");
-        if(partido.prediccion){ //esto es si esta la prediccion
+  container.innerHTML = ''; //esto limpia 
+  listaPartidos.forEach((partido) => {
+    let cartaPartido = document.createElement("div");
+    if (partido.prediccion) { //esto es si esta la prediccion
 
-        cartaPartido.innerHTML += `\
+      cartaPartido.innerHTML += `\
         <div class="mdc-card mdc-card--outlined">\
         <div class="mdc-card-wrapper__text-section">\
           <div class="demo-card__title">${partido.equipo1} - ${partido.equipo2}</div>\
@@ -42,9 +56,9 @@ const updatePartidos  = (listaPartidos) => {
         </div>\
       </div>`;
 
-        }else{ // si no han hecho la prediccion
+    } else { // si no han hecho la prediccion
 
-        cartaPartido.innerHTML += `\
+      cartaPartido.innerHTML += `\
         <div class="mdc-card mdc-card--outlined">\
         <div class="mdc-card-wrapper__text-section">\
           <div class="demo-card__title">${partido.equipo1} - ${partido.equipo2}</div>\
@@ -61,10 +75,10 @@ const updatePartidos  = (listaPartidos) => {
         </div>\
       </div>`;
 
-        }
+    }
 
-        container.appendChild(cartaPartido)
-    });
+    container.appendChild(cartaPartido)
+  });
 }
 
 
@@ -73,13 +87,13 @@ const updatePartidos  = (listaPartidos) => {
 
 
 const updateListTransactions = (list) => {
-    var container = document.querySelector(`#Historial #${list[0].type.toLowerCase()} .content .history-container`);
-    container.innerHTML = ''; //limpia
-    getSortedTransactions(list).forEach((element) => {
-        let category = '';
-        if (element.category !== undefined){category = `<div class="category">${element.category}</div>`}
-        let entry = document.createElement("div");
-        entry.innerHTML += `\
+  var container = document.querySelector(`#Historial #${list[0].type.toLowerCase()} .content .history-container`);
+  container.innerHTML = ''; //limpia
+  getSortedTransactions(list).forEach((element) => {
+    let category = '';
+    if (element.category !== undefined) { category = `<div class="category">${element.category}</div>` }
+    let entry = document.createElement("div");
+    entry.innerHTML += `\
         <div class="entry slide-in">\
             <div class="image-placeholder">\
                 <div class="circle">${element.name[0].toUpperCase()}</div>\
@@ -89,12 +103,12 @@ const updateListTransactions = (list) => {
                 <div class="item-name">${element.name}</div>\
             </div>\
             <div class="right-info">\
-                <div class="date ${element.type.toLowerCase()}">${element.date.getDate()}/${element.date.getMonth()+1}/${element.date.getFullYear()}</div>\
+                <div class="date ${element.type.toLowerCase()}">${element.date.getDate()}/${element.date.getMonth() + 1}/${element.date.getFullYear()}</div>\
                 ${category}\
             </div>\
         </div>`;
-        container.appendChild(entry)
-    });
+    container.appendChild(entry)
+  });
 }
 
 updatePartidos(instancia.getPartidosList());

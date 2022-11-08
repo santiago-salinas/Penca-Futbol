@@ -39,13 +39,22 @@
 
 @include card.core-styles;
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
 .mdc-card__actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 52px;
-    padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 52px;
+  padding: 8px;
 }
 
 // Estilo del Margen
@@ -57,12 +66,12 @@
   margin: 10px;
 }
 
-  //Sacado del m2
+//Sacado del m2
 .my-card-content {
   padding: 16px;
 }
 
-  //Sacado del m2
+//Sacado del m2
 .my-card {
   height: 350px;
   width: 350px;
@@ -81,9 +90,11 @@
   text-transform: inherit;
 }
 
-.mdc-card-wrapper__text-section:first-child, .mdc-card__media+.mdc-card-wrapper__text-section {
+.mdc-card-wrapper__text-section:first-child,
+.mdc-card__media+.mdc-card-wrapper__text-section {
   padding-top: 16px;
 }
+
 .mdc-card-wrapper__text-section {
   padding-left: 16px;
   padding-right: 16px;
@@ -102,6 +113,7 @@
   text-transform: inherit;
   opacity: .6;
 }
+
 //Nuestro fin
 
 @include checkbox.core-styles;
@@ -113,11 +125,7 @@
 @include list.deprecated-core-styles;
 @include textfield.core-styles;
 
-body {
-
-}
+body {}
 
 // Desktop
-@media only screen and (min-width: 768px) {
-
-}
+@media only screen and (min-width: 768px) {}
