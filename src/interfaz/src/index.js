@@ -13,7 +13,7 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
 //Tab
 import { MDCTabBar } from '@material/tab-bar';
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
-
+tabBar.activateTab(0);
 
 
 //Tab end
@@ -41,7 +41,7 @@ tabBar.listen('MDCTabBar:activated', function (event) {
 })
 
 const updatePartidos = (listaPartidos) => {
-  var container = document.querySelector(".container");
+  var container = document.querySelector(".containerProximos");
   container.innerHTML = ''; //esto limpia 
   listaPartidos.forEach((partido) => {
     let cartaPartido = document.createElement("div");
@@ -78,36 +78,6 @@ const updatePartidos = (listaPartidos) => {
     }
 
     container.appendChild(cartaPartido)
-  });
-}
-
-
-
-
-
-
-const updateListTransactions = (list) => {
-  var container = document.querySelector(`#Historial #${list[0].type.toLowerCase()} .content .history-container`);
-  container.innerHTML = ''; //limpia
-  getSortedTransactions(list).forEach((element) => {
-    let category = '';
-    if (element.category !== undefined) { category = `<div class="category">${element.category}</div>` }
-    let entry = document.createElement("div");
-    entry.innerHTML += `\
-        <div class="entry slide-in">\
-            <div class="image-placeholder">\
-                <div class="circle">${element.name[0].toUpperCase()}</div>\
-            </div>\
-            <div class="middle-info">\
-                <div class="amount ${element.type.toLowerCase()}">$${element.amount} </div>\
-                <div class="item-name">${element.name}</div>\
-            </div>\
-            <div class="right-info">\
-                <div class="date ${element.type.toLowerCase()}">${element.date.getDate()}/${element.date.getMonth() + 1}/${element.date.getFullYear()}</div>\
-                ${category}\
-            </div>\
-        </div>`;
-    container.appendChild(entry)
   });
 }
 

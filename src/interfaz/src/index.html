@@ -156,11 +156,23 @@
     </div>
   </div>
 
+
+  <!--
+La idea base es tener un gran section pantalla, este se excluye de
+la tab navigation bar de arriba (que despues debemos mover abajo) 
+
+Dentro hay 5 sections para cada boton, que dependiendo de cual este seleccionado
+Se le aplica una clase scss para mostrarlo o no
+
+Y dentro de cada clase tiene un div clase containerName
+donde se mostrara de forma dinamica con js los elementos
+-->
   <section id="Pantalla">
     <section id="Proximos" class='show'>
       <!--Carta de Partido-->
 
-      <div class="container">
+      <div class="containerProximos">
+        <!--
         <div class="mdc-card mdc-card--outlined">
           <div class="mdc-card-wrapper__text-section">
             <div class="demo-card__title"> Uruguay - Ghana</div>
@@ -187,6 +199,7 @@
             </button>
           </div>
         </div>
+-->
       </div>
     </section>
     <section id="Resultados" class='hide'>
