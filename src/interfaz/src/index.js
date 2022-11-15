@@ -332,6 +332,7 @@ const updatePartidos = (listaPartidos) => {
           }</div>\
     </div>\
   </div>`;
+  container.appendChild(cartaPartido);
         } else {
           // si no han hecho la prediccion
           cartaPartido.innerHTML += `\
@@ -345,7 +346,7 @@ const updatePartidos = (listaPartidos) => {
           }/${partido.fecha.getFullYear()}</div>\
     </div>\
     <div class="mdc-card__actions">\
-      <button class="mdc-button mdc-button--raised mdc-button--leading">\
+      <button id="btn${partido.identificador}" class="mdc-button mdc-button--raised mdc-button--leading">\
         <span class="mdc-button__ripple"></span>\
         <i class="material-icons mdc-button__icon" aria-hidden="true"\
           >edit</i\
@@ -354,14 +355,16 @@ const updatePartidos = (listaPartidos) => {
       </button>\
     </div>\
   </div>`;
+          container.appendChild(cartaPartido);
           //Agrega funcionalidad a los botones
-          cartaPartido.addEventListener("click", function () {
+          document.querySelector(`#btn${partido.identificador}`).addEventListener("click", function () {
             pantallaPrediccion(partido);
             //console.log(partido.identificador);
           });
+
         }
 
-        container.appendChild(cartaPartido);
+        
       }
     }
   });
