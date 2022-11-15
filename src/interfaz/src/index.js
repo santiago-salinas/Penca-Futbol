@@ -175,6 +175,10 @@ const pantallaPrediccion = (partido) => {
     "#txtPredic2"
   ).innerHTML = `Predicción ${partido.equipo2}`;
 
+  var old_element = document.querySelector("#btnPredic");
+  var new_element = old_element.cloneNode(true);
+  old_element.parentNode.replaceChild(new_element, old_element);
+
   document.querySelector("#btnPredic").addEventListener("click", function () {
     if (txtField1.valid && txtField2.valid) {
       instancia.setPrediccion(
@@ -363,7 +367,6 @@ const updatePartidos = (listaPartidos) => {
           });
 
         }
-
         
       }
     }
