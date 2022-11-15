@@ -20,10 +20,49 @@ tabBar.activateTab(0);
 //Datos de prueba
 //Datos de prueba
 let instancia = new Sistema();
+
+//Ya paso,tiene prediccion, y reclame
+let partido004 = new Partido({
+  identificador: "004",
+  equipo1: "Netherland",
+  equipo2: "México",
+  prediccion: true,
+  prediccion1: 3,
+  prediccion2: 4,
+  fecha: "2021-10-07",
+  type: "Partido",
+  reclame: true,
+});
+//Ya paso, tiene prediccion y no reclame
+let partido005 = new Partido({
+  identificador: "005",
+  equipo1: "Paraguay",
+  equipo2: "México",
+  prediccion: true,
+  prediccion1: 3,
+  prediccion2: 4,
+  fecha: "2021-10-07",
+  type: "Partido",
+  reclame: false,
+});
+
+//Ya paso no tiene prediccion
+let partido003 = new Partido({
+  identificador: "003",
+  equipo1: "Uruguay",
+  equipo2: "México",
+  prediccion: false,
+  prediccion1: 3,
+  prediccion2: 4,
+  fecha: "2021-10-07",
+  type: "Partido",
+  reclame: false,
+});
+//No paso, tiene prediccion
 let partido001 = new Partido({
   identificador: "001",
   equipo1: "Uruguay",
-  equipo2: "Ghana",
+  equipo2: "Holanda",
   prediccion: true,
   prediccion1: 1,
   prediccion2: 2,
@@ -31,20 +70,25 @@ let partido001 = new Partido({
   type: "Partido",
   reclame: false,
 });
+//No paso, no tiene prediccion
+
 let partido002 = new Partido({
   identificador: "002",
-  equipo1: "Uruguay",
-  equipo2: "México",
+  equipo1: "España",
+  equipo2: "Ghana",
   prediccion: false,
-  prediccion1: 3,
-  prediccion2: 4,
-  fecha: "2021-10-07", //TODO: Cambie como ponemos las fechas en cada partido
+  prediccion1: 1,
+  prediccion2: 2,
+  fecha: "2022-12-07",
   type: "Partido",
   reclame: false,
 });
 
 instancia.addPartido(partido001);
 instancia.addPartido(partido002);
+instancia.addPartido(partido003);
+instancia.addPartido(partido004);
+instancia.addPartido(partido005);
 
 let contenido = document.querySelectorAll("#Pantalla");
 tabBar.listen("MDCTabBar:activated", function (event) {
@@ -120,24 +164,8 @@ const updatePartidos = (listaPartidos) => {
           <div class="demo-card__title">Haz click aqui para reclamar tu premio</div>\
         </div>\
       </div>`;
+            container.appendChild(cartaPartido);
           }
-
-          let cartaPartido = document.createElement("div");
-          cartaPartido.innerHTML += `\
-      <div class="mdc-card mdc-card--outlined">\
-      <div class="mdc-card-wrapper__text-section">\
-        <div class="demo-card__title">${partido.equipo1} - ${
-            partido.equipo2
-          }</div>\
-        <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-            partido.fecha.getMonth() + 1
-          }/${partido.fecha.getFullYear()}</div>\
-        <div class="demo-card__title">Tu predicción: ${partido.prediccion1} - ${
-            partido.prediccion2
-          }</div>\
-      </div>\
-    </div>`;
-          container.appendChild(cartaPartido);
         } else {
           //ACA ES QUE PASO EL PARTIDO Y NO HICISTE LA PREDICCION
 
@@ -238,6 +266,6 @@ const updatePartidos = (listaPartidos) => {
 };
 
 updatePartidos(instancia.getPartidosList());
-instancia.setPrediccion("001", 2, 13);
+//instancia.setPrediccion("001", 2, 13);
 updatePartidos(instancia.getPartidosList());
 console.log(updatePartidos);
