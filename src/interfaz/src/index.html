@@ -1,174 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundial</title>
+    <link rel="stylesheet" href="bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mundial</title>
-  <link rel="stylesheet" href="bundle.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900"
-    rel="stylesheet" type="text/css" />
-</head>
-
-
-<body>
-  <header class="mdc-top-app-bar">
-    <div class="mdc-top-app-bar__row">
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <div class="material-icons" aria-label="Close">circle</div>
-        <span class="mdc-top-app-bar__title">Mundial</span>
-      </section>
-    </div>
-  </header>
-  <main class="mdc-top-app-bar--fixed-adjust">
-
-    <!--Tabs-->
-
-    <div id="Menu" class="footer mdc-tab-bar" role="tablist">
-      <div class="mdc-tab-scroller">
-        <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px">
-          <div class="mdc-tab-scroller__scroll-content">
-            <!---->
-            <button role="tab" class="mdc-tab mdc-tab--stacked" aria-selected="false" tabindex="-1"
-              id="goog_575636264-FIXED--1">
-              <span class="mdc-tab__content">
-                <i aria-hidden="true" class="material-icons mdc-tab__icon">
-                  <!---->alarm
-                  <!---->
-                </i>
-
-                <span class="mdc-tab__text-label">
-                  <!---->Próximos
-                  <!---->
-                </span>
-              </span>
-
-              <span class="mdc-tab-indicator">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
-              </span>
-
-              <span class="mdc-tab__ripple mdc-ripple-upgraded" style="
-                  --mdc-ripple-fg-size: 91px;
-                  --mdc-ripple-fg-scale: 1.96403;
-                  --mdc-ripple-fg-translate-start: 75px, -13.5px;
-                  --mdc-ripple-fg-translate-end: 30.7969px, -9.5px;
-                "></span>
+  <body>
+    <header class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <div id="back-button" class="hide">
+            <button
+              class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+              aria-label="Back arrow"
+            >
+              arrow_back
             </button>
-            <!---->
-            <button role="tab" class="mdc-tab mdc-tab--stacked mdc-tab--active" aria-selected="true" tabindex="0"
-              id="goog_575636264-FIXED-0">
-              <span class="mdc-tab__content">
-                <i aria-hidden="true" class="material-icons mdc-tab__icon">
-                  <!---->dashboard
-                  <!---->
-                </i>
+          </div>
+          <span class="mdc-top-app-bar__title">Mundial</span>
+        </section>
+      </div>
+    </header>
+    <main class="mdc-top-app-bar--fixed-adjust">
+      <!--Tabs-->
 
-                <span class="mdc-tab__text-label">
-                  <!---->Resultados
-                  <!---->
+      <div id="Menu" class="footer mdc-tab-bar show" role="tablist">
+        <div class="mdc-tab-scroller">
+          <div
+            class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+            style="margin-bottom: 0px"
+          >
+            <div class="mdc-tab-scroller__scroll-content">
+              <!---->
+              <button
+                role="tab"
+                class="mdc-tab mdc-tab--stacked"
+                aria-selected="false"
+                tabindex="-1"
+                id="goog_575636264-FIXED--1"
+              >
+                <span class="mdc-tab__content">
+                  <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                    <!---->alarm
+                    <!---->
+                  </i>
+
+                  <span class="mdc-tab__text-label">
+                    <!---->Próximos
+                    <!---->
+                  </span>
                 </span>
-              </span>
 
-              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
-              </span>
-
-              <span class="mdc-tab__ripple mdc-ripple-upgraded" style="
-                  --mdc-ripple-fg-size: 93px;
-                  --mdc-ripple-fg-scale: 1.94767;
-                  --mdc-ripple-fg-translate-start: -45.5938px, -5.5px;
-                  --mdc-ripple-fg-translate-end: 31.125px, -10.5px;
-                "></span>
-            </button>
-            <!---->
-            <button role="tab" class="mdc-tab mdc-tab--stacked" aria-selected="false" tabindex="1"
-              id="goog_575636264-FIXED-1">
-              <span class="mdc-tab__content">
-                <i aria-hidden="true" class="material-icons mdc-tab__icon">
-                  <!---->group
-                  <!---->
-                </i>
-
-                <span class="mdc-tab__text-label">
-                  <!---->Grupo
-                  <!---->
+                <span class="mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                    style=""
+                  ></span>
                 </span>
-              </span>
 
-              <span class="mdc-tab-indicator">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
-              </span>
+                <span
+                  class="mdc-tab__ripple mdc-ripple-upgraded"
+                  style="
+                    --mdc-ripple-fg-size: 91px;
+                    --mdc-ripple-fg-scale: 1.96403;
+                    --mdc-ripple-fg-translate-start: 75px, -13.5px;
+                    --mdc-ripple-fg-translate-end: 30.7969px, -9.5px;
+                  "
+                ></span>
+              </button>
+              <!---->
+              <button
+                role="tab"
+                class="mdc-tab mdc-tab--stacked mdc-tab--active"
+                aria-selected="true"
+                tabindex="0"
+                id="goog_575636264-FIXED-0"
+              >
+                <span class="mdc-tab__content">
+                  <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                    <!---->dashboard
+                    <!---->
+                  </i>
 
-              <span class="mdc-tab__ripple mdc-ripple-upgraded" style="
-                  --mdc-ripple-fg-size: 102px;
-                  --mdc-ripple-fg-scale: 1.90958;
-                  --mdc-ripple-fg-translate-start: -9.34375px, -11px;
-                  --mdc-ripple-fg-translate-end: 34.0859px, -15px;
-                "></span>
-            </button>
-            <!---->
-            <button role="tab" class="mdc-tab mdc-tab--stacked" aria-selected="false" tabindex="2"
-              id="goog_575636264-FIXED-2">
-              <span class="mdc-tab__content">
-                <i aria-hidden="true" class="material-icons mdc-tab__icon">
-                  <!---->shopping_cart
-                  <!---->
-                </i>
-
-                <span class="mdc-tab__text-label">
-                  <!---->Canje
-                  <!---->
+                  <span class="mdc-tab__text-label">
+                    <!---->Resultados
+                    <!---->
+                  </span>
                 </span>
-              </span>
 
-              <span class="mdc-tab-indicator">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
-              </span>
-
-              <span class="mdc-tab__ripple mdc-ripple-upgraded" style="
-                  --mdc-ripple-fg-size: 102px;
-                  --mdc-ripple-fg-scale: 1.90958;
-                  --mdc-ripple-fg-translate-start: -9.34375px, -11px;
-                  --mdc-ripple-fg-translate-end: 34.0859px, -15px;
-                "></span>
-            </button>
-            <!---->
-            <button role="tab" class="mdc-tab mdc-tab--stacked" aria-selected="false" tabindex="3"
-              id="goog_575636264-FIXED-3">
-              <span class="mdc-tab__content">
-                <i aria-hidden="true" class="material-icons mdc-tab__icon">
-                  <!---->person
-                  <!---->
-                </i>
-
-                <span class="mdc-tab__text-label">
-                  <!---->Perfil
-                  <!---->
+                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                    style=""
+                  ></span>
                 </span>
-              </span>
 
-              <span class="mdc-tab-indicator">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline" style=""></span>
-              </span>
+                <span
+                  class="mdc-tab__ripple mdc-ripple-upgraded"
+                  style="
+                    --mdc-ripple-fg-size: 93px;
+                    --mdc-ripple-fg-scale: 1.94767;
+                    --mdc-ripple-fg-translate-start: -45.5938px, -5.5px;
+                    --mdc-ripple-fg-translate-end: 31.125px, -10.5px;
+                  "
+                ></span>
+              </button>
+              <!---->
+              <button
+                role="tab"
+                class="mdc-tab mdc-tab--stacked"
+                aria-selected="false"
+                tabindex="1"
+                id="goog_575636264-FIXED-1"
+              >
+                <span class="mdc-tab__content">
+                  <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                    <!---->group
+                    <!---->
+                  </i>
 
-              <span class="mdc-tab__ripple mdc-ripple-upgraded" style="
-                  --mdc-ripple-fg-size: 102px;
-                  --mdc-ripple-fg-scale: 1.90958;
-                  --mdc-ripple-fg-translate-start: -9.34375px, -11px;
-                  --mdc-ripple-fg-translate-end: 34.0859px, -15px;
-                "></span>
-            </button>
-            <!---->
+                  <span class="mdc-tab__text-label">
+                    <!---->Grupo
+                    <!---->
+                  </span>
+                </span>
+
+                <span class="mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                    style=""
+                  ></span>
+                </span>
+
+                <span
+                  class="mdc-tab__ripple mdc-ripple-upgraded"
+                  style="
+                    --mdc-ripple-fg-size: 102px;
+                    --mdc-ripple-fg-scale: 1.90958;
+                    --mdc-ripple-fg-translate-start: -9.34375px, -11px;
+                    --mdc-ripple-fg-translate-end: 34.0859px, -15px;
+                  "
+                ></span>
+              </button>
+              <!---->
+              <button
+                role="tab"
+                class="mdc-tab mdc-tab--stacked"
+                aria-selected="false"
+                tabindex="2"
+                id="goog_575636264-FIXED-2"
+              >
+                <span class="mdc-tab__content">
+                  <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                    <!---->shopping_cart
+                    <!---->
+                  </i>
+
+                  <span class="mdc-tab__text-label">
+                    <!---->Canje
+                    <!---->
+                  </span>
+                </span>
+
+                <span class="mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                    style=""
+                  ></span>
+                </span>
+
+                <span
+                  class="mdc-tab__ripple mdc-ripple-upgraded"
+                  style="
+                    --mdc-ripple-fg-size: 102px;
+                    --mdc-ripple-fg-scale: 1.90958;
+                    --mdc-ripple-fg-translate-start: -9.34375px, -11px;
+                    --mdc-ripple-fg-translate-end: 34.0859px, -15px;
+                  "
+                ></span>
+              </button>
+              <!---->
+              <button
+                role="tab"
+                class="mdc-tab mdc-tab--stacked"
+                aria-selected="false"
+                tabindex="3"
+                id="goog_575636264-FIXED-3"
+              >
+                <span class="mdc-tab__content">
+                  <i aria-hidden="true" class="material-icons mdc-tab__icon">
+                    <!---->person
+                    <!---->
+                  </i>
+
+                  <span class="mdc-tab__text-label">
+                    <!---->Perfil
+                    <!---->
+                  </span>
+                </span>
+
+                <span class="mdc-tab-indicator">
+                  <span
+                    class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+                    style=""
+                  ></span>
+                </span>
+
+                <span
+                  class="mdc-tab__ripple mdc-ripple-upgraded"
+                  style="
+                    --mdc-ripple-fg-size: 102px;
+                    --mdc-ripple-fg-scale: 1.90958;
+                    --mdc-ripple-fg-translate-start: -9.34375px, -11px;
+                    --mdc-ripple-fg-translate-end: 34.0859px, -15px;
+                  "
+                ></span>
+              </button>
+              <!---->
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-
-    <!--
+      <!--
 La idea base es tener un gran section pantalla, este se excluye de
 la tab navigation bar de arriba (que despues debemos mover abajo) 
 
@@ -178,12 +246,12 @@ Se le aplica una clase scss para mostrarlo o no
 Y dentro de cada clase tiene un div clase containerName
 donde se mostrara de forma dinamica con js los elementos
 -->
-    <section id="Pantalla">
-      <section id="Proximos" class='show'>
-        <!--Carta de Partido-->
+      <section id="Pantalla">
+        <section id="Proximos" class="show">
+          <!--Carta de Partido-->
 
-        <div class="containerProximos">
-          <!--
+          <div class="containerProximos">
+            <!--
         <div class="mdc-card mdc-card--outlined">
           <div class="mdc-card-wrapper__text-section">
             <div class="demo-card__title"> Uruguay - Ghana</div>
@@ -211,25 +279,71 @@ donde se mostrara de forma dinamica con js los elementos
           </div>
         </div>
 -->
-        </div>
-      </section>
-      <section id="Resultados" class='hide'>
-        Resultados
-        <div class="containerResultados">
+          </div>
+        </section>
+        <section id="Resultados" class="hide">
+          Resultados
+          <div class="containerResultados"></div>
+        </section>
+        <section id="Grupo" class="hide">Grupo</section>
+        <section id="Canje" class="hide">Canje</section>
+        <section id="Perfil" class="hide">Perfil</section>
 
-        </div>
-      </section>
-      <section id="Grupo" class='hide'>
-        Grupo
-      </section>
-      <section id="Canje" class='hide'>
-        Canje
-      </section>
-      <section id="Perfil" class='hide'>
-        Perfil
-      </section>
-    </section>
-  </main>
-</body>
+        <section id="IngresoPrediccion" class="hide">
+          IngresoPrediccion
+          <div id="paises"></div>
 
+          <br></br>
+          <label
+            id="labelPredic1"
+            class="mdc-text-field mdc-text-field--outlined"
+          >
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label" id="txtPredic1"
+                  >Prediccion PAIS1</span
+                >
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <input
+              type="number"
+              class="mdc-text-field__input"
+              aria-labelledby="my-label-id"
+              required
+              minlength="1"
+            />
+          </label>
+          <label
+            id="labelPredic2"
+            class="mdc-text-field mdc-text-field--outlined"
+          >
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label" id="txtPredic2"
+                  >Prediccion PAIS2</span
+                >
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <input
+              type="number"
+              class="mdc-text-field__input"
+              aria-labelledby="my-label-id"
+              required
+              minlength="1"
+            />
+          </label>
+<br>
+          <div id="btnPredic" class="mdc-touch-target-wrapper">
+            <button class="mdc-button mdc-button--raised">
+              <span class="mdc-button__label">Enviar Prediccion</span>
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>

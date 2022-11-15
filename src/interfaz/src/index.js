@@ -1,9 +1,22 @@
 import "./styles/index.scss";
-//Card JavaScript instantiation
-import { MDCRipple } from "@material/ripple";
 import Sistema from "../../dominio/sistema";
 import Partido from "../../dominio/partido";
 
+//Top app bar
+import { MDCTopAppBar } from "@material/top-app-bar";
+const topAppBarElement = document.querySelector(".mdc-top-app-bar");
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+//
+
+//Text Fields
+import { MDCTextField } from "@material/textfield";
+const txtField1 = new MDCTextField(document.querySelector("#labelPredic1"));
+const txtField2 = new MDCTextField(document.querySelector("#labelPredic2"));
+
+//End Text Fields
+
+//Card
+import { MDCRipple } from "@material/ripple";
 const selector = ".mdc-button, .mdc-icon-button, .mdc-card__primary-action";
 const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
   return new MDCRipple(el);
@@ -14,7 +27,6 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
 import { MDCTabBar } from "@material/tab-bar";
 const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 tabBar.activateTab(0);
-
 //Tab end
 
 //Datos de prueba
@@ -84,45 +96,130 @@ let partido002 = new Partido({
   reclame: false,
 });
 
+let partido006 = new Partido({
+  identificador: "006",
+  equipo1: "Alemania",
+  equipo2: "Qatar",
+  prediccion: false,
+  prediccion1: 0,
+  prediccion2: 0,
+  fecha: "2022-11-16",
+  type: "Partido",
+  reclame: false,
+});
+
 instancia.addPartido(partido001);
 instancia.addPartido(partido002);
 instancia.addPartido(partido003);
 instancia.addPartido(partido004);
 instancia.addPartido(partido005);
+instancia.addPartido(partido006);
 
 let contenido = document.querySelectorAll("#Pantalla");
 tabBar.listen("MDCTabBar:activated", function (event) {
   //Obtiene el elemento seleccionado del tab
-  console.log(event.detail.index);
-  console.log(contenido);
+  //console.log(event.detail.index);
+  //console.log(contenido);
   document.querySelector("#Pantalla .show").classList.add("hide");
   document.querySelector("#Pantalla .show").classList.remove("show");
   contenido[0].children[event.detail.index].classList.add("show");
   contenido[0].children[event.detail.index].classList.remove("hide");
-  console.log(contenido[0].children[event.detail.index]);
+  //console.log(contenido[0].children[event.detail.index]);
   updatePartidos(instancia.getPartidosList());
 });
 
+//PRE: Dado el identificador de un partido
+//POS: Se encarga que luego el boton para ingresar
+//la prediccion, sepa a que prediccion corresponde
+
+const pantallaPrediccion = (partido) => {
+  //console.log(partido);
+  document.querySelector("#Pantalla .show").classList.add("hide");
+  document.querySelector("#Pantalla .show").classList.remove("show");
+
+  document.querySelector("#Menu").classList.add("hide");
+  document.querySelector("#Menu").classList.remove("show");
+
+  document.querySelector("#back-button").classList.add("show");
+  document.querySelector("#back-button").classList.remove("hide");
+  // Volver al inicio
+  document.querySelector("#back-button").addEventListener("click", function () {
+    document.querySelector("#Menu").classList.add("show");
+    document.querySelector("#Menu").classList.remove("hide");
+    document.querySelector("#Pantalla .show").classList.add("hide");
+    document.querySelector("#Pantalla .show").classList.remove("show");
+
+    contenido[0].children[0].classList.add("show");
+    contenido[0].children[0].classList.remove("hide");
+    tabBar.activateTab(0);
+    document.querySelector("#back-button").classList.add("hide");
+    document.querySelector("#back-button").classList.remove("show");
+    updatePartidos(instancia.getPartidosList());
+  });
+
+  let predic = document.querySelector("#Pantalla #IngresoPrediccion");
+  predic.classList.add("show");
+  predic.classList.remove("hide");
+  document.querySelector(
+    "#IngresoPrediccion #paises"
+  ).innerHTML = `${partido.equipo1} - ${partido.equipo2} `;
+
+  document.querySelector(
+    "#txtPredic1"
+  ).innerHTML = `Predicción ${partido.equipo1}`;
+
+  txtField1.value = "";
+  txtField2.value = "";
+
+  document.querySelector(
+    "#txtPredic2"
+  ).innerHTML = `Predicción ${partido.equipo2}`;
+
+  document.querySelector("#btnPredic").addEventListener("click", function () {
+    if (txtField1.valid && txtField2.valid) {
+      instancia.setPrediccion(
+        `${partido.identificador}`,
+        txtField1.value,
+        txtField2.value
+      );
+      document.querySelector("#Menu").classList.add("show");
+      document.querySelector("#Menu").classList.remove("hide");
+      document.querySelector("#Pantalla .show").classList.add("hide");
+      document.querySelector("#Pantalla .show").classList.remove("show");
+
+      contenido[0].children[0].classList.add("show");
+      contenido[0].children[0].classList.remove("hide");
+      tabBar.activateTab(0);
+      document.querySelector("#back-button").classList.add("hide");
+      document.querySelector("#back-button").classList.remove("show");
+      updatePartidos(instancia.getPartidosList());
+    } else {
+      alert("Parametros vacios");
+    }
+    //console.log(partido.identificador);
+  });
+};
+
 const updatePartidos = (listaPartidos) => {
   var tabActiva = document.querySelector("#Pantalla .show").id;
-  console.log("holisAAA");
-  console.log(tabActiva);
+  //console.log("holisAAA");
+  //console.log(tabActiva);
 
   var container = document.querySelector(".container" + tabActiva);
-  console.log("esto es el container mira xd");
-  console.log(container);
+  // console.log("esto es el container mira xd");
+  //console.log(container);
 
   container.innerHTML = ""; //esto limpia
   listaPartidos.forEach((partido) => {
     //Hago una fecha nueva que setea sus datos con los datos de hoy
     var fechaDeHoy = new Date();
 
-    console.log("Esta es la fecha del partido");
-    console.log(partido.fecha);
-    console.log("Esta es la fecha de hoy xd");
-    console.log(fechaDeHoy);
-    console.log("Este es el resultado de la comparacion");
-    console.log(partido.fecha < fechaDeHoy);
+    // console.log("Esta es la fecha del partido");
+    // console.log(partido.fecha);
+    // console.log("Esta es la fecha de hoy xd");
+    //  console.log(fechaDeHoy);
+    //  console.log("Este es el resultado de la comparacion");
+    //  console.log(partido.fecha < fechaDeHoy);
 
     if (tabActiva == "Resultados") {
       if (partido.fecha < fechaDeHoy) {
@@ -257,6 +354,11 @@ const updatePartidos = (listaPartidos) => {
       </button>\
     </div>\
   </div>`;
+          //Agrega funcionalidad a los botones
+          cartaPartido.addEventListener("click", function () {
+            pantallaPrediccion(partido);
+            //console.log(partido.identificador);
+          });
         }
 
         container.appendChild(cartaPartido);
@@ -268,4 +370,3 @@ const updatePartidos = (listaPartidos) => {
 updatePartidos(instancia.getPartidosList());
 //instancia.setPrediccion("001", 2, 13);
 updatePartidos(instancia.getPartidosList());
-console.log(updatePartidos);
