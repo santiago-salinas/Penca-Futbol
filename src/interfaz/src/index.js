@@ -143,10 +143,7 @@ tabBar.listen("MDCTabBar:activated", function (event) {
 //la prediccion, sepa a que prediccion corresponde
 
 const reclamarPuntos = (partidoAReclamar) => {
-  var puntaje = instancia.calcularPuntaje(partidoAReclamar);
-  instancia.setPuntaje(puntaje);
-  console.log("entro a reclamar");
-  instancia.setReclame(partidoAReclamar);
+  instancia.setReclame(partidoAReclamar.identificador);
   updatePartidos(instancia.getPartidosList());
 }; //Hay que hiddear el boton y mostrar que reclamo los puntos
 
@@ -273,10 +270,7 @@ const updatePartidos = (listaPartidos) => {
             //Calcula el puntaje
             var puntaje;
 
-            puntaje = instancia.calcularPuntaje(partido);
-            console.log("Este seria el puntaje");
-            console.log(puntaje);
-            puntaje = 560;
+            puntaje = instancia.calcularPuntaje(partido.identificador);
 
             let cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
@@ -304,7 +298,7 @@ const updatePartidos = (listaPartidos) => {
             document
               .querySelector(`#btn${partido.identificador}`)
               .addEventListener("click", function () {
-                reclamarPuntos(partido, puntaje);
+                reclamarPuntos(partido);
                 //console.log(partido.identificador);
               });
 

@@ -43,6 +43,7 @@ class Sistema {
     this.getPartidosList().forEach((partido) => {
       if (partido.identificador == idPartido) {
         partido.reclame = true;
+        this.setPuntaje(this.calcularPuntaje(partido.identificador));
       }
     });
   }
