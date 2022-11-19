@@ -36,6 +36,8 @@ class Partido {
       prediccion: this.prediccion,
       prediccion1: this.prediccion1,
       prediccion2: this.prediccion2,
+      resultado1: this.resultado1,
+      resultado2: this.resultado2,
       fecha: this.fecha,
       reclame: this.reclame,
       type: this.type,

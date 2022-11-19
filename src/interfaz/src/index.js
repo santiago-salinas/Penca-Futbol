@@ -239,6 +239,12 @@ const updatePartidos = (listaPartidos) => {
               partido.fecha.getMonth() + 1
             }/${partido.fecha.getFullYear()}</div>\
           <div class="demo-card__title">Ya reclamaste tu premio</div>\
+          <div  class="demo-card__subhead">
+          Tu predicción : ${partido.prediccion1} - ${partido.prediccion2}
+          </div>\
+          <div  class="demo-card__subhead">
+          Resultado : ${partido.resultado1} - ${partido.resultado2}
+          </div>\
         </div>\
       </div>`;
             container.appendChild(cartaPartido);
@@ -266,6 +272,12 @@ const updatePartidos = (listaPartidos) => {
     >\
     <span class="mdc-button__label">Reclamar ${puntaje} puntos</span>\
   </button>\
+  <div  class="demo-card__subhead">
+          Tu predicción : ${partido.prediccion1} - ${partido.prediccion2}
+          </div>\
+          <div  class="demo-card__subhead">
+          Resultado : ${partido.resultado1} - ${partido.resultado2}
+          </div>\
 </div>\
 </div>`;
             container.appendChild(cartaPartido);
@@ -294,6 +306,9 @@ const updatePartidos = (listaPartidos) => {
           }/${partido.fecha.getFullYear()}</div>\
 <div class="demo-card__title">Ya paso el partido y no hiciste prediccion</div>\
        </div>\
+       <div  class="demo-card__subhead">
+          Resultado : ${partido.resultado1} - ${partido.resultado2}
+          </div>\
      </div>`;
           container.appendChild(cartaPartido);
         }
