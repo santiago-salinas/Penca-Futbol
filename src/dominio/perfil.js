@@ -4,6 +4,7 @@
 class Perfil {
   /**
    * Inicializa y crea una instancia de la clase Perfil
+   * */
   constructor() {
     this.puntos = 0;
     this.type = "Perfil";

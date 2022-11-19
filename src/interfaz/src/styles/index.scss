@@ -61,6 +61,34 @@ img.emoji {
   vertical-align: -0.1em;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+#Menu{
+  position: flex;
+    z-index:99;
+    background-color: #e8e8e8;
+}
+
 section#Pantalla{
   -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
