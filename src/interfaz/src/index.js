@@ -254,7 +254,7 @@ const updatePartidos = (listaPartidos) => {
 
             let cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
-        <div class="mdc-card mdc-card--outlined">\
+        <div class="mdc-card mdc-card">\
         <div class="mdc-card-wrapper__text-section">\
           <div class="demo-card__title">${partido.equipo1} - ${
               partido.equipo2
@@ -274,7 +274,7 @@ const updatePartidos = (listaPartidos) => {
 
             let cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
-<div class="mdc-card mdc-card--outlined">\
+<div class="mdc-card mdc-card">\
 <div class="mdc-card-wrapper__text-section">\
   <div class="demo-card__title">${partido.equipo1} - ${partido.equipo2}</div>\
   <div class="demo-card__subhead">${partido.fecha.getDate()}/${
@@ -309,7 +309,7 @@ const updatePartidos = (listaPartidos) => {
 
           let cartaPartido = document.createElement("div");
           cartaPartido.innerHTML += `\
-       <div class="mdc-card mdc-card--outlined">\
+       <div class="mdc-card mdc-card">\
        <div class="mdc-card-wrapper__text-section">\
          <div class="demo-card__title">${partido.equipo1} - ${
             partido.equipo2
@@ -360,7 +360,7 @@ const updatePartidos = (listaPartidos) => {
           //esto es si esta la prediccion
 
           cartaPartido.innerHTML += `\
-  <div class="mdc-card mdc-card--outlined">\
+  <div class="mdc-card mdc-card">\
     <div class="mdc-card-wrapper__text-section">\
       <div class="demo-card__title">${partido.equipo1} - ${
             partido.equipo2
@@ -377,7 +377,7 @@ const updatePartidos = (listaPartidos) => {
         } else {
           // si no han hecho la prediccion
           cartaPartido.innerHTML += `\
-    <div class="mdc-card mdc-card--outlined">\
+    <div class="mdc-card mdc-card">\
     <div class="mdc-card-wrapper__text-section">\
       <div class="demo-card__title">${partido.equipo1} - ${
             partido.equipo2
@@ -415,13 +415,13 @@ const updatePartidos = (listaPartidos) => {
     let cartaPerfil = document.createElement("div");
 
     cartaPerfil.innerHTML += `\
-      <div id="contPuntaje" class="mdc-card mdc-card--outlined">\
+      <div id="contPuntaje" class="mdc-card mdc-card">\
       <div class="mdc-card-wrapper__text-section">\
         <div  class="demo-card__subhead">
           Actualmente tienes:
         </div>\
 
-        <div id="zonaPuntaje" class="mdc-card mdc-card--outlined">\
+        <div id="zonaPuntaje" class="mdc-card mdc-card">\
             <div  class="demo-card__title"> 
               ${perfil.puntos}
             </div>\
