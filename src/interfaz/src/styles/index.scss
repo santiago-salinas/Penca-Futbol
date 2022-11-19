@@ -132,9 +132,20 @@ img.emoji {
 }
 
 //Tarjeta Perfil
+#contPuntaje{
+  text-align: center;
+  background-color: #1B5E20;
+  color: #FFFFFF;
+  //font-weight: bold;
+}
+
 #zonaPuntaje {
   font-family: unquote("Roboto");
   font-size: 2rem;
+  text-align: center;
+  background-color: #4C8C4A;
+  color: #FFFFFF;
+  border: #4C8C4A;
 }
 
 //Nuestro fin

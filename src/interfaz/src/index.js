@@ -119,7 +119,7 @@ instancia.addPartido(partido006);
 let perfil = new Perfil();
 instancia.addPerfil(perfil);
 
-instancia.setPuntaje(1);
+instancia.setPuntaje(100);
 console.log(instancia.getPuntaje());
 
 
@@ -392,9 +392,20 @@ const updatePartidos = (listaPartidos) => {
     let cartaPerfil = document.createElement("div");
 
     cartaPerfil.innerHTML += `\
-    <div  class="mdc-card mdc-card--outlined">\
-      <div id="zonaPuntaje" class="demo-card__title">Tus puntos: ${perfil.puntos}</div>\
-    </div>`;
+      <div id="contPuntaje" class="mdc-card mdc-card--outlined">\
+      <div class="mdc-card-wrapper__text-section">\
+        <div  class="demo-card__subhead">
+          Actualmente tienes:
+        </div>\
+
+        <div id="zonaPuntaje" class="mdc-card mdc-card--outlined">\
+            <div  class="demo-card__title"> 
+              ${perfil.puntos}
+            </div>\
+        </div>\
+
+        <div  class="demo-card__subhead">Puntos</div>\
+      </div>`;
 
     container.appendChild(cartaPerfil);
   }
