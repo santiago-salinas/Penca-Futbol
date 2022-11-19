@@ -3,15 +3,14 @@
  */
 class Perfil {
   /**
-   * TODO: Documentacion
-   */
+   * Inicializa y crea una instancia de la clase Perfil
   constructor() {
     this.puntos = 0;
-    this.type = 'Perfil';
+    this.type = "Perfil";
   }
   /**
-   * TODO: Documentacion
-   * @return {array}
+   *
+   * @return {array} Devuelve el perfil
    */
   getPerfil() {
     return {

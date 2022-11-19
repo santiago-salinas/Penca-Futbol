@@ -1,32 +1,32 @@
-import './styles/index.scss';
-import Sistema from '../../dominio/sistema';
-import Partido from '../../dominio/partido';
+import "./styles/index.scss";
+import Sistema from "../../dominio/sistema";
+import Partido from "../../dominio/partido";
 
 // Top app bar
-import {MDCTopAppBar} from '@material/top-app-bar';
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+import { MDCTopAppBar } from "@material/top-app-bar";
+const topAppBarElement = document.querySelector(".mdc-top-app-bar");
 new MDCTopAppBar(topAppBarElement);
 //
 
 // Text Fields
-import {MDCTextField} from '@material/textfield';
-const txtField1 = new MDCTextField(document.querySelector('#labelPredic1'));
-const txtField2 = new MDCTextField(document.querySelector('#labelPredic2'));
+import { MDCTextField } from "@material/textfield";
+const txtField1 = new MDCTextField(document.querySelector("#labelPredic1"));
+const txtField2 = new MDCTextField(document.querySelector("#labelPredic2"));
 
 // End Text Fields
 
 // Card
-import {MDCRipple} from '@material/ripple';
-const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
-[].map.call(document.querySelectorAll(selector), function(el) {
+import { MDCRipple } from "@material/ripple";
+const selector = ".mdc-button, .mdc-icon-button, .mdc-card__primary-action";
+[].map.call(document.querySelectorAll(selector), function (el) {
   return new MDCRipple(el);
 });
 // Card End
 
 // Tab
-import {MDCTabBar} from '@material/tab-bar';
-import Perfil from '../../dominio/perfil';
-const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+import { MDCTabBar } from "@material/tab-bar";
+import Perfil from "../../dominio/perfil";
+const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 tabBar.activateTab(0);
 // Tab end
 
@@ -36,76 +36,76 @@ const instancia = new Sistema();
 
 // Ya paso,tiene prediccion, y reclame
 const partido004 = new Partido({
-  identificador: '004',
-  equipo1: '🇳🇱 Netherland',
-  equipo2: 'México 🇲🇽',
+  identificador: "004",
+  equipo1: "🇳🇱 Netherland",
+  equipo2: "México 🇲🇽",
   prediccion: true,
   prediccion1: 3,
   prediccion2: 4,
-  fecha: '2021-10-07',
-  type: 'Partido',
+  fecha: "2021-10-07",
+  type: "Partido",
   reclame: true,
 });
 // Ya paso, tiene prediccion y no reclame
 const partido005 = new Partido({
-  identificador: '005',
-  equipo1: '🇵🇾 Paraguay',
-  equipo2: 'México 🇲🇽',
+  identificador: "005",
+  equipo1: "🇵🇾 Paraguay",
+  equipo2: "México 🇲🇽",
   prediccion: true,
   prediccion1: 3,
   prediccion2: 4,
-  fecha: '2021-10-07',
-  type: 'Partido',
+  fecha: "2021-10-07",
+  type: "Partido",
   reclame: false,
 });
 
 // Ya paso no tiene prediccion
 const partido003 = new Partido({
-  identificador: '003',
-  equipo1: '🇺🇾 Uruguay',
-  equipo2: 'México 🇲🇽',
+  identificador: "003",
+  equipo1: "🇺🇾 Uruguay",
+  equipo2: "México 🇲🇽",
   prediccion: false,
   prediccion1: 3,
   prediccion2: 4,
-  fecha: '2021-10-07',
-  type: 'Partido',
+  fecha: "2021-10-07",
+  type: "Partido",
   reclame: false,
 });
 // No paso, tiene prediccion
 const partido001 = new Partido({
-  identificador: '001',
-  equipo1: '🇺🇾 Uruguay',
-  equipo2: 'Holanda 🇳🇱',
+  identificador: "001",
+  equipo1: "🇺🇾 Uruguay",
+  equipo2: "Holanda 🇳🇱",
   prediccion: true,
   prediccion1: 1,
   prediccion2: 2,
-  fecha: '2022-12-07',
-  type: 'Partido',
+  fecha: "2022-12-07",
+  type: "Partido",
   reclame: false,
 });
 // No paso, no tiene prediccion
 
 const partido002 = new Partido({
-  identificador: '002',
-  equipo1: '🇪🇸 España',
-  equipo2: 'Ghana 🇬🇭',
+  identificador: "002",
+  equipo1: "🇪🇸 España",
+  equipo2: "Ghana 🇬🇭",
   prediccion: false,
   prediccion1: 1,
   prediccion2: 2,
-  fecha: '2022-12-07',
-  type: 'Partido',
+  fecha: "2022-12-07",
+  type: "Partido",
   reclame: false,
 });
 
 const partido006 = new Partido({
-  identificador: '006',
-  equipo1: '🇩🇪 Alemania',
-  equipo2: 'Qatar 🇶🇦',
+  identificador: "006",
+  equipo1: "🇩🇪 Alemania",
+  equipo2: "Qatar 🇶🇦",
   prediccion: false,
   prediccion1: 0,
   prediccion2: 0,
-  fecha: '2022-11-16',
-  type: 'Partido',
+  fecha: "2022-11-16",
+  type: "Partido",
   reclame: false,
 });
 
@@ -120,20 +120,20 @@ const perfil = new Perfil();
 instancia.addPerfil(perfil);
 
 instancia.setPuntaje(100);
-instancia.setResultado('005', 3, 2);
+instancia.setResultado("005", 3, 2);
 console.log(instancia.getPuntaje());
 
 // -------- Fin datos de prueba --------
 
-const contenido = document.querySelectorAll('#Pantalla');
-tabBar.listen('MDCTabBar:activated', function(event) {
+const contenido = document.querySelectorAll("#Pantalla");
+tabBar.listen("MDCTabBar:activated", function (event) {
   // Obtiene el elemento seleccionado del tab
   // console.log(event.detail.index);
   // console.log(contenido);
-  document.querySelector('#Pantalla .show').classList.add('hide');
-  document.querySelector('#Pantalla .show').classList.remove('show');
-  contenido[0].children[event.detail.index].classList.add('show');
-  contenido[0].children[event.detail.index].classList.remove('hide');
+  document.querySelector("#Pantalla .show").classList.add("hide");
+  document.querySelector("#Pantalla .show").classList.remove("show");
+  contenido[0].children[event.detail.index].classList.add("show");
+  contenido[0].children[event.detail.index].classList.remove("hide");
   // console.log(contenido[0].children[event.detail.index]);
   updatePartidos(instancia.getPartidosList());
 });
@@ -149,71 +149,71 @@ const reclamarPuntos = (partidoAReclamar) => {
 
 const pantallaPrediccion = (partido) => {
   // console.log(partido);
-  document.querySelector('#Pantalla .show').classList.add('hide');
-  document.querySelector('#Pantalla .show').classList.remove('show');
+  document.querySelector("#Pantalla .show").classList.add("hide");
+  document.querySelector("#Pantalla .show").classList.remove("show");
 
-  document.querySelector('#Menu').classList.add('hide');
-  document.querySelector('#Menu').classList.remove('show');
+  document.querySelector("#Menu").classList.add("hide");
+  document.querySelector("#Menu").classList.remove("show");
 
-  document.querySelector('#back-button').classList.add('show');
-  document.querySelector('#back-button').classList.remove('hide');
+  document.querySelector("#back-button").classList.add("show");
+  document.querySelector("#back-button").classList.remove("hide");
   // Volver al inicio
-  document.querySelector('#back-button').addEventListener('click', function() {
-    document.querySelector('#Menu').classList.add('show');
-    document.querySelector('#Menu').classList.remove('hide');
-    document.querySelector('#Pantalla .show').classList.add('hide');
-    document.querySelector('#Pantalla .show').classList.remove('show');
+  document.querySelector("#back-button").addEventListener("click", function () {
+    document.querySelector("#Menu").classList.add("show");
+    document.querySelector("#Menu").classList.remove("hide");
+    document.querySelector("#Pantalla .show").classList.add("hide");
+    document.querySelector("#Pantalla .show").classList.remove("show");
 
-    contenido[0].children[0].classList.add('show');
-    contenido[0].children[0].classList.remove('hide');
+    contenido[0].children[0].classList.add("show");
+    contenido[0].children[0].classList.remove("hide");
     tabBar.activateTab(0);
-    document.querySelector('#back-button').classList.add('hide');
-    document.querySelector('#back-button').classList.remove('show');
+    document.querySelector("#back-button").classList.add("hide");
+    document.querySelector("#back-button").classList.remove("show");
     updatePartidos(instancia.getPartidosList());
   });
 
-  const predic = document.querySelector('#Pantalla #IngresoPrediccion');
-  predic.classList.add('show');
-  predic.classList.remove('hide');
+  const predic = document.querySelector("#Pantalla #IngresoPrediccion");
+  predic.classList.add("show");
+  predic.classList.remove("hide");
   document.querySelector(
-      '#IngresoPrediccion #paises',
+    "#IngresoPrediccion #paises"
   ).innerHTML = `${partido.equipo1} - ${partido.equipo2} `;
 
   document.querySelector(
-      '#txtPredic1',
+    "#txtPredic1"
   ).innerHTML = `Predicción ${partido.equipo1}`;
 
-  txtField1.value = '';
-  txtField2.value = '';
+  txtField1.value = "";
+  txtField2.value = "";
 
   document.querySelector(
-      '#txtPredic2',
+    "#txtPredic2"
   ).innerHTML = `Predicción ${partido.equipo2}`;
 
-  const oldElement = document.querySelector('#btnPredic');
+  const oldElement = document.querySelector("#btnPredic");
   const newElement = oldElement.cloneNode(true);
   oldElement.parentNode.replaceChild(newElement, oldElement);
 
-  document.querySelector('#btnPredic').addEventListener('click', function() {
+  document.querySelector("#btnPredic").addEventListener("click", function () {
     if (txtField1.valid && txtField2.valid) {
       instancia.setPrediccion(
-          `${partido.identificador}`,
-          txtField1.value,
-          txtField2.value,
+        `${partido.identificador}`,
+        txtField1.value,
+        txtField2.value
       );
-      document.querySelector('#Menu').classList.add('show');
-      document.querySelector('#Menu').classList.remove('hide');
-      document.querySelector('#Pantalla .show').classList.add('hide');
-      document.querySelector('#Pantalla .show').classList.remove('show');
+      document.querySelector("#Menu").classList.add("show");
+      document.querySelector("#Menu").classList.remove("hide");
+      document.querySelector("#Pantalla .show").classList.add("hide");
+      document.querySelector("#Pantalla .show").classList.remove("show");
 
-      contenido[0].children[0].classList.add('show');
-      contenido[0].children[0].classList.remove('hide');
+      contenido[0].children[0].classList.add("show");
+      contenido[0].children[0].classList.remove("hide");
       tabBar.activateTab(0);
-      document.querySelector('#back-button').classList.add('hide');
-      document.querySelector('#back-button').classList.remove('show');
+      document.querySelector("#back-button").classList.add("hide");
+      document.querySelector("#back-button").classList.remove("show");
       updatePartidos(instancia.getPartidosList());
     } else {
-      alert('Parametros vacios');
+      alert("Parametros vacios");
     }
     // console.log(partido.identificador);
   });
@@ -221,15 +221,15 @@ const pantallaPrediccion = (partido) => {
 };
 
 const updatePartidos = (listaPartidos) => {
-  const tabActiva = document.querySelector('#Pantalla .show').id;
+  const tabActiva = document.querySelector("#Pantalla .show").id;
   // console.log("holisAAA");
   // console.log(tabActiva);
 
-  const container = document.querySelector('.container' + tabActiva);
+  const container = document.querySelector(".container" + tabActiva);
   // console.log("esto es el container mira xd");
   // console.log(container);
 
-  container.innerHTML = ''; // esto limpia
+  container.innerHTML = ""; // esto limpia
   listaPartidos.forEach((partido) => {
     // Hago una fecha nueva que setea sus datos con los datos de hoy
     const fechaDeHoy = new Date();
@@ -241,7 +241,7 @@ const updatePartidos = (listaPartidos) => {
     //  console.log("Este es el resultado de la comparacion");
     //  console.log(partido.fecha < fechaDeHoy);
 
-    if (tabActiva == 'Resultados') {
+    if (tabActiva == "Resultados") {
       if (partido.fecha < fechaDeHoy) {
         // if true es que ya paso el partido
 
@@ -252,16 +252,16 @@ const updatePartidos = (listaPartidos) => {
             // esto es si reclamaron ya o no
             // si ya reclamaron
 
-            const cartaPartido = document.createElement('div');
+            const cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
         <div class="mdc-card mdc-card">\
         <div class="mdc-card-wrapper__text-section">\
           <div class="demo-card__title">${partido.equipo1} - ${
-  partido.equipo2
-}</div>\
+              partido.equipo2
+            }</div>\
           <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-  partido.fecha.getMonth() + 1
-}/${partido.fecha.getFullYear()}</div>\
+              partido.fecha.getMonth() + 1
+            }/${partido.fecha.getFullYear()}</div>\
           <div class="demo-card__title">Ya reclamaste tu premio</div>\
         </div>\
       </div>`;
@@ -271,19 +271,19 @@ const updatePartidos = (listaPartidos) => {
 
             const puntaje = instancia.calcularPuntaje(partido.identificador);
 
-            const cartaPartido = document.createElement('div');
+            const cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
 <div class="mdc-card mdc-card">\
 <div class="mdc-card-wrapper__text-section">\
   <div class="demo-card__title">${partido.equipo1} - ${partido.equipo2}</div>\
   <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-  partido.fecha.getMonth() + 1
-}/${partido.fecha.getFullYear()}</div>\
+              partido.fecha.getMonth() + 1
+            }/${partido.fecha.getFullYear()}</div>\
 </div>\
 <div class="mdc-card__actions">\
   <button id="btn${
-  partido.identificador
-}" class="mdc-button mdc-button--raised mdc-button--leading">\
+    partido.identificador
+  }" class="mdc-button mdc-button--raised mdc-button--leading">\
     <span class="mdc-button__ripple"></span>\
     <i class="material-icons mdc-button__icon" aria-hidden="true"\
       >edit</i\
@@ -295,27 +295,27 @@ const updatePartidos = (listaPartidos) => {
             container.appendChild(cartaPartido);
             // Agrega funcionalidad a los botones
             document
-                .querySelector(`#btn${partido.identificador}`)
-                .addEventListener('click', function() {
-                  reclamarPuntos(partido);
+              .querySelector(`#btn${partido.identificador}`)
+              .addEventListener("click", function () {
+                reclamarPuntos(partido);
                 // console.log(partido.identificador);
-                });
+              });
 
             // si auno no lo reclamaron
           }
         } else {
           // ACA ES QUE PASO EL PARTIDO Y NO HICISTE LA PREDICCION
 
-          const cartaPartido = document.createElement('div');
+          const cartaPartido = document.createElement("div");
           cartaPartido.innerHTML += `\
        <div class="mdc-card mdc-card">\
        <div class="mdc-card-wrapper__text-section">\
          <div class="demo-card__title">${partido.equipo1} - ${
-  partido.equipo2
-}</div>\
+            partido.equipo2
+          }</div>\
          <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-  partido.fecha.getMonth() + 1
-}/${partido.fecha.getFullYear()}</div>\
+            partido.fecha.getMonth() + 1
+          }/${partido.fecha.getFullYear()}</div>\
 <div class="demo-card__title">Ya paso el partido y no hiciste prediccion</div>\
        </div>\
      </div>`;
@@ -324,11 +324,11 @@ const updatePartidos = (listaPartidos) => {
       }
     }
 
-    if (tabActiva == 'Proximos') {
+    if (tabActiva == "Proximos") {
       if (partido.fecha >= fechaDeHoy) {
         // no ha pasado el partido o es hoy ( ==)
 
-        const cartaPartido = document.createElement('div');
+        const cartaPartido = document.createElement("div");
         if (partido.prediccion) {
           // esto es si esta la prediccion
 
@@ -336,14 +336,14 @@ const updatePartidos = (listaPartidos) => {
   <div class="mdc-card mdc-card">\
     <div class="mdc-card-wrapper__text-section">\
       <div class="demo-card__title">${partido.equipo1} - ${
-  partido.equipo2
-}</div>\
+            partido.equipo2
+          }</div>\
       <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-  partido.fecha.getMonth() + 1
-}/${partido.fecha.getFullYear()}</div>\
+            partido.fecha.getMonth() + 1
+          }/${partido.fecha.getFullYear()}</div>\
       <div class="demo-card__title">Tu predicción: ${partido.prediccion1} - ${
-  partido.prediccion2
-}</div>\
+            partido.prediccion2
+          }</div>\
     </div>\
   </div>`;
           container.appendChild(cartaPartido);
@@ -353,16 +353,16 @@ const updatePartidos = (listaPartidos) => {
     <div class="mdc-card mdc-card">\
     <div class="mdc-card-wrapper__text-section">\
       <div class="demo-card__title">${partido.equipo1} - ${
-  partido.equipo2
-}</div>\
+            partido.equipo2
+          }</div>\
       <div class="demo-card__subhead">${partido.fecha.getDate()}/${
-  partido.fecha.getMonth() + 1
-}/${partido.fecha.getFullYear()}</div>\
+            partido.fecha.getMonth() + 1
+          }/${partido.fecha.getFullYear()}</div>\
     </div>\
     <div class="mdc-card__actions">\
       <button id="btn${
-  partido.identificador
-}" class="mdc-button mdc-button--raised mdc-button--leading">\
+        partido.identificador
+      }" class="mdc-button mdc-button--raised mdc-button--leading">\
         <span class="mdc-button__ripple"></span>\
         <i class="material-icons mdc-button__icon" aria-hidden="true"\
           >edit</i\
@@ -374,18 +374,18 @@ const updatePartidos = (listaPartidos) => {
           container.appendChild(cartaPartido);
           // Agrega funcionalidad a los botones
           document
-              .querySelector(`#btn${partido.identificador}`)
-              .addEventListener('click', function() {
-                pantallaPrediccion(partido);
+            .querySelector(`#btn${partido.identificador}`)
+            .addEventListener("click", function () {
+              pantallaPrediccion(partido);
               // console.log(partido.identificador);
-              });
+            });
         }
       }
     }
   });
 
-  if (tabActiva == 'Perfil') {
-    const cartaPerfil = document.createElement('div');
+  if (tabActiva == "Perfil") {
+    const cartaPerfil = document.createElement("div");
 
     cartaPerfil.innerHTML += `\
       <div id="contPuntaje" class="mdc-card mdc-card">\

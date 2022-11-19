@@ -3,34 +3,34 @@
  */
 class Sistema {
   /**
-   * TODO: Documentacion
+   * Inicializa y crea una instancia de la clase Sistema
    */
   constructor() {
     this.partidos = [];
     this.perfil;
   }
   /**
-   * TODO: Documentacion
-   * @return {partidos} The sum of the two numbers.
+   *
+   * @return {partidos} Retorna partidos
    */
   getPartidosList() {
     return this.partidos;
   }
 
   /**
-   * TODO: Documentacion
-   * @param {array} partido The first number.
+   * Agrega partido
+   * @param {array} partido el partido a agregar
    */
   addPartido(partido) {
     this.partidos.push(partido);
   }
 
   /**
-   * TODO: Documentacion
-   * @param {int} idPartido The first number.
-   * @param {int} prediccion1 The first number.
-   * @param {int} prediccion2 The first number.
-   * @return {boolean}
+   * Establece predicciones a un cierto partido
+   * @param {int} idPartido Identificador del partido
+   * @param {int} prediccion1  Prediccion para el 1er equipo
+   * @param {int} prediccion2 Prediccion para el 2do equipo
+   * @return {boolean} Retorna si fue capaz de establecer la prediccion
    */
   setPrediccion(idPartido, prediccion1, prediccion2) {
     if (prediccion1 >= 0 && prediccion2 >= 0) {
@@ -47,11 +47,11 @@ class Sistema {
   }
 
   /**
-   * TODO: Documentacion
-   * @param {int} idPartido The first number.
-   * @param {int} resultado1 The first number.
-   * @param {int} resultado2 The first number.
-   * @return {boolean}
+   * Establece un resultado para un cierto partido
+   * @param {int} idPartido Identificador del partido
+   * @param {int} resultado1 El resultado del primer equipo
+   * @param {int} resultado2 El resultado del segundo equipo
+   * @return {boolean} Retorna si fue capaz de establecer el resultado
    */
   setResultado(idPartido, resultado1, resultado2) {
     if (resultado1 > 0 && resultado2 > 0) {
@@ -67,11 +67,9 @@ class Sistema {
   }
 
   /**
-   * TODO: Documentacion
-   * @param {int} idPartido The first number.
-   * @param {int} resultado1 The first number.
-   * @param {int} resultado2 The first number.
-   * @return {boolean}
+   * Establece que el puntaje ha sido reclamado para un cierto partido
+   * @param {int} idPartido Identificador del partido
+   * @return {boolean} Retorna si fue capaz de cambiar el estado de el atributo reclame
    */
   setReclame(idPartido) {
     this.getPartidosList().forEach((partido) => {
@@ -85,33 +83,33 @@ class Sistema {
   }
 
   /**
-   * TODO: Documentacion
-   * @return {perfil}
+   *
+   * @return {perfil} Devuelve el objeto perfil
    */
   getPerfil() {
     return this.perfil;
   }
 
   /**
-   * TODO: Documentacion
-   * @param {perfil} perfil The first number.
+   * Agrega un perfil
+   * @param {perfil} perfil El perfil a agregar
    */
   addPerfil(perfil) {
     this.perfil = perfil;
   }
 
   /**
-   * TODO: Documentacion
-   * @return {int}
+   *
+   * @return {int} Retorna el puntaje de un perfil
    */
   getPuntaje() {
     return this.getPerfil().puntos;
   }
 
   /**
-   * TODO: Documentacion
-   * @param {int} p The first number.
-   * @return {boolean}
+   * Suma un puntaje a el perfil
+   * @param {int} p Puntaje a agregar
+   * @return {boolean} Retorna si fue capaz de agregar ese puntaje o no.
    */
   setPuntaje(p) {
     if (p > 0) {
@@ -122,9 +120,9 @@ class Sistema {
   }
 
   /**
-   * TODO: Documentacion
-   * @param {int} idPartido The first number.
-   * @return {int}
+   * Calcula el puntaje de un cierto partido a partir de la prediccion y el resultado real
+   * @param {int} idPartido El partido cuyo puntaje sera calculado
+   * @return {int} Devuelve el puntaje calculado
    */
   calcularPuntaje(idPartido) {
     let puntaje = 1000;

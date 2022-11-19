@@ -3,30 +3,30 @@
  */
 class Partido {
   /**
-   * TODO: Documentacion
-   * @param {array} dataArray The first number.
+   * Inicializa y crea una instancia de la clase Partido
+   * @param {array} dataArray array con atributos
    */
   constructor(dataArray) {
-    this.identificador = dataArray['identificador'];
-    this.equipo1 = dataArray['equipo1'];
-    this.equipo2 = dataArray['equipo2'];
+    this.identificador = dataArray["identificador"];
+    this.equipo1 = dataArray["equipo1"];
+    this.equipo2 = dataArray["equipo2"];
     // booleano que indica si hay prediccion ingresada
-    this.prediccion = dataArray['prediccion'];
+    this.prediccion = dataArray["prediccion"];
     // para poner cuanto el primer equipo
-    this.prediccion1 = dataArray['prediccion1'];
+    this.prediccion1 = dataArray["prediccion1"];
     // para poner cuanto el segundo equipo
-    this.prediccion2 = dataArray['prediccion2'];
-    this.resultado1 = dataArray['resultado1'];
-    this.resultado2 = dataArray['resultado2'];
-    this.fecha = new Date(dataArray['fecha']);
+    this.prediccion2 = dataArray["prediccion2"];
+    this.resultado1 = dataArray["resultado1"];
+    this.resultado2 = dataArray["resultado2"];
+    this.fecha = new Date(dataArray["fecha"]);
     // booleano para saber si ya reclamaron el premio o no
-    this.reclame = dataArray['reclame'];
-    this.type = 'Partido';
+    this.reclame = dataArray["reclame"];
+    this.type = "Partido";
   }
   dataArray;
   /**
-   * TODO: Documentacion
-   * @return {array}
+   *
+   * @return {array} Devuelve el objeto Partido
    */
   getPartido() {
     return {
