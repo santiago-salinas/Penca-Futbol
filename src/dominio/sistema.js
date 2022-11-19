@@ -25,6 +25,28 @@ class Sistema {
     });
   }
 
+  //Agrega prediccion
+  setResultado(idPartido, resultado1, resultado2) {
+    //TODO: Buscar partido y modificar
+    //this.partidos.push(partido)
+    this.getPartidosList().forEach((partido) => {
+      if (partido.identificador == idPartido) {
+        partido.resultado1 = resultado1;
+        partido.resultado2 = resultado2;
+      }
+    });
+  }
+
+  setReclame(idPartido) {
+    //TODO: Buscar partido y modificar
+    //this.partidos.push(partido)
+    this.getPartidosList().forEach((partido) => {
+      if (partido.identificador == idPartido) {
+        partido.reclame = true;
+      }
+    });
+  }
+
   getPerfil() {
     return this.perfil;
   }

@@ -120,8 +120,8 @@ let perfil = new Perfil();
 instancia.addPerfil(perfil);
 
 instancia.setPuntaje(100);
+instancia.setResultado("005", 3, 2);
 console.log(instancia.getPuntaje());
-
 
 //-------- Fin datos de prueba --------
 
@@ -141,6 +141,14 @@ tabBar.listen("MDCTabBar:activated", function (event) {
 //PRE: Dado el identificador de un partido
 //POS: Se encarga que luego el boton para ingresar
 //la prediccion, sepa a que prediccion corresponde
+
+const reclamarPuntos = (partidoAReclamar) => {
+  var puntaje = instancia.calcularPuntaje(partidoAReclamar);
+  instancia.setPuntaje(puntaje);
+  console.log("entro a reclamar");
+  instancia.setReclame(partidoAReclamar);
+  updatePartidos(instancia.getPartidosList());
+}; //Hay que hiddear el boton y mostrar que reclamo los puntos
 
 const pantallaPrediccion = (partido) => {
   //console.log(partido);
@@ -262,21 +270,45 @@ const updatePartidos = (listaPartidos) => {
       </div>`;
             container.appendChild(cartaPartido);
           } else {
-            //si auno no lo reclamaron
+            //Calcula el puntaje
+            var puntaje;
+
+            puntaje = instancia.calcularPuntaje(partido);
+            console.log("Este seria el puntaje");
+            console.log(puntaje);
+            puntaje = 560;
+
             let cartaPartido = document.createElement("div");
             cartaPartido.innerHTML += `\
-        <div class="mdc-card mdc-card--outlined">\
-        <div class="mdc-card-wrapper__text-section">\
-          <div class="demo-card__title">${partido.equipo1} - ${
-              partido.equipo2
-            }</div>\
-          <div class="demo-card__subhead">${partido.fecha.getDate()}/${
+<div class="mdc-card mdc-card--outlined">\
+<div class="mdc-card-wrapper__text-section">\
+  <div class="demo-card__title">${partido.equipo1} - ${partido.equipo2}</div>\
+  <div class="demo-card__subhead">${partido.fecha.getDate()}/${
               partido.fecha.getMonth() + 1
             }/${partido.fecha.getFullYear()}</div>\
-          <div class="demo-card__title">Haz click aqui para reclamar tu premio</div>\
-        </div>\
-      </div>`;
+</div>\
+<div class="mdc-card__actions">\
+  <button id="btn${
+    partido.identificador
+  }" class="mdc-button mdc-button--raised mdc-button--leading">\
+    <span class="mdc-button__ripple"></span>\
+    <i class="material-icons mdc-button__icon" aria-hidden="true"\
+      >edit</i\
+    >\
+    <span class="mdc-button__label">Reclamar ${puntaje} puntos</span>\
+  </button>\
+</div>\
+</div>`;
             container.appendChild(cartaPartido);
+            //Agrega funcionalidad a los botones
+            document
+              .querySelector(`#btn${partido.identificador}`)
+              .addEventListener("click", function () {
+                reclamarPuntos(partido, puntaje);
+                //console.log(partido.identificador);
+              });
+
+            //si auno no lo reclamaron
           }
         } else {
           //ACA ES QUE PASO EL PARTIDO Y NO HICISTE LA PREDICCION
@@ -383,9 +415,6 @@ const updatePartidos = (listaPartidos) => {
         }
       }
     }
-
-
-
   });
 
   if (tabActiva == "Perfil") {
@@ -413,8 +442,6 @@ const updatePartidos = (listaPartidos) => {
   twemoji.parse(document.body);
 };
 
-
 updatePartidos(instancia.getPartidosList());
 //instancia.setPrediccion("001", 2, 13);
 updatePartidos(instancia.getPartidosList());
-
