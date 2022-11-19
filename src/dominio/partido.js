@@ -7,6 +7,8 @@ class Partido {
     this.prediccion = dataArray["prediccion"]; //booleano que indica si hay prediccion ingresada
     this.prediccion1 = dataArray["prediccion1"]; //para poner cuanto el primer equipo
     this.prediccion2 = dataArray["prediccion2"]; //para poner cuanto el segundo equipo
+    this.resultado1 = dataArray["resultado1"];
+    this.resultado2 = dataArray["resultado2"];
     this.fecha = new Date(dataArray["fecha"]); //TODO:Cambie como ponemos la fecha
     this.reclame = dataArray["reclame"]; //booleano para saber si ya reclamaron el premio o no
     this.type = "Partido";

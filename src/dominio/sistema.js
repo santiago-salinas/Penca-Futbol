@@ -25,24 +25,37 @@ class Sistema {
     });
   }
 
-  getPerfil(){
+  getPerfil() {
     return this.perfil;
   }
 
-  addPerfil(perfil){
+  addPerfil(perfil) {
     this.perfil = perfil;
   }
 
-  getPuntaje(){
+  getPuntaje() {
     return this.getPerfil().puntos;
   }
 
-  setPuntaje(p){
+  setPuntaje(p) {
     this.getPerfil().puntos += p;
   }
 
-  calcularPuntaje(){
-    
+  calcularPuntaje(idPartido) {
+    var puntaje = 1000;
+    var delta1;
+    var delta2;
+    this.getPartidosList().forEach((partido) => {
+      if (partido.identificador == idPartido) {
+        delta1 = Math.abs(partido.prediccion1 - partido.resultado1);
+        delta2 = Math.abs(partido.prediccion2 - partido.resultado2);
+      }
+    });
+    puntaje = puntaje - 300 * delta1 - 300 * delta2;
+    if (puntaje < 0) {
+      return 10;
+    }
+    return puntaje;
   }
 }
 module.exports = Sistema;
