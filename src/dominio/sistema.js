@@ -141,4 +141,4 @@ class Sistema {
     return puntaje;
   }
 }
-export default Sistema;
+module.exports = Sistema;

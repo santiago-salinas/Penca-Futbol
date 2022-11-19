@@ -45,7 +45,7 @@ class Partido {
   }
 }
 
-export default Partido;
+module.exports = Partido;
 
 // TODO: Agregar en la documentacion porque elegimos
 // hacer las predicciones de esa manera  (source:adorjan)

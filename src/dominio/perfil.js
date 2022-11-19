@@ -20,4 +20,4 @@ class Perfil {
     };
   }
 }
-export default Perfil;
+module.exports = Perfil;
