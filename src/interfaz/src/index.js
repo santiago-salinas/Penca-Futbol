@@ -36,8 +36,8 @@ let instancia = new Sistema();
 //Ya paso,tiene prediccion, y reclame
 let partido004 = new Partido({
   identificador: "004",
-  equipo1: "Netherland",
-  equipo2: "México",
+  equipo1: "🇳🇱 Netherland",
+  equipo2: "México 🇲🇽",
   prediccion: true,
   prediccion1: 3,
   prediccion2: 4,
@@ -48,8 +48,8 @@ let partido004 = new Partido({
 //Ya paso, tiene prediccion y no reclame
 let partido005 = new Partido({
   identificador: "005",
-  equipo1: "Paraguay",
-  equipo2: "México",
+  equipo1: "🇵🇾 Paraguay",
+  equipo2: "México 🇲🇽",
   prediccion: true,
   prediccion1: 3,
   prediccion2: 4,
@@ -61,8 +61,8 @@ let partido005 = new Partido({
 //Ya paso no tiene prediccion
 let partido003 = new Partido({
   identificador: "003",
-  equipo1: "Uruguay",
-  equipo2: "México",
+  equipo1: "🇺🇾 Uruguay",
+  equipo2: "México 🇲🇽",
   prediccion: false,
   prediccion1: 3,
   prediccion2: 4,
@@ -73,8 +73,8 @@ let partido003 = new Partido({
 //No paso, tiene prediccion
 let partido001 = new Partido({
   identificador: "001",
-  equipo1: "Uruguay",
-  equipo2: "Holanda",
+  equipo1: "🇺🇾 Uruguay",
+  equipo2: "Holanda 🇳🇱",
   prediccion: true,
   prediccion1: 1,
   prediccion2: 2,
@@ -86,8 +86,8 @@ let partido001 = new Partido({
 
 let partido002 = new Partido({
   identificador: "002",
-  equipo1: "España",
-  equipo2: "Ghana",
+  equipo1: "🇪🇸 España",
+  equipo2: "Ghana 🇬🇭",
   prediccion: false,
   prediccion1: 1,
   prediccion2: 2,
@@ -98,8 +98,8 @@ let partido002 = new Partido({
 
 let partido006 = new Partido({
   identificador: "006",
-  equipo1: "Alemania",
-  equipo2: "Qatar",
+  equipo1: "🇩🇪 Alemania",
+  equipo2: "Qatar 🇶🇦",
   prediccion: false,
   prediccion1: 0,
   prediccion2: 0,
@@ -202,6 +202,7 @@ const pantallaPrediccion = (partido) => {
     }
     //console.log(partido.identificador);
   });
+  twemoji.parse(document.body);
 };
 
 const updatePartidos = (listaPartidos) => {
@@ -336,7 +337,7 @@ const updatePartidos = (listaPartidos) => {
           }</div>\
     </div>\
   </div>`;
-  container.appendChild(cartaPartido);
+          container.appendChild(cartaPartido);
         } else {
           // si no han hecho la prediccion
           cartaPartido.innerHTML += `\
@@ -350,7 +351,9 @@ const updatePartidos = (listaPartidos) => {
           }/${partido.fecha.getFullYear()}</div>\
     </div>\
     <div class="mdc-card__actions">\
-      <button id="btn${partido.identificador}" class="mdc-button mdc-button--raised mdc-button--leading">\
+      <button id="btn${
+        partido.identificador
+      }" class="mdc-button mdc-button--raised mdc-button--leading">\
         <span class="mdc-button__ripple"></span>\
         <i class="material-icons mdc-button__icon" aria-hidden="true"\
           >edit</i\
@@ -361,16 +364,17 @@ const updatePartidos = (listaPartidos) => {
   </div>`;
           container.appendChild(cartaPartido);
           //Agrega funcionalidad a los botones
-          document.querySelector(`#btn${partido.identificador}`).addEventListener("click", function () {
-            pantallaPrediccion(partido);
-            //console.log(partido.identificador);
-          });
-
+          document
+            .querySelector(`#btn${partido.identificador}`)
+            .addEventListener("click", function () {
+              pantallaPrediccion(partido);
+              //console.log(partido.identificador);
+            });
         }
-        
       }
     }
   });
+  twemoji.parse(document.body);
 };
 
 updatePartidos(instancia.getPartidosList());
