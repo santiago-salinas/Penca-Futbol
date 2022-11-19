@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const path = require("path");
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
