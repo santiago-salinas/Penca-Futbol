@@ -381,17 +381,17 @@ const updatePartidos = (listaPartidos) => {
     cartaPerfil.innerHTML += `\
       <div id="contPuntaje" class="mdc-card mdc-card">\
       <div class="mdc-card-wrapper__text-section">\
-        <div  class="demo-card__subhead">
+        <div id="textPuntaje" class="demo-card__subhead">
           Actualmente tienes:
         </div>\
 
         <div id="zonaPuntaje" class="mdc-card mdc-card">\
-            <div  class="demo-card__title"> 
+            <div id="zonaPuntaje" class="demo-card__title"> 
               ${perfil.puntos}
             </div>\
         </div>\
 
-        <div  class="demo-card__subhead">Puntos</div>\
+        <div id="textPuntaje" class="demo-card__subhead">Puntos</div>\
       </div>`;
 
     container.appendChild(cartaPerfil);
