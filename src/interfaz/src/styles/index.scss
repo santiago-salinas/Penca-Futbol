@@ -186,15 +186,14 @@ h1{ font-size:40px;
 //Tarjeta Perfil
 #contPuntaje{
   text-align: center;
-  background-color: #1B5E20;
-  color: #FFFFFF;
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
 #textPuntaje{
+  opacity: 10;
   font-size: 30px;
-  color: #FFFFFF;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -202,9 +201,9 @@ h1{ font-size:40px;
   font-family: unquote("Roboto");
   font-size: 50px;
   text-align: center;
-  background-color: #4C8C4A;
-  color: #FFFFFF;
-  border: #4C8C4A;
+  background-color: #6cac6a;
+  color: #ffffff;
+  border: #6cac6a;
   padding-top: 16px;
   padding-bottom: 16px;
 }
