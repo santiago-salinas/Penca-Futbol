@@ -25,11 +25,12 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
 
 //Tab
 import { MDCTabBar } from "@material/tab-bar";
+import Perfil from "../../dominio/perfil";
 const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 tabBar.activateTab(0);
 //Tab end
 
-//Datos de prueba
+//-------- Inicio datos de prueba --------
 //Datos de prueba
 let instancia = new Sistema();
 
@@ -114,6 +115,15 @@ instancia.addPartido(partido003);
 instancia.addPartido(partido004);
 instancia.addPartido(partido005);
 instancia.addPartido(partido006);
+
+let perfil = new Perfil();
+instancia.addPerfil(perfil);
+
+instancia.setPuntaje(1);
+console.log(instancia.getPuntaje());
+
+
+//-------- Fin datos de prueba --------
 
 let contenido = document.querySelectorAll("#Pantalla");
 tabBar.listen("MDCTabBar:activated", function (event) {
@@ -324,7 +334,7 @@ const updatePartidos = (listaPartidos) => {
           //esto es si esta la prediccion
 
           cartaPartido.innerHTML += `\
-    <div class="mdc-card mdc-card--outlined">\
+  <div class="mdc-card mdc-card--outlined">\
     <div class="mdc-card-wrapper__text-section">\
       <div class="demo-card__title">${partido.equipo1} - ${
             partido.equipo2
@@ -373,10 +383,27 @@ const updatePartidos = (listaPartidos) => {
         }
       }
     }
+
+
+
   });
+
+  if (tabActiva == "Perfil") {
+    let cartaPerfil = document.createElement("div");
+
+    cartaPerfil.innerHTML += `\
+    <div  class="mdc-card mdc-card--outlined">\
+      <div id="zonaPuntaje" class="demo-card__title">Tus puntos: ${perfil.puntos}</div>\
+    </div>`;
+
+    container.appendChild(cartaPerfil);
+  }
+
   twemoji.parse(document.body);
 };
+
 
 updatePartidos(instancia.getPartidosList());
 //instancia.setPrediccion("001", 2, 13);
 updatePartidos(instancia.getPartidosList());
+

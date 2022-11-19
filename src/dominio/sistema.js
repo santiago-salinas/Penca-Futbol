@@ -1,6 +1,7 @@
 class Sistema {
   constructor() {
     this.partidos = [];
+    this.perfil;
   }
 
   getPartidosList() {
@@ -22,6 +23,26 @@ class Sistema {
         partido.prediccion2 = prediccion2;
       }
     });
+  }
+
+  getPerfil(){
+    return this.perfil;
+  }
+
+  addPerfil(perfil){
+    this.perfil = perfil;
+  }
+
+  getPuntaje(){
+    return this.getPerfil().puntos;
+  }
+
+  setPuntaje(p){
+    this.getPerfil().puntos += p;
+  }
+
+  calcularPuntaje(){
+    
   }
 }
 module.exports = Sistema;

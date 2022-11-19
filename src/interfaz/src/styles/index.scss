@@ -131,6 +131,12 @@ img.emoji {
   opacity: .6;
 }
 
+//Tarjeta Perfil
+#zonaPuntaje {
+  font-family: unquote("Roboto");
+  font-size: 2rem;
+}
+
 //Nuestro fin
 
 @include checkbox.core-styles;
