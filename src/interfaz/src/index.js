@@ -33,95 +33,71 @@ tabBar.activateTab(0);
 // -------- Inicio datos de prueba --------
 // Datos de prueba
 const instancia = new Sistema();
+const perfil = new Perfil();
+instancia.addPerfil(perfil);
 
-// Ya paso,tiene prediccion, y reclame
-const partido004 = new Partido({
-  identificador: "004",
-  equipo1: "🇳🇱 Netherland",
-  equipo2: "México 🇲🇽",
-  prediccion: true,
-  prediccion1: 3,
-  prediccion2: 4,
-  fecha: "2021-10-07",
-  type: "Partido",
-  reclame: true,
-});
-// Ya paso, tiene prediccion y no reclame
-const partido005 = new Partido({
-  identificador: "005",
-  equipo1: "🇵🇾 Paraguay",
-  equipo2: "México 🇲🇽",
-  prediccion: true,
-  prediccion1: 3,
-  prediccion2: 4,
-  fecha: "2021-10-07",
-  type: "Partido",
-  reclame: false,
-});
 
-// Ya paso no tiene prediccion
-const partido003 = new Partido({
-  identificador: "003",
-  equipo1: "🇺🇾 Uruguay",
-  equipo2: "México 🇲🇽",
-  prediccion: false,
-  prediccion1: 3,
-  prediccion2: 4,
-  fecha: "2021-10-07",
-  type: "Partido",
-  reclame: false,
-});
-// No paso, tiene prediccion
+
 const partido001 = new Partido({
   identificador: "001",
   equipo1: "🇺🇾 Uruguay",
   equipo2: "Holanda 🇳🇱",
-  prediccion: true,
-  prediccion1: 1,
-  prediccion2: 2,
   fecha: "2022-12-07",
-  type: "Partido",
-  reclame: false,
 });
-// No paso, no tiene prediccion
+// No paso, tiene prediccion
+instancia.addPartido(partido001);
+instancia.setPrediccion("001", 1, 3);
 
 const partido002 = new Partido({
   identificador: "002",
   equipo1: "🇪🇸 España",
   equipo2: "Ghana 🇬🇭",
-  prediccion: false,
-  prediccion1: 1,
-  prediccion2: 2,
   fecha: "2022-12-07",
-  type: "Partido",
-  reclame: false,
 });
+// No paso, no tiene prediccion
+instancia.addPartido(partido002);
+
+const partido003 = new Partido({
+  identificador: "003",
+  equipo1: "🇺🇾 Uruguay",
+  equipo2: "México 🇲🇽",
+  fecha: "2021-10-07"
+});
+// Ya paso no tiene prediccion
+instancia.addPartido(partido003);
+instancia.setResultado("003", 4, 1);
+
+const partido004 = new Partido({
+  identificador: "004",
+  equipo1: "🇳🇱 Netherland",
+  equipo2: "México 🇲🇽",
+  fecha: "2021-10-07",
+});
+// Ya paso,tiene prediccion, y reclame
+instancia.addPartido(partido004);
+instancia.setPrediccion("004", 2, 1);
+instancia.setResultado("004", 4, 1);
+instancia.setReclame("004");
+
+const partido005 = new Partido({
+  identificador: "005",
+  equipo1: "🇵🇾 Paraguay",
+  equipo2: "México 🇲🇽",
+  fecha: "2021-10-07",
+});
+// Ya paso, tiene prediccion y no reclame
+instancia.addPartido(partido005);
+instancia.setResultado("005", 4, 1);
+instancia.setPrediccion("005", 4, 1);
 
 const partido006 = new Partido({
   identificador: "006",
   equipo1: "🇩🇪 Alemania",
   equipo2: "Qatar 🇶🇦",
-  prediccion: false,
-  prediccion1: 0,
-  prediccion2: 0,
   fecha: "2022-11-16",
-  type: "Partido",
-  reclame: false,
 });
-
-instancia.addPartido(partido001);
-instancia.addPartido(partido002);
-instancia.addPartido(partido003);
-instancia.addPartido(partido004);
-instancia.addPartido(partido005);
 instancia.addPartido(partido006);
-
-const perfil = new Perfil();
-instancia.addPerfil(perfil);
-
-instancia.setPuntaje(100);
-instancia.setResultado("005", 3, 2);
-console.log(instancia.getPuntaje());
+instancia.setResultado("006", 4, 1);
 
 // -------- Fin datos de prueba --------
 
