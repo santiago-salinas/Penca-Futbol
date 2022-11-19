@@ -1,41 +1,60 @@
+/**
+ * TODO: Documentacion
+ */
 class Sistema {
+  /**
+   * TODO: Documentacion
+   */
   constructor() {
     this.partidos = [];
     this.perfil;
   }
-
+  /**
+   * TODO: Documentacion
+   * @return {partidos} The sum of the two numbers.
+   */
   getPartidosList() {
     return this.partidos;
   }
 
+  /**
+   * TODO: Documentacion
+   * @param {array} partido The first number.
+   */
   addPartido(partido) {
     this.partidos.push(partido);
   }
 
-  //Agrega prediccion
+  /**
+   * TODO: Documentacion
+   * @param {int} idPartido The first number.
+   * @param {int} prediccion1 The first number.
+   * @param {int} prediccion2 The first number.
+   * @return {boolean}
+   */
   setPrediccion(idPartido, prediccion1, prediccion2) {
     if (prediccion1 >= 0 && prediccion2 >= 0) {
-      //TODO: Buscar partido y modificar
-      //this.partidos.push(partido)
       this.getPartidosList().forEach((partido) => {
         if (partido.identificador == idPartido) {
           partido.prediccion = true;
           partido.prediccion1 = prediccion1;
           partido.prediccion2 = prediccion2;
-          console.log("true");
           return true;
         }
       });
     }
-    console.log("false");
     return false;
   }
 
-  //Agrega prediccion
+  /**
+   * TODO: Documentacion
+   * @param {int} idPartido The first number.
+   * @param {int} resultado1 The first number.
+   * @param {int} resultado2 The first number.
+   * @return {boolean}
+   */
   setResultado(idPartido, resultado1, resultado2) {
     if (resultado1 > 0 && resultado2 > 0) {
-      //TODO: Buscar partido y modificar
-      //this.partidos.push(partido)
       this.getPartidosList().forEach((partido) => {
         if (partido.identificador == idPartido) {
           partido.resultado1 = resultado1;
@@ -47,9 +66,14 @@ class Sistema {
     return false;
   }
 
+  /**
+   * TODO: Documentacion
+   * @param {int} idPartido The first number.
+   * @param {int} resultado1 The first number.
+   * @param {int} resultado2 The first number.
+   * @return {boolean}
+   */
   setReclame(idPartido) {
-    //TODO: Buscar partido y modificar
-    //this.partidos.push(partido)
     this.getPartidosList().forEach((partido) => {
       if (partido.identificador == idPartido) {
         partido.reclame = true;
@@ -60,18 +84,35 @@ class Sistema {
     return false;
   }
 
+  /**
+   * TODO: Documentacion
+   * @return {perfil}
+   */
   getPerfil() {
     return this.perfil;
   }
 
+  /**
+   * TODO: Documentacion
+   * @param {perfil} perfil The first number.
+   */
   addPerfil(perfil) {
     this.perfil = perfil;
   }
 
+  /**
+   * TODO: Documentacion
+   * @return {int}
+   */
   getPuntaje() {
     return this.getPerfil().puntos;
   }
 
+  /**
+   * TODO: Documentacion
+   * @param {int} p The first number.
+   * @return {boolean}
+   */
   setPuntaje(p) {
     if (p > 0) {
       this.getPerfil().puntos += p;
@@ -80,10 +121,15 @@ class Sistema {
     return false;
   }
 
+  /**
+   * TODO: Documentacion
+   * @param {int} idPartido The first number.
+   * @return {int}
+   */
   calcularPuntaje(idPartido) {
-    var puntaje = 1000;
-    var delta1;
-    var delta2;
+    let puntaje = 1000;
+    let delta1;
+    let delta2;
     this.getPartidosList().forEach((partido) => {
       if (partido.identificador == idPartido) {
         delta1 = Math.abs(partido.prediccion1 - partido.resultado1);
@@ -97,4 +143,4 @@ class Sistema {
     return puntaje;
   }
 }
-module.exports = Sistema;
+export default Sistema;

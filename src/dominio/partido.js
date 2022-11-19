@@ -1,19 +1,33 @@
-/* eslint-disable require-jsdoc */
+/**
+ * TODO: Documentacion
+ */
 class Partido {
+  /**
+   * TODO: Documentacion
+   * @param {array} dataArray The first number.
+   */
   constructor(dataArray) {
-    this.identificador = dataArray["identificador"];
-    this.equipo1 = dataArray["equipo1"];
-    this.equipo2 = dataArray["equipo2"];
-    this.prediccion = dataArray["prediccion"]; //booleano que indica si hay prediccion ingresada
-    this.prediccion1 = dataArray["prediccion1"]; //para poner cuanto el primer equipo
-    this.prediccion2 = dataArray["prediccion2"]; //para poner cuanto el segundo equipo
-    this.resultado1 = dataArray["resultado1"];
-    this.resultado2 = dataArray["resultado2"];
-    this.fecha = new Date(dataArray["fecha"]); //TODO:Cambie como ponemos la fecha
-    this.reclame = dataArray["reclame"]; //booleano para saber si ya reclamaron el premio o no
-    this.type = "Partido";
+    this.identificador = dataArray['identificador'];
+    this.equipo1 = dataArray['equipo1'];
+    this.equipo2 = dataArray['equipo2'];
+    // booleano que indica si hay prediccion ingresada
+    this.prediccion = dataArray['prediccion'];
+    // para poner cuanto el primer equipo
+    this.prediccion1 = dataArray['prediccion1'];
+    // para poner cuanto el segundo equipo
+    this.prediccion2 = dataArray['prediccion2'];
+    this.resultado1 = dataArray['resultado1'];
+    this.resultado2 = dataArray['resultado2'];
+    this.fecha = new Date(dataArray['fecha']);
+    // booleano para saber si ya reclamaron el premio o no
+    this.reclame = dataArray['reclame'];
+    this.type = 'Partido';
   }
-
+  dataArray;
+  /**
+   * TODO: Documentacion
+   * @return {array}
+   */
   getPartido() {
     return {
       identificador: this.identificador,
@@ -29,6 +43,7 @@ class Partido {
   }
 }
 
-module.exports = Partido;
+export default Partido;
 
-//TODO: Agregar en la documentacion porque elegimos hacer las predicciones de esa manera  (source:adorjan)
+// TODO: Agregar en la documentacion porque elegimos
+// hacer las predicciones de esa manera  (source:adorjan)

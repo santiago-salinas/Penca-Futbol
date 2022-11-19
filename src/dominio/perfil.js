@@ -1,15 +1,23 @@
+/**
+ * TODO: Documentacion
+ */
 class Perfil {
-    constructor() {
-      this.puntos = 0;
-      this.type = "Perfil";
-    }
-    
-    getPerfil() {
-        return {
-          puntos: this.puntos,
-          type: this.type,
-        };
-    }
-    
+  /**
+   * TODO: Documentacion
+   */
+  constructor() {
+    this.puntos = 0;
+    this.type = 'Perfil';
   }
-  module.exports = Perfil;
+  /**
+   * TODO: Documentacion
+   * @return {array}
+   */
+  getPerfil() {
+    return {
+      puntos: this.puntos,
+      type: this.type,
+    };
+  }
+}
+export default Perfil;
