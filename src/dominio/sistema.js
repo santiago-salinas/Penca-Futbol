@@ -33,17 +33,18 @@ class Sistema {
    * @return {boolean} Retorna si fue capaz de establecer la prediccion
    */
   setPrediccion(idPartido, prediccion1, prediccion2) {
+    let bool = false;
     if (prediccion1 >= 0 && prediccion2 >= 0) {
       this.getPartidosList().forEach((partido) => {
         if (partido.identificador == idPartido) {
           partido.prediccion = true;
           partido.prediccion1 = prediccion1;
           partido.prediccion2 = prediccion2;
-          return true;
+          bool = true;
         }
       });
     }
-    return false;
+    return bool;
   }
 
   /**
@@ -54,16 +55,17 @@ class Sistema {
    * @return {boolean} Retorna si fue capaz de establecer el resultado
    */
   setResultado(idPartido, resultado1, resultado2) {
+    let bool = false;
     if (resultado1 > 0 && resultado2 > 0) {
       this.getPartidosList().forEach((partido) => {
         if (partido.identificador == idPartido) {
           partido.resultado1 = resultado1;
           partido.resultado2 = resultado2;
-          return true;
+          bool = true;
         }
       });
     }
-    return false;
+    return bool;
   }
 
   /**
@@ -73,14 +75,15 @@ class Sistema {
    * estado de el atributo reclame
    */
   setReclame(idPartido) {
+    let bool = false;
     this.getPartidosList().forEach((partido) => {
       if (partido.identificador == idPartido) {
         partido.reclame = true;
         this.setPuntaje(this.calcularPuntaje(partido.identificador));
-        return true;
+        bool = true;
       }
     });
-    return false;
+    return bool;
   }
 
   /**
@@ -128,8 +131,8 @@ class Sistema {
    */
   calcularPuntaje(idPartido) {
     let puntaje = 1000;
-    let delta1;
-    let delta2;
+    let delta1 = 2000;
+    let delta2 = 2000;
     this.getPartidosList().forEach((partido) => {
       if (partido.identificador == idPartido) {
         delta1 = Math.abs(partido.prediccion1 - partido.resultado1);

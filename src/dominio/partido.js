@@ -32,7 +32,7 @@ class Partido {
     return {
       identificador: this.identificador,
       equipo1: this.equipo1,
-      equipo1: this.equipo1,
+      equipo2: this.equipo2,
       prediccion: this.prediccion,
       prediccion1: this.prediccion1,
       prediccion2: this.prediccion2,
@@ -42,6 +42,14 @@ class Partido {
       reclame: this.reclame,
       type: this.type,
     };
+  }
+
+  /**
+   *
+   * @return {bool} devuelve si se realizo prediccion
+   */
+  getPrediccion() {
+    return this.prediccion;
   }
 
   /**
