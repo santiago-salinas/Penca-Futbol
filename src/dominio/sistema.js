@@ -69,7 +69,8 @@ class Sistema {
   /**
    * Establece que el puntaje ha sido reclamado para un cierto partido
    * @param {int} idPartido Identificador del partido
-   * @return {boolean} Retorna si fue capaz de cambiar el estado de el atributo reclame
+   * @return {boolean} Retorna si fue capaz de cambiar el
+   * estado de el atributo reclame
    */
   setReclame(idPartido) {
     this.getPartidosList().forEach((partido) => {
@@ -120,7 +121,8 @@ class Sistema {
   }
 
   /**
-   * Calcula el puntaje de un cierto partido a partir de la prediccion y el resultado real
+   * Calcula el puntaje de un cierto partido a partir de la
+   * prediccion y el resultado real
    * @param {int} idPartido El partido cuyo puntaje sera calculado
    * @return {int} Devuelve el puntaje calculado
    */

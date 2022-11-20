@@ -7,7 +7,7 @@ class Perfil {
    * */
   constructor() {
     this.puntos = 0;
-    this.type = "Perfil";
+    this.type = 'Perfil';
   }
   /**
    *
