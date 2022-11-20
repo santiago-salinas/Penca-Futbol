@@ -37,30 +37,30 @@ test("Estado de partido aun no reclamado", () => {
 //Pruebas para ver si se cambio el reclame
 test("Estado de partido aun  reclamado", () => {
   instancia.setReclame(partido001.identificador);
-  expect(partido001.reclame).toBe(true);
+  expect(partido001.getReclame()).toBe(true);
 });
 
 //Pruebas para ver si se setteo la prediccion 1
 test("Estado de la prediccion 1", () => {
   instancia.setPrediccion(partido001.identificador, 1, 2);
 
-  expect(partido001.prediccion1).toBe(1);
+  expect(partido001.getPrediccion1()).toBe(1);
 });
 
 //Pruebas para ver si se setteo la prediccion 2
 test("Estado de la prediccion 2", () => {
   instancia.setPrediccion(partido001.identificador, 3, 4);
-  expect(partido001.prediccion2).toBe(4);
+  expect(partido001.getPrediccion2()).toBe(4);
 });
 
 //Pruebas para ver si se setteo el resultado1
 test("Estado del resultado 1", () => {
   instancia.setResultado(partido001.identificador, 10, 50);
-  expect(partido001.resultado1).toBe(10);
+  expect(partido001.getResultado1()).toBe(10);
 });
 
 //Pruebas para ver si se setteo el resultado2
 test("Estado del resultado 2", () => {
   instancia.setResultado(partido001.identificador, 10, 50);
-  expect(partido001.resultado2).toBe(50);
+  expect(partido001.getResultado2()).toBe(50);
 });
