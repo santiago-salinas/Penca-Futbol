@@ -6,7 +6,7 @@ const instancia = new Sistema();
 const perfil = new Perfil();
 instancia.addPerfil(perfil);
 
-const partido001 = new Partido({
+var partido001 = new Partido({
   identificador: "010",
   equipo1: "🇺🇾 Uruguay",
   equipo2: "Holanda 🇳🇱",
@@ -31,41 +31,36 @@ test("Establecer puntaje 100", () => {
 
 //Pruebas para ver si se inicializo en false el reclame
 test("Estado de partido aun no reclamado", () => {
-  var partido = instancia.getPartido("010");
-  expect(partido.getReclame()).toBe(false);
+  expect(partido001.getReclame()).toBe(false);
 });
 
 //Pruebas para ver si se cambio el reclame
 test("Estado de partido aun  reclamado", () => {
-  instancia.setReclame("010");
-  var partido = instancia.getPartido("010");
-  expect(partido.reclame).toBe(true);
+  instancia.setReclame(partido001.identificador);
+  expect(partido001.reclame).toBe(true);
 });
 
 //Pruebas para ver si se setteo la prediccion 1
 test("Estado de la prediccion 1", () => {
-  instancia.setPrediccion("010", 1, 2);
-  var partido = instancia.getPartido("010");
-  expect(partido.prediccion1).toBe(1);
+  instancia.setPrediccion(partido001.identificador, 1, 2);
+
+  expect(partido001.prediccion1).toBe(1);
 });
 
-//Pruebas para ver si se setteo la prediccion
+//Pruebas para ver si se setteo la prediccion 2
 test("Estado de la prediccion 2", () => {
-  instancia.setPrediccion("010", 3, 4);
-  var partido = instancia.getPartido("010");
-  expect(partido.prediccion2).toBe(4);
+  instancia.setPrediccion(partido001.identificador, 3, 4);
+  expect(partido001.prediccion2).toBe(4);
 });
 
 //Pruebas para ver si se setteo el resultado1
 test("Estado del resultado 1", () => {
-  instancia.setResultado("010", 10, 50);
-  var partido = instancia.getPartido("010");
-  expect(partido.resultado1).toBe(10);
+  instancia.setResultado(partido001.identificador, 10, 50);
+  expect(partido001.resultado1).toBe(10);
 });
 
 //Pruebas para ver si se setteo el resultado2
 test("Estado del resultado 2", () => {
-  instancia.setResultado("010", 10, 50);
-  var partido = instancia.getPartido("010");
-  expect(partido.resultado2).toBe(50);
+  instancia.setResultado(partido001.identificador, 10, 50);
+  expect(partido001.resultado2).toBe(50);
 });

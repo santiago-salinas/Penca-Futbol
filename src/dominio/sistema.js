@@ -18,19 +18,6 @@ class Sistema {
   }
 
   /**
-   *
-   * @param {int} idPartido
-   * @return {partido} Retorna partidos
-   */
-  getPartido(idPartido) {
-    this.getPartidosList().forEach((partido) => {
-      if (partido.identificador == idPartido) {
-        return partido;
-      }
-    });
-  }
-
-  /**
    * Agrega partido
    * @param {array} partido el partido a agregar
    */
