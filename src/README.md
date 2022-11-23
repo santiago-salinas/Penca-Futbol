@@ -146,12 +146,18 @@ Letras
 ### Detallar sesiones de prueba exploratoria
 
 ## Reporte de issues
+Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema del equipo 1.
+
+![image](https://user-images.githubusercontent.com/48341470/203602402-24f735f2-03ac-4dbd-93c8-98ca114c7dd9.png)
+
+![image](https://user-images.githubusercontent.com/48341470/203603427-185d4f02-f69c-4ecc-8f17-3bfa82c33910.png)
 
 ### Reportar issues (bugs, improvements, missing features) en GitHub 
 
 ### Aplicar buenas prácticas de reporte de issues
 
 ### Definir labels para tipos de issue y niveles de severidad
+Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para problemas visuales relacionados con el estilo ` style `.
 
 ### Dejar issues abiertos para correcciones o mejoras futuras
 
