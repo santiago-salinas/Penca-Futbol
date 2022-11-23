@@ -4,6 +4,23 @@ Fecha de entrega: 29-nov-2021
 ## Construcción
 
 Implementación de funciones principales (sin la necesidad de persistencia de datos)
+✔️ - RF1: No Login
+✔️ - RF2: Ver Partidos Próximos
+✔️ - RF3: Predicción
+🚫 - RF4: Estadísticas Pre-Predicción
+🚫 - RF5: Logros
+✔️ - RF6: Puntos
+🚫 - RF7: Canjear Puntos
+🚫 - RF8: Hacer grupo con códigos de amigo (sin login)
+
+✔️ - RNF1: Especificación de estilo
+✔️ - RNF2: Números grandes.
+✔️ - RNF3: Responsive
+✔️ - RNF4: Minimizar Uso de Ads
+❓ - RNF5: Sencilla
+✔️ - RNF6: Navegación
+❓ - RNF7: Instantaneidad
+✔️ - RNF8: Material Design Web Components
 
 Configuración de plataforma tecnológica para desarrollo y producción
 
