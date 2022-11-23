@@ -29,8 +29,19 @@ Documentación del uso de librerías externas (package.json)
 ## Interfaz de usuario
 
 Interfaz de usuario web / mobile (responsive)
+Esto es posible gracias a propiedades de estilo css que se aseguran de que la interfaz sea agradable para el usuario en ambos casos. 
+
+La propiedad de estilo en cuestión es la siguiente:
+` @media only screen and (min-width: 768px) `
+
 
 Página única con navegación entre secciones
+Para esto 
+Hicimos uso del Material Design Component Tab para llevar a cabo con este requerimineto de navegación. 
+
+Se plantea un ` <section id="Pantalla"> ` que contendra dentro un ` <section id="nombreSeccion"> ` para cada una de las distintas pantalla.
+
+El efecto de cambio se efectua con el uso de dos clases scss principales ` .hide ` y ` .show `, que ocultan o muestran el section en pantalla.
 
 Implementación: Material Design Web Components
 
