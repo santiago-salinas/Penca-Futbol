@@ -17,10 +17,25 @@ Fecha de entrega: 29-nov-2021
 ✔️ - RNF2: Números grandes  
 ✔️ - RNF3: Responsive  
 ✔️ - RNF4: Minimizar Uso de Ads  
-❓ - RNF5: Sencilla  
+✔️ - RNF5: Sencilla  
 ✔️ - RNF6: Navegación  
 ❓ - RNF7: Instantaneidad  
 ✔️ - RNF8: Material Design Web Components  
+
+De forma general la aplicación es capaz de moverse a través de las diferentes secciones (Próximos, Resultados, Grupo, Canje, Perfil). Siendo en Próximos, Resultados y Perfil donde hay funcioness implementadas.
+
+Los User Cases implementados en esta ocasión fueron 
+### UserCase 1: Ver partidos próximos
+El usuario selecciona "Próximos Partidos" y a continuación se muestran los partidos más inmediatos, sus equipos y horarios.
+
+### UserCase 2: Predecir
+El usuario selecciona "Ingresar predicción" en el área de “Próximos partidos”, aparece un campo de texto para ingresar la misma, y se presiona un botón para confirmarla.
+
+### UserCase 3: Obtención de puntos
+El usuario selecciona el área "Resultados", se muestran los partidos ya jugados y con su correspondiente resultado, y en el caso de haber ingresado una predicción en el mismo, el sistema muestra un botón para reclamar los puntos.
+
+### UserCase 7: Ver logros o puntos
+El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resultantes de las predicciones realizadas en partidos ya jugados.
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
 
