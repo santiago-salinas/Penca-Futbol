@@ -74,6 +74,7 @@ A partir de este punto solo se realizan actividades de test de sistema, reporte 
 ## Test de sistema
 
 ### Realizar test de sistema en un entorno separado del desarrollo
+100% cobertura en clases de dominio
  PASS  ./sistema.test.js
   V Mi primera prueba (4 ms)
   V Obtener partido en default (2 ms)
@@ -110,8 +111,37 @@ Snapshots:   0 total
 Time:        3.835 s
 Ran all test suites.
 
+| En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
+A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
+
+## Test de sistema
+A nuestro equipo se nos ha asignado el siguiente repositorio:
+` https://github.com/ORTFIS2022/obligatorio-goday-fernandez-morandi `
+
+Realizar test de sistema en un entorno separado del desarrollo
 
 ### Generar casos de prueba aplicando técnica partición equivalente
+Al momento de ingresar una predicción se han tomado en cuenta las siguientes particiones
+
+Numeros Enteros Positivos dentro de un rango normal 0-100:  
+✔️ - El sistema actúa de forma normal
+
+Numeros Enteros Positivos fuerra de un rango normal > 100:  
+❓ - El sistema acepta numeros muy grandes, considerando las condiciones reales y fisicas de un partido de football, es raro que ocurra.
+
+Numeros Enteros Negativos:  
+✔️ - El sistema actúa de forma normal rechazando este tipo de predicciones
+
+Numeros con Decimales:  
+🚫 - El sistema admite el ingreso de las misma
+Ejemplo: 2.3
+
+Letras
+🚫 - Permite escribir sobre el campo de entrada
+✔️ - No permite ingresarlo como predicciñon
+
+
+
 
 ### Detallar sesiones de prueba exploratoria
 
