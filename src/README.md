@@ -74,6 +74,42 @@ A partir de este punto solo se realizan actividades de test de sistema, reporte 
 ## Test de sistema
 
 Realizar test de sistema en un entorno separado del desarrollo
+ PASS  ./sistema.test.js
+  V Mi primera prueba (4 ms)
+  V Obtener partido en default (2 ms)
+  V Crear Sistema, puntaje 0 (1 ms)
+  V Establecer puntaje 100 (1 ms)
+  V Establecer puntaje negativo (1 ms)
+  V Estado de partido aun no reclamado (1 ms)
+  V Estado de partido reclamado (1 ms)
+  V Estado de partido fantasma
+  V Prediccion 1 negativa (1 ms)
+  V Prediccion 2 negativa (1 ms)
+  V Prediccion 2 negativa
+  V Estado de la prediccion 1
+  V Estado de la prediccion 2 (1 ms)
+  V Estado del resultado 1 (1 ms)
+  V Estado del resultado 2 (1 ms)
+  V Resultado negativo (1 ms)
+  V Prediccion exacta (10 ms)
+  V Prediccion delta2 (1 ms)
+  V Prediccion delta2 (2 ms)
+  V Obtener Perfil (1 ms)
+
+------------|---------|----------|---------|---------|----------------
+File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line
+------------|---------|----------|---------|---------|----------------
+All files   |     100 |      100 |     100 |     100 |
+ partido.js |     100 |      100 |     100 |     100 |
+ perfil.js  |     100 |      100 |     100 |     100 |
+ sistema.js |     100 |      100 |     100 |     100 |
+------------|---------|----------|---------|---------|----------------
+Test Suites: 1 passed, 1 total
+Tests:       20 passed, 20 total
+Snapshots:   0 total
+Time:        3.835 s
+Ran all test suites.
+
 
 Generar casos de prueba aplicando técnica partición equivalente
 
