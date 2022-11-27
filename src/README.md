@@ -267,10 +267,7 @@ Para reportar las diferentes issues, utilizamos una plantilla a seguir, con el s
 Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para problemas visuales relacionados con el estilo ` style `.
 
 ### Dejar issues abiertos para correcciones o mejoras futuras
-
-### Sumarizar número de issues reportados por tipo
-
-### Realizar una evaluación global de la calidad
+https://github.com/ORTFIS2022/obligatorio-vazquez-fernandez-salinas/issues
 
 ## Reflexión
 
