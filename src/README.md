@@ -90,6 +90,7 @@ Se busca que nuestra aplicación siga los principios de usabilidad planteados po
 > Podemos mejorar agregando mensajes directos al usuario, cuando la predicción que ingresa no es valida.
 
 ✔️ 2 – Relación entre el sistema y el mundo real
+> Los iconos utilizados reflejan un parecido con su nombre  
 ![image](https://user-images.githubusercontent.com/48341470/204150983-be57e785-1c63-4f69-91c3-8d3feedbdabc.png)
 
 ✔️ 3 – Control y libertad del usuario
@@ -134,7 +135,7 @@ Haciendo que los dispositivos de microsoft no mostraran las banderas. Por lo que
 ## Codificación
 
 ### IDE Visual Studio Code: configuración común del equipo
-Para la realización del proyecto, el IDE utilizado por el equipo, fue IDE Visual Studio Code en la versión 1.73.1, utilizando extensiones tales como, LiveShare (para aquellos momentos donde era necesario trabajar en conjunto para solucionar problemas, o decidir la implementacion de una cierta función) y TodoTree (para dejar marcada tareas para el resto del equipo, o pequeños detalles a arreglar a futuro)
+Para la realización del proyecto, el IDE utilizado por el equipo, fue IDE Visual Studio Code en la versión 1.73.1, utilizando extensiones tales como, LiveShare (para aquellos momentos donde era necesario trabajar en conjunto para solucionar problemas, o decidir la implementación de una cierta función) y TodoTree (para dejar marcada tareas para el resto del equipo, o pequeños detalles a arreglar a futuro)
 
 ### Estándares de codificación Google (HTML, CSS, JavaScript)
 "Un estándar de codificación es una serie de reglas que determinan cómo debe escribirse el código. El objetivo es lograr un código fácil de leer por otros humanos 
@@ -260,7 +261,7 @@ Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema 
 
 Para reportar las diferentes issues, utilizamos una plantilla a seguir, con el siguiente formato:
 
-*Resumen:* _Breve descripcion del problema_
+*Resumen:* _Breve descripción del problema_
 
 *Severidad:* _Nivel de severidad del problema_
 
@@ -283,6 +284,9 @@ https://github.com/ORTFIS2022/obligatorio-vazquez-fernandez-salinas/issues
 ### Detalle del trabajo individual
 Noe: Desde hace mucho tiempo ya, no construía algo desde abajo, por lo que realizar este proyecto, fue un desafío interesante y enriquecedor, ya que se recordaron tecnologías que se utilizaron en un pasado y el volver a tenerlas en cuenta para refrescar el conocimiento sirvió para mantener el entendimiento de las mismas fresco, destaco de nuevo la opinión sobre mis compañeros dada en la primera instancia y lo que más me llevo de este proyecto es la cercanía que tiene con el mundo real:el tener que empezar algo, y tener que analizar como enfocarlo y/o dirigirlo.
 
+Santi: Previo a este proyecto mi experiencia con HTML, JS, CSS era muy poca, por lo que esto me permitió expandir mi conocimiento y cambiar mi forma de pensar como estructurar una aplicación web. El haber aprendido mientras hacia me lleva a decir que si tuviera que arrancar desde cero, hoy lo habría estructurado de otra forma. Esto se debe a que el trabajo me hizo aprender cosas nuevas y ciertas formas de implementar ciertas funcionalidades se me ocurrían tiempo después. A lo que es trabajo individual, considero que no vale la pena itemizar cada punto, ya que a decir verdad, tanto en la primer entrega, como en esta, todos hemos tomado riendas sobre el proyecto. Desde la programación, lo estético, el testing, etc.
+
+Natty: ...
 ***
 ### Técnicas aplicadas y aprendizajes
 Teniendo en cuenta los aprendizajes de la primera instancia de este proyecto, como lo son, el buen trabajo en equipo, la comunicación entre las diferentes partes, ahora, en esta segunda instancia como reflexiones y aprendizajes finales, podemos discutir y recalcar diferentes puntos, tales como:
