@@ -19,12 +19,15 @@ Fecha de entrega: 29-nov-2021
 ✔️ - RNF4: Minimizar Uso de Ads  
 ✔️ - RNF5: Sencilla  
 ✔️ - RNF6: Navegación  
-❓ - RNF7: Instantaneidad  
+🚫 - RNF7: Instantaneidad  
 ✔️ - RNF8: Material Design Web Components  
+
+***
 
 De forma general la aplicación es capaz de moverse a través de las diferentes secciones (Próximos, Resultados, Grupo, Canje, Perfil). Siendo en Próximos, Resultados y Perfil donde hay funcioness implementadas.
 
 Los User Cases implementados en esta ocasión fueron 
+***
 ### UserCase 1: Ver partidos próximos
 El usuario selecciona "Próximos Partidos" y a continuación se muestran los partidos más inmediatos, sus equipos y horarios.
 
@@ -44,7 +47,7 @@ El usuario selecciona el área "Resultados", se muestran los partidos ya jugados
 
 ### UserCase 7: Ver logros o puntos
 El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resultantes de las predicciones realizadas en partidos ya jugados.
-
+***
 ![](imagenes/imagen7.jpg)
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
@@ -59,7 +62,6 @@ Esto es posible gracias a propiedades de estilo css que se aseguran de que la in
 La propiedad de estilo en cuestión es la siguiente:  
 ` @media only screen and (min-width: 768px) `
 
-
 ### Página única con navegación entre secciones  
 Para esto 
 Hicimos uso del Material Design Component Tab para llevar a cabo con este requerimineto de navegación. 
@@ -69,12 +71,55 @@ Se plantea un ` <section id="Pantalla"> ` que contendra dentro un ` <section id=
 El efecto de cambio se efectua con el uso de dos clases scss principales ` .hide ` y ` .show `, que ocultan o muestran el section en pantalla.
 
 ### Implementación: Material Design Web Components
+Como parte de los requerimientos no funcionales del obligatorio, se han utilizado componentes pre-diseñados ofrecidos por Google. Estos mismos se pueden encontrar en `https://material.io/`.  
 
+Actualmente se publicita el uso de la versión 3 de Material Design, pero esta aún no se encuentra disponible para web. Por lo que para nuestro proyecto usamos la versión 2. `https://m2.material.io/develop/web`
+
+Su uso con node.js es sencillo, se debe seguir la guía del componente a utilizar. Haciendo `npm install componente`, copiando el bloque de html y agregar funcionalidades extra por Javascript.
+
+Dentro de nuestro proyecto se puede hallar el uso de las siguientes depencias:  
+> Cards
+> Tab Bar
+> Textfield
+> Button
 ### Aplicar un sistema de diseño y principios de usabilidad
+Se busca que nuestra aplicación siga los principios de usabilidad planteados por Jakob Nielsen
 
+🚫 1 – Visibilidad del estado del sistema
+> Podemos mejorar agregando mensajes directos al usuario, cuando la predicción que ingresa no es valida.
+
+✔️ 2 – Relación entre el sistema y el mundo real
+![image](https://user-images.githubusercontent.com/48341470/204150983-be57e785-1c63-4f69-91c3-8d3feedbdabc.png)
+
+✔️ 3 – Control y libertad del usuario
+> Permitimos al usuario volver hacia atras cuando entra al menu de ingresar predicción pero aún no esta listo para realizarla.
+
+✔️ 4 – Consistencia y estándares de usabilidad
+> El uso de Material Design nos permite mantener un diseño constante y reconozible a simple vista.
+
+✔️ 5 – Prevención de errores en usabilidad  
+
+✔️ 6 – Reconocer antes que recordar  
+
+✔️ 7 – Flexibilidad y eficiencia en el uso
+> Hacemos uso de un lenguaje muy básico y nuestra aplicación no tiene muchas opciones por pantalla. Haciendo que sea fácil de usar tanto para expertos, como para novatos en la tecnologia.
+
+✔️ 8 – Diseño estético y minimalista  
+
+🚫 9 – Ayudar a los usuarios a reconocer y corregir sus errores
+> Podemos mejorar agregando mensajes directos al usuario, cuando la predicción que ingresa no es valida.
+
+🚫 10 – Ayuda y documentación
+> Actualmente nuestro sistema no cuenta con documentación sobre su uso.
 ### Cumplimiento de estándar de accesibilidad WCAG
-
+TODO:
 ### Seguir especificación de estilo
+TODO:
+
+### Emojis
+El uso de emojis para sumar color al aplicativo fue mediante el uso de las banderas. Pero notamos que dependiendo del dispositivo del usuario, su experiencia variaria drasticamente, ya que cada dispositivo cuenta con su libreria de emojis.
+
+Haciendo que los dispositivos de microsoft no mostraran las banderas. Por lo que optamos por hacer uso de Tweemoji `https://twemoji.twitter.com/` , una libreria de emojis Open Source de twitter. Esto le da un look uniforme a nuestro proyecto desde cualquier dispositivo.
 
 ## Codificación
 
@@ -123,42 +168,44 @@ A partir de este punto solo se realizan actividades de test de sistema, reporte 
 ## Test de sistema
 
 ### Realizar test de sistema en un entorno separado del desarrollo
-100% cobertura en clases de dominio
- PASS  ./sistema.test.js
-  V Mi primera prueba (4 ms)
-  V Obtener partido en default (2 ms)
-  V Crear Sistema, puntaje 0 (1 ms)
-  V Establecer puntaje 100 (1 ms)
-  V Establecer puntaje negativo (1 ms)
-  V Estado de partido aun no reclamado (1 ms)
-  V Estado de partido reclamado (1 ms)
-  V Estado de partido fantasma
-  V Prediccion 1 negativa (1 ms)
-  V Prediccion 2 negativa (1 ms)
-  V Prediccion 2 negativa
-  V Estado de la prediccion 1
-  V Estado de la prediccion 2 (1 ms)
-  V Estado del resultado 1 (1 ms)
-  V Estado del resultado 2 (1 ms)
-  V Resultado negativo (1 ms)
-  V Prediccion exacta (10 ms)
-  V Prediccion delta2 (1 ms)
-  V Prediccion delta2 (2 ms)
+100% cobertura en clases de dominio  
+ PASS  ./sistema.test.js  
+  V Mi primera prueba (4 ms)  
+  V Obtener partido en default (2 ms)  
+  V Crear Sistema, puntaje 0 (1 ms)  
+  V Establecer puntaje 100 (1 ms)  
+  V Establecer puntaje negativo (1 ms)  
+  V Estado de partido aun no reclamado (1 ms)  
+  V Estado de partido reclamado (1 ms)  
+  V Estado de partido fantasma  
+  V Prediccion 1 negativa (1 ms)  
+  V Prediccion 2 negativa (1 ms)  
+  V Prediccion 2 negativa  
+  V Estado de la prediccion 1  
+  V Estado de la prediccion 2 (1 ms)  
+  V Estado del resultado 1 (1 ms)  
+  V Estado del resultado 2 (1 ms)  
+  V Resultado negativo (1 ms)  
+  V Prediccion exacta (10 ms)  
+  V Prediccion delta2 (1 ms)  
+  V Prediccion delta2 (2 ms)  
   V Obtener Perfil (1 ms)
 
-------------|---------|----------|---------|---------|----------------
-File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line
-------------|---------|----------|---------|---------|----------------
-All files   |     100 |      100 |     100 |     100 |
- partido.js |     100 |      100 |     100 |     100 |
- perfil.js  |     100 |      100 |     100 |     100 |
- sistema.js |     100 |      100 |     100 |     100 |
-------------|---------|----------|---------|---------|----------------
-Test Suites: 1 passed, 1 total
-Tests:       20 passed, 20 total
-Snapshots:   0 total
-Time:        3.835 s
-Ran all test suites.
+>
+>File        | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line
+>------------|---------|----------|---------|---------|----------------
+>All files   |     100 |      100 |     100 |     100 |
+> partido.js |     100 |      100 |     100 |     100 |
+> perfil.js  |     100 |      100 |     100 |     100 |
+> sistema.js |     100 |      100 |     100 |     100 |
+
+>Test Suites: 1 passed, 1 total  
+>Tests:       20 passed, 20 total  
+>Snapshots:   0 total  
+>Time:        3.835 s  
+>Ran all test suites.  
+>
+
 
 | En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
 A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
@@ -185,13 +232,11 @@ Numeros con Decimales:
 🚫 - El sistema admite el ingreso de las misma
 Ejemplo: 2.3
 
-Letras
+Letras  
 🚫 - Permite escribir sobre el campo de entrada
 ✔️ - No permite ingresarlo como predicciñon
 
-
-
-
+***
 ### Detallar sesiones de prueba exploratoria
 
 ## Reporte de issues
@@ -219,14 +264,14 @@ Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para prob
 ### Detalle del trabajo individual
 Noe: Desde hace mucho tiempo ya, no construía algo desde abajo, por lo que realizar este proyecto, fue un desafío interesante y enriquecedor, ya que se recordaron tecnologías que se utilizaron en un pasado y el volver a tenerlas en cuenta para refrescar el conocimiento sirvio para mantener el entedimiento de las mismas fresco, destaco denuevo la opinión sobre mis compañeros dada en la primera instancia y lo que más me llevo de este proyecto es la cercanía que tiene con el mundo real:el tener que empezar algo, y tener que analizar como enfocarlo y/o dirigirlo.
 
-
+***
 ### Técnicas aplicadas y aprendizajes
 Teniendo en cuenta los aprendizajes de la primera instancia de este proyecto, como lo son, el buen trabajo en equipo, la comunicación entre las diferentes partes, ahora, en esta segunda instancia como reflexiones y aprendizajes finales, podemos discutir y recalcar diferentes puntos, tales como:
 
 1. Toma de decisiones: A la hora de comenzar a montar, y estructurar la aplicación, hubo que evaluar que era más benificioso para el equipo, el comenzar el proyecto desde cero, o utilizar uno ya comenzado y empezar a trabajar desde ese punto.
-   
+
 2. Ingeniería inversa: Como decisión grupal, evaluamos que tomar el proyecto brindado como ejemplo era la mejor opción, en la práctica a esto se le llama "Ingeniería inversa", y es el proceso llevado a cabo con el objetivo de obtener información o un diseño a partir de un producto ya creado, con el objetivo de recrear uno similiar al mismo. 
-   
+
 3. Comunicación: Las formas en las que las funciones podían ser implentadas eran infinitas, por lo que una buena comunicación sobre como estructurar los componentes y sus funcionalidades fue clave esencial para la aplicación.
-   
+
 4. Miedo a lo desconocido: Al principio surgieron muchas dudas sobre como comenzar el mismo, sobre como hacer las implentaciones o sobre como funcionaban los componentes, por lo que la confianza en que, eventualmente, con su correcta investigación y motivación, se podrían hallar soluciones fue fundamental.
