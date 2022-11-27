@@ -69,12 +69,36 @@ El efecto de cambio se efectua con el uso de dos clases scss principales ` .hide
 ## Codificación
 
 ### IDE Visual Studio Code: configuración común del equipo
+Para la realización del proyecto, el IDE utilizado por el equipo, fue IDE Visual Studio Code en la versión 1.73.1, utilizando extensiones tales como, LiveShare (para aquellos momentos donde era necesario trabajar en conjunto para solucionar problemas, o decidir la implementacion de una cierta función) y TodoTree (para dejar marcada tareas para el resto del equipo, o pequeños detalles a arreglar a futuro)
 
 ### Estándares de codificación Google (HTML, CSS, JavaScript)
+"Un estándar de codificación es una serie de reglas que determinan cómo debe escribirse el código. El objetivo es lograr un código fácil de leer por otros humanos 
+Un ejemplo de una regla como esta podría ser «todos los if llevan {} independientemente de que haya una línea dentro del bloque o más de una" - https://academy.leewayweb.com/
 
+
+Para lograr el correcto uso de los estándares de codificación, se tomaron como base los estándares de codificación de Google, para poder utilizar los mismos, se hizo empleo de ESLint como herramienta de análisis estático de código de JavaScript.
 ### Buenas prácticas de OOP: separación de lógica e interfaz
+A modo de buena práctica de OOP, se separó la lógica de la interfaz.
+Por un lado, contamos con la carpeta dominio, la cual incluye la lógica, las clases y los test, y por el otro la carpeta Interfaz, la cual contiene el HTML, el SCSS, y JavaScript
+
+En la carpeta dominio, podemos encontrar las clases
+ - partido.js
+ - perfil.js
+ - sistema.js 
+
+al igual que los test
+-sistema.test.js
+
+En la carpeta interfaz, podemos hallar
+- index.html
+- index.js
+- _variables.scss
+- index.scss
 
 ### Análisis estático de código: mostrar reducción de problemas
+"Una herramienta de análisis estático escanea el código en busca de errores y vulnerabilidades comunes conocidas, como fugas de memoria o desbordamientos de búfer. El análisis también puede hacer cumplir las reglas de codificación." - https://www.jetbrains.com/
+
+Como ya mencionado anteriormente, se hizo uso de la herramienta esLint.
 
 ## Test unitario
 
