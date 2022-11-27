@@ -52,7 +52,8 @@ El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resu
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
 
-### Documentación del uso de librerías externas (package.json)
+A modo de tene un área de trabajo separada de la versión final del proyecto se creo una rama develop a partir de la rama main. Realizando el merge de las mismas, tal como indicado, al final, donde la aplicación cumplía sus funcionalidades, y se consideraba establecida.
+
 
 ## Interfaz de usuario
 
@@ -142,7 +143,7 @@ En la carpeta dominio, podemos encontrar las clases
  - sistema.js 
 
 al igual que los test
--sistema.test.js
+- sistema.test.js
 
 En la carpeta interfaz, podemos hallar
 - index.html
@@ -234,7 +235,7 @@ Ejemplo: 2.3
 
 Letras  
 🚫 - Permite escribir sobre el campo de entrada
-✔️ - No permite ingresarlo como predicciñon
+✔️ - No permite ingresarlo como predicción
 
 ***
 ### Detallar sesiones de prueba exploratoria
@@ -246,9 +247,21 @@ Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema 
 
 ![image](https://user-images.githubusercontent.com/48341470/203603427-185d4f02-f69c-4ecc-8f17-3bfa82c33910.png)
 
-### Reportar issues (bugs, improvements, missing features) en GitHub 
-
 ### Aplicar buenas prácticas de reporte de issues
+
+Para reportar las diferentes issues, utilizamos una plantilla a seguir, con el siguiente formato:
+
+*Resumen:* _Breve descripcion del problema_
+
+*Severidad:* _Nivel de severidad del problema_
+
+*Pasos a reproducir:* _Serie de pasos que llevan a hallar el problema que esta siendo reportado_
+
+*Resultado actual:* _El resultado que se visualiza_
+
+*Resultado esperado:* _El resultado que se debería visualizar_
+
+*Imágenes relacionadas al problema, o serie de pasos*
 
 ### Definir labels para tipos de issue y niveles de severidad
 Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para problemas visuales relacionados con el estilo ` style `.
