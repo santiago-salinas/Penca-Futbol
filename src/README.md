@@ -28,14 +28,24 @@ Los User Cases implementados en esta ocasión fueron
 ### UserCase 1: Ver partidos próximos
 El usuario selecciona "Próximos Partidos" y a continuación se muestran los partidos más inmediatos, sus equipos y horarios.
 
+![](imagenes/imagen5.jpg)
+
 ### UserCase 2: Predecir
 El usuario selecciona "Ingresar predicción" en el área de “Próximos partidos”, aparece un campo de texto para ingresar la misma, y se presiona un botón para confirmarla.
+
+![](imagenes/imagen2.jpg)
+![](imagenes/imagen1.jpg)
+![](imagenes/imagen3.jpg)
 
 ### UserCase 3: Obtención de puntos
 El usuario selecciona el área "Resultados", se muestran los partidos ya jugados y con su correspondiente resultado, y en el caso de haber ingresado una predicción en el mismo, el sistema muestra un botón para reclamar los puntos.
 
+![](imagenes/imagen6.jpg)
+
 ### UserCase 7: Ver logros o puntos
 El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resultantes de las predicciones realizadas en partidos ya jugados.
+
+![](imagenes/imagen7.jpg)
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
 
