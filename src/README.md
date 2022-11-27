@@ -185,3 +185,12 @@ Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para prob
 ### Detalle del trabajo individual
 
 ### Técnicas aplicadas y aprendizajes
+Teniendo en cuenta los aprendizajes de la primera instancia de este proyecto, como lo son, el buen trabajo en equipo, la comunicación entre las diferentes partes, ahora, en esta segunda instancia como reflexiones y aprendizajes finales, podemos discutir y recalcar diferentes puntos, tales como:
+
+1. Toma de decisiones: A la hora de comenzar a montar, y estructurar la aplicación, hubo que evaluar que era más benificioso para el equipo, el comenzar el proyecto desde cero, o utilizar uno ya comenzado y empezar a trabajar desde ese punto.
+   
+2. Ingeniería inversa: Como decisión grupal, evaluamos que tomar el proyecto brindado como ejemplo era la mejor opción, en la práctica a esto se le llama "Ingeniería inversa", y es el proceso llevado a cabo con el objetivo de obtener información o un diseño a partir de un producto ya creado, con el objetivo de recrear uno similiar al mismo. 
+   
+3. Comunicación: Las formas en las que las funciones podían ser implentadas eran infinitas, por lo que una buena comunicación sobre como estructurar los componentes y sus funcionalidades fue clave esencial para la aplicación.
+   
+4. Miedo a lo desconocido: Al principio surgieron muchas dudas sobre como comenzar el mismo, sobre como hacer las implentaciones o sobre como funcionaban los componentes, por lo que la confianza en que, eventualmente, con su correcta investigación y motivación, se podrían hallar soluciones fue fundamental.
