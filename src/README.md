@@ -24,7 +24,7 @@ Fecha de entrega: 29-nov-2021
 
 ***
 
-De forma general la aplicación es capaz de moverse a través de las diferentes secciones (Próximos, Resultados, Grupo, Canje, Perfil). Siendo en Próximos, Resultados y Perfil donde hay funcioness implementadas.
+De forma general la aplicación es capaz de moverse a través de las diferentes secciones (Próximos, Resultados, Grupo, Canje, Perfil). Siendo en Próximos, Resultados y Perfil donde hay funciones implementadas.
 
 Los User Cases implementados en esta ocasión fueron 
 ***
@@ -54,11 +54,11 @@ La propiedad de estilo en cuestión es la siguiente:
 
 ### Página única con navegación entre secciones  
 Para esto 
-Hicimos uso del Material Design Component Tab para llevar a cabo con este requerimineto de navegación. 
+Hicimos uso del Material Design Component Tab para llevar a cabo con este requerimiento de navegación. 
 
-Se plantea un ` <section id="Pantalla"> ` que contendra dentro un ` <section id="nombreSeccion"> ` para cada una de las distintas pantalla.
+Se plantea un ` <section id="Pantalla"> ` que contendrá dentro un ` <section id="nombreSeccion"> ` para cada una de las distintas pantalla.
 
-El efecto de cambio se efectua con el uso de dos clases scss principales ` .hide ` y ` .show `, que ocultan o muestran el section en pantalla.
+El efecto de cambio se efectúa con el uso de dos clases scss principales ` .hide ` y ` .show `, que ocultan o muestran el section en pantalla.
 
 ### Implementación: Material Design Web Components
 Como parte de los requerimientos no funcionales del obligatorio, se han utilizado componentes pre-diseñados ofrecidos por Google. Estos mismos se pueden encontrar en `https://material.io/`.  
@@ -67,7 +67,7 @@ Actualmente se publicita el uso de la versión 3 de Material Design, pero esta a
 
 Su uso con node.js es sencillo, se debe seguir la guía del componente a utilizar. Haciendo `npm install componente`, copiando el bloque de html y agregar funcionalidades extra por Javascript.
 
-Dentro de nuestro proyecto se puede hallar el uso de las siguientes depencias:  
+Dentro de nuestro proyecto se puede hallar el uso de las siguientes dependencias:  
 > Cards
 > Tab Bar
 > Textfield
@@ -82,17 +82,17 @@ Se busca que nuestra aplicación siga los principios de usabilidad planteados po
 ![image](https://user-images.githubusercontent.com/48341470/204150983-be57e785-1c63-4f69-91c3-8d3feedbdabc.png)
 
 ✔️ 3 – Control y libertad del usuario
-> Permitimos al usuario volver hacia atras cuando entra al menu de ingresar predicción pero aún no esta listo para realizarla.
+> Permitimos al usuario volver hacia atrás cuando entra al menu de ingresar predicción pero aún no esta listo para realizarla.
 
 ✔️ 4 – Consistencia y estándares de usabilidad
-> El uso de Material Design nos permite mantener un diseño constante y reconozible a simple vista.
+> El uso de Material Design nos permite mantener un diseño constante y reconocible a simple vista.
 
 ✔️ 5 – Prevención de errores en usabilidad  
 
 ✔️ 6 – Reconocer antes que recordar  
 
 ✔️ 7 – Flexibilidad y eficiencia en el uso
-> Hacemos uso de un lenguaje muy básico y nuestra aplicación no tiene muchas opciones por pantalla. Haciendo que sea fácil de usar tanto para expertos, como para novatos en la tecnologia.
+> Hacemos uso de un lenguaje muy básico y nuestra aplicación no tiene muchas opciones por pantalla. Haciendo que sea fácil de usar tanto para expertos, como para novatos en la tecnología.
 
 ✔️ 8 – Diseño estético y minimalista  
 
@@ -102,14 +102,23 @@ Se busca que nuestra aplicación siga los principios de usabilidad planteados po
 🚫 10 – Ayuda y documentación
 > Actualmente nuestro sistema no cuenta con documentación sobre su uso.
 ### Cumplimiento de estándar de accesibilidad WCAG
-TODO:
+
+Hicimos uso de la extensión WAVE de Chrome para analizar nuestra página.
+![image](https://user-images.githubusercontent.com/48341470/204152363-4bf2bf87-b8db-4414-be18-d003dc32db8f.png)
+
+Se encuentran dos errores asociados a los aria-labels que incluían los botones.
+Y un warning sobre los tabIndex de nuestra barra inferior, ya que estos arrancan en -1.
+
+Debemos cambiar el idioma del html de EN a ES, para mantener la accesibilidad.
+
+Nuestra página no presenta contrastes incorrectos, facilitando la lectura.
 ### Seguir especificación de estilo
 TODO:
 
 ### Emojis
-El uso de emojis para sumar color al aplicativo fue mediante el uso de las banderas. Pero notamos que dependiendo del dispositivo del usuario, su experiencia variaria drasticamente, ya que cada dispositivo cuenta con su libreria de emojis.
+El uso de emojis para sumar color al aplicativo fue mediante el uso de las banderas. Pero notamos que dependiendo del dispositivo del usuario, su experiencia variaría drásticamente, ya que cada dispositivo cuenta con su librería de emojis.
 
-Haciendo que los dispositivos de microsoft no mostraran las banderas. Por lo que optamos por hacer uso de Tweemoji `https://twemoji.twitter.com/` , una libreria de emojis Open Source de twitter. Esto le da un look uniforme a nuestro proyecto desde cualquier dispositivo.
+Haciendo que los dispositivos de microsoft no mostraran las banderas. Por lo que optamos por hacer uso de Tweemoji `https://twemoji.twitter.com/` , una librería de emojis Open Source de twitter. Esto le da un look uniforme a nuestro proyecto desde cualquier dispositivo.
 
 ## Codificación
 
@@ -129,7 +138,7 @@ Por un lado, contamos con la carpeta dominio, la cual incluye la lógica, las cl
 En la carpeta dominio, podemos encontrar las clases
  - partido.js
  - perfil.js
- - sistema.js 
+ - sistema.js
 
 al igual que los test
 -sistema.test.js
@@ -209,22 +218,22 @@ Realizar test de sistema en un entorno separado del desarrollo
 ### Generar casos de prueba aplicando técnica partición equivalente
 Al momento de ingresar una predicción se han tomado en cuenta las siguientes particiones
 
-Numeros Enteros Positivos dentro de un rango normal 0-100:  
+Números Enteros Positivos dentro de un rango normal 0-100:  
 ✔️ - El sistema actúa de forma normal
 
-Numeros Enteros Positivos fuerra de un rango normal > 100:  
-❓ - El sistema acepta numeros muy grandes, considerando las condiciones reales y fisicas de un partido de football, es raro que ocurra.
+Números Enteros Positivos fuera de un rango normal > 100:  
+❓ - El sistema acepta números muy grandes, considerando las condiciones reales y físicas de un partido de football, es raro que ocurra.
 
-Numeros Enteros Negativos:  
+Números Enteros Negativos:  
 ✔️ - El sistema actúa de forma normal rechazando este tipo de predicciones
 
-Numeros con Decimales:  
+Números con Decimales:  
 🚫 - El sistema admite el ingreso de las misma
 Ejemplo: 2.3
 
 Letras  
 🚫 - Permite escribir sobre el campo de entrada
-✔️ - No permite ingresarlo como predicciñon
+✔️ - No permite ingresarlo como predicción
 
 ***
 ### Detallar sesiones de prueba exploratoria
@@ -241,7 +250,7 @@ Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema 
 ### Aplicar buenas prácticas de reporte de issues
 
 ### Definir labels para tipos de issue y niveles de severidad
-Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para problemas visuales relacionados con el estilo ` style `.
+Hicimos uso de la label predefinida ` bug ` y hemos creado una propia para problemas visuales relacionados con el estilo ` style `.
 
 ### Dejar issues abiertos para correcciones o mejoras futuras
 
@@ -252,16 +261,16 @@ Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para prob
 ## Reflexión
 
 ### Detalle del trabajo individual
-Noe: Desde hace mucho tiempo ya, no construía algo desde abajo, por lo que realizar este proyecto, fue un desafío interesante y enriquecedor, ya que se recordaron tecnologías que se utilizaron en un pasado y el volver a tenerlas en cuenta para refrescar el conocimiento sirvio para mantener el entedimiento de las mismas fresco, destaco denuevo la opinión sobre mis compañeros dada en la primera instancia y lo que más me llevo de este proyecto es la cercanía que tiene con el mundo real:el tener que empezar algo, y tener que analizar como enfocarlo y/o dirigirlo.
+Noe: Desde hace mucho tiempo ya, no construía algo desde abajo, por lo que realizar este proyecto, fue un desafío interesante y enriquecedor, ya que se recordaron tecnologías que se utilizaron en un pasado y el volver a tenerlas en cuenta para refrescar el conocimiento sirvió para mantener el entendimiento de las mismas fresco, destaco de nuevo la opinión sobre mis compañeros dada en la primera instancia y lo que más me llevo de este proyecto es la cercanía que tiene con el mundo real:el tener que empezar algo, y tener que analizar como enfocarlo y/o dirigirlo.
 
 ***
 ### Técnicas aplicadas y aprendizajes
 Teniendo en cuenta los aprendizajes de la primera instancia de este proyecto, como lo son, el buen trabajo en equipo, la comunicación entre las diferentes partes, ahora, en esta segunda instancia como reflexiones y aprendizajes finales, podemos discutir y recalcar diferentes puntos, tales como:
 
-1. Toma de decisiones: A la hora de comenzar a montar, y estructurar la aplicación, hubo que evaluar que era más benificioso para el equipo, el comenzar el proyecto desde cero, o utilizar uno ya comenzado y empezar a trabajar desde ese punto.
+1. Toma de decisiones: A la hora de comenzar a montar, y estructurar la aplicación, hubo que evaluar que era más beneficioso para el equipo, el comenzar el proyecto desde cero, o utilizar uno ya comenzado y empezar a trabajar desde ese punto.
 
-2. Ingeniería inversa: Como decisión grupal, evaluamos que tomar el proyecto brindado como ejemplo era la mejor opción, en la práctica a esto se le llama "Ingeniería inversa", y es el proceso llevado a cabo con el objetivo de obtener información o un diseño a partir de un producto ya creado, con el objetivo de recrear uno similiar al mismo. 
+2. Ingeniería inversa: Como decisión grupal, evaluamos que tomar el proyecto brindado como ejemplo era la mejor opción, en la práctica a esto se le llama "Ingeniería inversa", y es el proceso llevado a cabo con el objetivo de obtener información o un diseño a partir de un producto ya creado, con el objetivo de recrear uno similar al mismo.
 
-3. Comunicación: Las formas en las que las funciones podían ser implentadas eran infinitas, por lo que una buena comunicación sobre como estructurar los componentes y sus funcionalidades fue clave esencial para la aplicación.
+3. Comunicación: Las formas en las que las funciones podían ser implementadas eran infinitas, por lo que una buena comunicación sobre como estructurar los componentes y sus funcionalidades fue clave esencial para la aplicación.
 
-4. Miedo a lo desconocido: Al principio surgieron muchas dudas sobre como comenzar el mismo, sobre como hacer las implentaciones o sobre como funcionaban los componentes, por lo que la confianza en que, eventualmente, con su correcta investigación y motivación, se podrían hallar soluciones fue fundamental.
+4. Miedo a lo desconocido: Al principio surgieron muchas dudas sobre como comenzar el mismo, sobre como hacer las implantaciones o sobre como funcionaban los componentes, por lo que la confianza en que, eventualmente, con su correcta investigación y motivación, se podrían hallar soluciones fue fundamental.
