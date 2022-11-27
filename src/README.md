@@ -183,6 +183,8 @@ Hicimos uso de la label predeifinida ` bug ` y hemos creado una propia para prob
 ## Reflexión
 
 ### Detalle del trabajo individual
+Noe: Desde hace mucho tiempo ya, no construía algo desde abajo, por lo que realizar este proyecto, fue un desafío interesante y enriquecedor, ya que se recordaron tecnologías que se utilizaron en un pasado y el volver a tenerlas en cuenta para refrescar el conocimiento sirvio para mantener el entedimiento de las mismas fresco, destaco denuevo la opinión sobre mis compañeros dada en la primera instancia y lo que más me llevo de este proyecto es la cercanía que tiene con el mundo real:el tener que empezar algo, y tener que analizar como enfocarlo y/o dirigirlo.
+
 
 ### Técnicas aplicadas y aprendizajes
 Teniendo en cuenta los aprendizajes de la primera instancia de este proyecto, como lo son, el buen trabajo en equipo, la comunicación entre las diferentes partes, ahora, en esta segunda instancia como reflexiones y aprendizajes finales, podemos discutir y recalcar diferentes puntos, tales como:
