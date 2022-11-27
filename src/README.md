@@ -52,7 +52,7 @@ El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resu
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
 
-A modo de tene un área de trabajo separada de la versión final del proyecto se creo una rama develop a partir de la rama main. Realizando el merge de las mismas, tal como indicado, al final, donde la aplicación cumplía sus funcionalidades, y se consideraba establecida.
+A modo de tener un área de trabajo separada de la versión final del proyecto se creo una rama develop a partir de la rama main. Realizando el merge de las mismas, tal como indicado, al final, donde la aplicación cumplía sus funcionalidades, y se consideraba establecida.
 
 
 ## Interfaz de usuario
