@@ -125,9 +125,6 @@ Debemos cambiar el idioma del html de EN a ES, para mantener la accesibilidad.
 
 Nuestra página no presenta contrastes incorrectos, facilitando la lectura.
 
-### Seguir especificación de estilo
-TODO:
-
 ### Emojis
 El uso de emojis para sumar color al aplicativo fue mediante el uso de las banderas. Pero notamos que dependiendo del dispositivo del usuario, su experiencia variaría drásticamente, ya que cada dispositivo cuenta con su librería de emojis.
 
@@ -175,7 +172,7 @@ Como ya mencionado anteriormente, se hizo uso de la herramienta esLint.
 > se opera para buscar errores, anomalías o información de atributos no funcionales del
 > programa." - Sommerville, Ian. (2011). *Ingeniería de Software*
 
-Una prueba unitaria se una forma de probar el correcto funcionamiento de distintos fragmentos de código. Consisten en aislar una parte del código y comprobar que funcinan a la perfección.
+Una prueba unitaria se una forma de probar el correcto funcionamiento de distintos fragmentos de código. Consisten en aislar una parte del código y comprobar que funcionan a la perfección.
 
 Con ella se pueden detectar antes los errores, que no se podrían detectar hasta fases más avanzadas, por lo cuál, realizar pruebas unitarias supone un ahorro de tiempo y dinero.
 
@@ -217,7 +214,7 @@ test('Estado del resultado 1', () => {
 ```
 Con esta función probamos que se haya ingresado correctamente un resultado de un partido.
 
-Debemos crear tantas pruebas como funciones tengamos en nuestra clase a testear, cuando corramos el test, Jest nos devolvera el resultado de las pruebas y cuánto cubrimos de dicha clase. Por cada prueba dirá si pasó (PASS), el archivo donce se encuentra dicha prueba, el símbolo de check (✓), la descripción de la prueba (el primer parámetro de la función test) y el tiempo que tardo en ejecutarse.
+Debemos crear tantas pruebas como funciones tengamos en nuestra clase a testear, cuando corramos el test, Jest nos devolverá el resultado de las pruebas y cuánto cubrimos de dicha clase. Por cada prueba dirá si pasó (PASS), el archivo donde se encuentra dicha prueba, el símbolo de check (✓), la descripción de la prueba (el primer parámetro de la función test) y el tiempo que tardo en ejecutarse.
 
 #### Algunos matchers de Jest
 
@@ -318,8 +315,8 @@ Letras
 **Prueba exploratoria #1**  
 
 **Unidad de tiempo:** 10-15 min.  
-**Objetivo:** Validar que la grmática y ortografía son correctas en todo el sitio.  
-**Notas:** Luego de analizar las pestañas disponibles y las pantallas de ingreso de predicción, no encontramos nincún error ortográfico o de gramática.
+**Objetivo:** Validar que la gramática y ortografía son correctas en todo el sitio.  
+**Notas:** Luego de analizar las pestañas disponibles y las pantallas de ingreso de predicción, no encontramos ningún error ortográfico o de gramática.
 
 ## Reporte de issues
 Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema del equipo 1.
