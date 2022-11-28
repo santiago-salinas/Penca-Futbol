@@ -317,10 +317,9 @@ Letras
 
 **Prueba exploratoria #1**  
 
-**Unidad de tiempo:** 10-15 min.
-**Objetivo:** Validar que la grmática y ortografía son correctas en todo el sitio.
+**Unidad de tiempo:** 10-15 min.  
+**Objetivo:** Validar que la grmática y ortografía son correctas en todo el sitio.  
 **Notas:** Luego de analizar las pestañas disponibles y las pantallas de ingreso de predicción, no encontramos nincún error ortográfico o de gramática.
-
 
 ## Reporte de issues
 Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema del equipo 1.
