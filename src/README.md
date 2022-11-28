@@ -168,17 +168,80 @@ Como ya mencionado anteriormente, se hizo uso de la herramienta esLint.
 
 ## Test unitario
 
+> "Las pruebas intentan demostrar que un programa hace lo que se intenta que haga, así
+> como descubrir defectos en el programa antes de usarlo. Al probar el software, se ejecuta
+> un programa con datos artificiales. Hay que verificar los resultados de la prueba que
+> se opera para buscar errores, anomalías o información de atributos no funcionales del
+> programa." - Sommerville, Ian. (2011). *Ingeniería de Software*
+
+Una prueba unitaria se una forma de probar el correcto funcionamiento de distintos fragmentos de código. Consisten en aislar una parte del código y comprobar que funcinan a la perfección.
+
+Con ella se pueden detectar antes los errores, que no se podrían detectar hasta fases más avanzadas, por lo cuál, realizar pruebas unitarias supone un ahorro de tiempo y dinero.
+
 ### Test unitarios en Jest
+
+Para las pruebas unitarias utilizaremos Jest, un marco de prueba de javascript.
+Para configurar el entorno de trabajo con Jest, debemos instalar la dependencia de desarrollo:
+```
+npm install --save-dev jest
+```
+
+Y añadir el en *package.json* que vamos a utilizar Jest para las pruebas:
+```
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
+
+Una vez instalado, para realizar las pruebas, debemos correr el comando
+```
+npm run test
+```
+
+Para comenzar con las pruebas, creamos un archivo .test en el dominio, en nuestro caso *sistema.test.js*, ya que nuestra clase sistema contiene todas las funciones que utilizamos en la aplicación. Una vez tenemos creado el archivo, importamos los módulos de las clases que queremos probar:
+```
+const Sistema = require('./sistema');
+const Perfil = require('./perfil');
+const Partido = require('./partido');
+```
+
+Utilizaremos la función "test" de Jest, que recibe dos parámetros, el primero la descripción de qué esperamos que devuelva la prueba y el segundo será una función que ejecutará el test. Con el método "expect" le decimos a la función el resultado que esperamos, luego utilizando matchers, funciones comparadoras para probar valores de diferentes maneras, evaluamos la correctitud del resultado. Por ejemplo:
+```
+test('Estado del resultado 1', () => {
+  instancia.setResultado(partido001.identificador, 10, 50);
+  expect(partido001.getResultado1()).toBe(10);
+});
+```
+Con esta función probamos que se haya ingresado correctamente un resultado de un partido.
+
+Debemos crear tantas pruebas como funciones tengamos en nuestra clase a testear, cuando corramos el test, Jest nos devolvera el resultado de las pruebas y cuánto cubrimos de dicha clase. Por cada prueba dirá si pasó (PASS), el archivo donce se encuentra dicha prueba, el símbolo de check (✓), la descripción de la prueba (el primer parámetro de la función test) y el tiempo que tardo en ejecutarse.
+
+#### Algunos matchers de Jest
+
+* **.toBe() / .not.toBe()** --> Compara identidad de objetos 
+
+* **.toEqual() / .not.toEqual()** --> Compara comportamientos con operación equals()
+
+* **.toBeNull()** --> Solo coincide con NULL 
+
+* **.toBeUndefined() / .toBeDefined()** --> Solo coincide si es / no es *undefined*
+
+* **.toBeTruthy() / .toBeFalsy()** --> Coincide con declaraciones *if* verdaderas / falsas 
+
+* **.toBeGreaterThan() / .toBeGreaterThanOrEqual()** --> Mayor que / mayor o igual que 
+
+* **.toBeLessThan() / .toBeLessThanOrEqual()** --> Menor que / Menor o igual que
+
+* **.toMatch() / .not.toMatch()** --> Compara el string con una expresión regular que debe / no debe estar en el texto 
+
+* **.toContain()** --> Chequea si un array contiene un item particular
+
+* **.toThrow()** --> Chequea si se lanza una excepción  
 
 ### 100% cobertura en clases de dominio
 
-
-| En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
-A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
-
-## Test de sistema
-
-### Realizar test de sistema en un entorno separado del desarrollo
 100% cobertura en clases de dominio  
  PASS  ./sistema.test.js  
   V Mi primera prueba (4 ms)  
@@ -222,10 +285,11 @@ A partir de este punto solo se realizan actividades de test de sistema, reporte 
 A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
 
 ## Test de sistema
+
+### Realizar test de sistema en un entorno separado del desarrollo  
+
 A nuestro equipo se nos ha asignado el siguiente repositorio:
 ` https://github.com/ORTFIS2022/obligatorio-goday-fernandez-morandi `
-
-Realizar test de sistema en un entorno separado del desarrollo
 
 ### Generar casos de prueba aplicando técnica partición equivalente
 Al momento de ingresar una predicción se han tomado en cuenta las siguientes particiones
@@ -244,7 +308,7 @@ Números con Decimales:
 Ejemplo: 2.3
 
 Letras  
-🚫 - Permite escribir sobre el campo de entrada
+🚫 - Permite escribir sobre el campo de entrada  
 ✔️ - No permite ingresarlo como predicción
 
 ***
