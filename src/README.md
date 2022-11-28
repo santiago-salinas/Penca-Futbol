@@ -1,5 +1,5 @@
 # Informe académico entrega 2
-Fecha de entrega: 29-nov-2021
+Fecha de entrega: 29-nov-2022
 
 ## Construcción
 
@@ -26,26 +26,26 @@ Fecha de entrega: 29-nov-2021
 
 De forma general la aplicación es capaz de moverse a través de las diferentes secciones (Próximos, Resultados, Grupo, Canje, Perfil). Siendo en Próximos, Resultados y Perfil donde hay funciones implementadas.
 
-Los User Cases implementados en esta ocasión fueron 
+Los Use Cases implementados en esta ocasión fueron 
 ***
-### UserCase 1: Ver partidos próximos
+### UseCase 1: Ver partidos próximos
 El usuario selecciona "Próximos Partidos" y a continuación se muestran los partidos más inmediatos, sus equipos y horarios.
 
 ![](imagenes/imagen5.jpg)
 
-### UserCase 2: Predecir
+### UseCase 2: Predecir
 El usuario selecciona "Ingresar predicción" en el área de “Próximos partidos”, aparece un campo de texto para ingresar la misma, y se presiona un botón para confirmarla.
 
 ![](imagenes/imagen2.jpg)
 ![](imagenes/imagen1.jpg)
 ![](imagenes/imagen3.jpg)
 
-### UserCase 3: Obtención de puntos
+### UseCase 3: Obtención de puntos
 El usuario selecciona el área "Resultados", se muestran los partidos ya jugados y con su correspondiente resultado, y en el caso de haber ingresado una predicción en el mismo, el sistema muestra un botón para reclamar los puntos.
 
 ![](imagenes/imagen6.jpg)
 
-### UserCase 7: Ver logros o puntos
+### UseCase 7: Ver logros o puntos
 El usuario selecciona el área "Perfil" y es capaz de visualizar sus puntos resultantes de las predicciones realizadas en partidos ya jugados.
 ***
 ![](imagenes/imagen7.jpg)
@@ -124,6 +124,7 @@ Y un warning sobre los tabIndex de nuestra barra inferior, ya que estos arrancan
 Debemos cambiar el idioma del html de EN a ES, para mantener la accesibilidad.
 
 Nuestra página no presenta contrastes incorrectos, facilitando la lectura.
+
 ### Seguir especificación de estilo
 TODO:
 
@@ -313,6 +314,13 @@ Letras
 
 ***
 ### Detallar sesiones de prueba exploratoria
+
+**Prueba exploratoria #1**  
+
+**Unidad de tiempo:** 10-15 min.
+**Objetivo:** Validar que la grmática y ortografía son correctas en todo el sitio.
+**Notas:** Luego de analizar las pestañas disponibles y las pantallas de ingreso de predicción, no encontramos nincún error ortográfico o de gramática.
+
 
 ## Reporte de issues
 Hemos realizado reportes de issues tanto en nuestro sistema, como en el sistema del equipo 1.
